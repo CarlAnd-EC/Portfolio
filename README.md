@@ -1,7 +1,7 @@
 # My Portfolio Page​
 
 Hello and welcome to my repository! 
-My name is __**Carlos Andrés Escalona Contreras**__ and here you can find:​
+My name is **_Carlos Andrés Escalona Contreras_** and here you can find:​
 
 - My Curriculum Vitae​
 - [My personal page](https://ksquare-university.github.io/)
