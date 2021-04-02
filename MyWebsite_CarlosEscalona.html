@@ -2,12 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Carlos Escalona Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Website - Carlos Escalona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- add font library -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- add icon link -->
+    <link rel = "icon" href="./images/icons/c_3D_kisspng.png" type="image/x-icon">
+    <!-- add icon library -->
+    <!-- Old: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/72f033e11e.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- add responsive CSS framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- add CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav>
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="sideNavbar">
+      <!-- Avatar image in top left corner -->
+      <img src="/images/circuits.gif" alt="icon" style="width:100%">
       <a href="#">
         <i class="fa fa-home w3-xxlarge"></i>
         <p>HOME</p>
@@ -17,19 +31,19 @@
         <p>ABOUT</p>
       </a>
       <a href="#interests">
-        <i class="fa fa-eye w3-xxlarge"></i>
+        <i class="fas fa-microchip w3-xxlarge"></i>
         <p>INTERESTS</p>
       </a>
       <a href="#skills">
-        <i class="fa fa-eye w3-xxlarge"></i>
+        <i class="fas fa-brain w3-xxlarge"></i>
         <p>SKILLS</p>
       </a>
       <a href="#projects">
-        <i class="fa fa-eye w3-xxlarge"></i>
+        <i class="fas fa-laptop-code w3-xxlarge"></i>
         <p>PROJECTS</p>
       </a>
       <a href="#hobbies">
-        <i class="fa fa-eye w3-xxlarge"></i>
+        <i class="fas fa-volleyball-ball w3-xxlarge"></i><!--far,fad,fal-->
         <p>HOBBIES</p>
       </a>
       <a href="#contact">
@@ -37,88 +51,152 @@
         <p>CONTACT</p>
       </a>
     </nav>
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button" style="width:25%">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button" style="width:25%">ABOUT</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25%">CONTACT</a>
+        <!-- Unicode 3 bars: -->
+        <!-- &#9776; -->
+        <div class="dropdown w3-bar-item w3-button" style="width:25%">
+          <a class="dropbtn" ><i class="fa fa-bars"></i></a>
+          <div class="dropdown-content">
+            <a href="#">PROJECTS</a>
+            <a href="#">SKILLS</a>
+            <a href="#">HOBBIES</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Page Content -->
-    <!-- Header/Home -->
-    <header id="home">
-      <h1><span>Hi! I'm</span> Carlos Escalona</h1>
-      <p>Digital Systems and Robotics Engineer</p>
-      <img src="foto.png" alt="your photo" width="139" height="180">
-    </header>
-    <!-- About Section -->
-    <section id="about">
-      <h2>Something about me...</h2>
-      <hr style="width:200px">
-      <p>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
-  	by developing technological solutions that improve their life quality and stimulate their abilities.
-      </p>
-    </section>
-
-    <!-- Interests Section -->
-    <section id="interests">
-      <h2>Interests</h2>
-      <hr style="width:200px">
-    <!-- End Interests Section -->
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <hr style="width:200px">
-    <!-- End Projects Section -->
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>My Technical Skills</h2>
-      <hr style="width:200px">
-      <p>Programming in Python</p>
-      <p>Programming in C</p>
-  	  <p>PCB Design</p>
-    <!-- End Skills Section -->
-    </section>
-    
-    <!-- Hobbies Section -->
-    <section id="hobbies">
-      <h2>My Hobbies</h2>
-      <hr style="width:200px">
-    <!-- End Hobbies Section -->
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <hr style="width:200px">
-
-      <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> CDMX, Mexico</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +52 5513676172</p>
-        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: carl.esc.cont@gmail.com</p>
-      </div><br>
-      <p>Lets get in touch! Send me a message:</p>
-
-      <form action="/action_page.php" target="_blank">
-        <p><input type="text" placeholder="Name" required name="Name"></p>
-        <p><input type="text" placeholder="Email" required name="Email"></p>
-        <p><input type="text" placeholder="Subject" required name="Subject"></p>
-        <p><input type="text" placeholder="Message" required name="Message"></p>
-        <p>
-          <button type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header id="home">
+        <h1><span>Hi! I'm</span> Carlos Escalona</h1>
+        <p>Digital Systems and Robotics Engineer</p>
+        <!-- <img src="foto.png" alt="photo" width="139" height="180"> -->
+        <i class="fas fa-robot w3-xxlarge"></i>
+        <i class="fas fa-user-astronaut w3-xxlarge"></i>
+      </header>
+      <!-- About Section -->
+      <section id="about">
+        <h2>Something about me...<hr></h2>
+        
+        <p><i>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
+      by developing technological solutions that improve their life quality and stimulate their abilities.</i>
         </p>
-      </form>
-    <!-- End Contact Section -->
-    </section>
+      </section>
 
-      <!-- Footer -->
-    <footer>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-      <p>Designed by Carlos Escalona March, 2021</p>
-    <!-- End footer -->
-    </footer>
+      <!-- Interests Section -->
+      <section id="interests">
+        <h2>Interests</h2><hr>
+        <ul class="nodes">
+          <li class="node">Bionics</li>
+          <li class="node">STEM Education</li>
+          <li class="node">Embedded systems</li>
+          <li class="node">Domotics</li>
+          <li class="node">Internet of Things</li>
+          <li class="node">Renewable energies</li>
+          <li class="node">Social entrepreneurship</li>
+        </ul>
+      <!-- End Interests Section -->
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects</h2><hr>
+      <!-- End Projects Section -->
+      </section>
+      
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>Technical Skills</h2><hr>
+        <p>Descriptive Language (Basic): VHDL
+          Programming languages:
+          Intermediate: Java, C, Python
+          Basic: Assembler, C++, JavaScript
+          Basic Web design: React, NodeJS, HTML5, Responsive CSS, AWS
+          Basic Databases (modules for JS): MySQL, MongoDB
+          Networking: Cisco Packet Tracer, Wireshark
+          PCB design (Basic): Proteus, DipTrace
+          </p>
+        <p>
+          <img src="./images/ProgLang/python.png" alt="Python" style="width:20%">
+          <img src="./images/ProgLang/java.png" alt="Java" style="width:15%">
+          <img src="./images/ProgLang/c.png" alt="C" style="width:20%">
+          <img src="./images/ProgLang/c++.png" alt="C++" style="width:15%">
+          <img src="./images/ProgLang/javascript.png" alt="Javascript" style="width:20%">
+        </p>
+        <p>PCB Design</p>
+      <!-- End Skills Section -->
+      </section>
+      
+      <!-- Hobbies Section -->
+      <section id="hobbies">
+        <h2>Hobbies</h2><hr>
+      <!-- End Hobbies Section -->
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me!</h2><hr>
+
+        <div class="w3-section">
+          <p><i class="fas fa-map-marker-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> CDMX, Mexico</p>
+          <p>
+            <i class="fas fa-phone-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 
+            +52 55 13 67 61 72
+            <i class="fab fa-whatsapp w3-xxlarge w3-margin"></i>
+            <i class="fab fa-telegram w3-xxlarge w3-margin-right"></i>
+            <i class="fab fa-viber w3-xxlarge"></i>
+          </p>
+          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> carl.esc.cont@gmail.com</p>
+          <p><i class="kg-logo w3-xxlarge w3-margin-right"></i> carlos.escalona@theksquaregroup.com</p>
+          <p><i class="fab fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> carl-and-esc-cont</p>
+        </div><br>
+        <p>Let's get in touch! Send me a message:</p>
+
+        <form action="/action_page.php" target="_blank">
+          <p><input type="text" placeholder="Name" required name="Name"></p>
+          <p><input type="text" placeholder="Email" required name="Email"></p>
+          <p><input type="text" placeholder="Subject" required name="Subject"></p>
+          <p><input type="text" placeholder="Message" required name="Message"></p>
+          <p>
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+        <i class="fab fa-facebook w3-xxlarge w3-hover-opacity"></i>
+        <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i>
+      <!-- End Contact Section -->
+      </section>
+
+        <!-- Footer -->
+      <footer>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <p>Supported by
+          <i class="fab fa-chrome w3-xxlarge w3-margin"></i>
+          <i class="fab fa-opera w3-xxlarge w3-margin"></i>
+          <i class="fab fa-firefox-browser w3-xxlarge w3-margin"></i>
+          <i class="fab fa-html5 w3-xxlarge w3-margin"></i>
+          <i class="fab fa-css3-alt w3-xxlarge w3-margin"></i>
+          <i class="fab fa-js-square w3-xxlarge w3-margin"></i>
+          <i class="fab fa-node-js w3-xxlarge w3-margin"></i>
+          <i class="fab fa-aws w3-xxlarge w3-margin"></i>
+          <i class="fab fa-git w3-xxlarge w3-margin"></i>	
+          <i class="fab fa-github w3-xxlarge w3-margin"></i> Pages
+          <i class="fas fa-database w3-xxlarge w3-margin"></i>
+        </p>
+          <p>Designed by Carlos Escalona March, 2021</p>
+      <!-- End footer -->
+      </footer>
     <!-- END PAGE CONTENT -->
+    </div>
+    <!--Interactivity-->
+    <script type:"text/javascript" src="interactivity.js"></script>
+    <!---->
   </body>
 </html>

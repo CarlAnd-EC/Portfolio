@@ -1,0 +1,135 @@
+html {
+    /* Color Palette */
+    --bodyBg: #0e0e11;
+    --bodyF: #c0bbb4;
+    --scrollbarBg: #161616;
+    --scrollbarBgH: #272727;
+    --thumbBg: #01191f;
+    --thumbBgH: #0a3f46;
+}
+body{
+    color: var(--bodyF);
+    background-color: var(--bodyBg);
+}
+
+body, h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat", sans-serif;
+}
+/* h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  } */
+hr {
+    width: 80%;
+}
+hr:hover{
+    width: 80vmin;
+}
+a {
+    text-decoration: none;
+}
+body::-webkit-scrollbar {
+    width: 15px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBg);
+    border: 1px inset #1f1f1f;
+}
+body::-webkit-scrollbar-track:hover {
+    background: var(--scrollbarBgH);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBg);
+    border-radius: 15px;
+    border: 2px outset #082e38;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--thumbBgH);
+    border-color: #216456;
+}  
+
+/* Style The Dropdown Button */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  } */
+
+
+.nodes {
+    margin-left: 40px;
+    list-style-image: url(images/icons/nodes-bp.svg);
+    vertical-align: middle;
+}
+.node { 
+    vertical-align: middle;
+} 
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+/* Ksquare University Logo Icon*/
+.kg-logo {
+    background: url('./images/icons/KG_logo.svg');
+    background-size: cover;
+    height: 54px;
+    width: 36px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0.2em;
+}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+    margin-left: 120px
+}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
