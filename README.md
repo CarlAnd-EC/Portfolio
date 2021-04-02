@@ -4,7 +4,7 @@ Hello and welcome to my repository!
 My name is **_Carlos Andrés Escalona Contreras_** and here you can find:​
 
 - My Curriculum Vitae​
-- [My personal page](https://ksquare-university.github.io/)
+- [My personal page](https://carlosaec-ks.github.io/Portfolio/)
 - Some projects that might be interesting or useful for you​: [Github](https://github.com/CarlosAEC-KS)
 
 Feel free to contact me:​
