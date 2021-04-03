@@ -9,9 +9,8 @@
     <!-- add icon link -->
     <link rel = "icon" href="./images/icons/c_3D_kisspng.png" type="image/x-icon">
     <!-- add icon library -->
-    <!-- Old: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <!-- <script src="https://kit.fontawesome.com/72f033e11e.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/72f033e11e.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
     <!-- add responsive CSS framework -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- add CSS stylesheet -->
@@ -19,36 +18,29 @@
   </head>
   <body>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" id="sideNavbar">
+    <nav class="sidebar" id="sideNavbar">
       <!-- Avatar image in top left corner -->
-      <img src="./images/circuits.gif" alt="icon" style="width:100%">
+      <img src="./images/circuits.gif" alt="gif" style="width:100%">
       <a href="#">
-        <i class="fa fa-home w3-xxlarge"></i>
-        <p>HOME</p>
+        <p><i class="fa fa-home navIcon"></i><br>HOME</p>
       </a>
       <a href="#about">
-        <i class="fa fa-user w3-xxlarge"></i>
-        <p>ABOUT</p>
+        <p><i class="fa fa-user navIcon"></i><br>ABOUT</p>
       </a>
       <a href="#interests">
-        <i class="fas fa-microchip w3-xxlarge"></i>
-        <p>INTERESTS</p>
+        <p><i class="fas fa-microchip navIcon"></i><br>INTERESTS</p>
       </a>
       <a href="#skills">
-        <i class="fas fa-brain w3-xxlarge"></i>
-        <p>SKILLS</p>
+        <p><i class="fas fa-brain navIcon"></i><br>SKILLS</p>
       </a>
       <a href="#projects">
-        <i class="fas fa-laptop-code w3-xxlarge"></i>
-        <p>PROJECTS</p>
+        <p><i class="fas fa-laptop-code navIcon"></i><br>PROJECTS</p>
       </a>
       <a href="#hobbies">
-        <i class="fas fa-volleyball-ball w3-xxlarge"></i><!--far,fad,fal-->
-        <p>HOBBIES</p>
+        <p><i class="fas fa-volleyball-ball navIcon"></i><br>HOBBIES</p>
       </a>
       <a href="#contact">
-        <i class="fa fa-envelope w3-xxlarge"></i>
-        <p>CONTACT</p>
+        <p><i class="fa fa-envelope navIcon"></i><br>CONTACT</p>
       </a>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -69,21 +61,33 @@
         </div>
       </div>
     </nav>
-
-    <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-      <!-- Header/Home -->
-      <header id="home">
-        <h1><span>Hi! I'm</span> Carlos Escalona</h1>
-        <p>Digital Systems and Robotics Engineer</p>
-        <!-- <img src="foto.png" alt="photo" width="139" height="180"> -->
+    <!-- Header/Home -->
+    <header id="home">
+      <section>
+        <h1>
+          <i class="fas fa-angle-double-right w3-text-teal"></i>
+          <span class="w3-hide-small"> Hi! I'm</span> Carlos 
+          <span class="w3-hide-small">Andrés</span> Escalona
+          <span class="w3-hide-small">Contreras</span> 
+          <span class="blink">_</span>
+        </h1>
+        <p>Digital Systems and Robotics Engineer
+          <!-- <img src="./images/Profile/profile_tech_3D.png" alt="photo" width="40%"> -->
+        </p>
         <i class="fas fa-robot w3-xxlarge"></i>
         <i class="fas fa-user-astronaut w3-xxlarge"></i>
-      </header>
+      </section>
+    </header>
+    <!-- Page Content -->
+    <main>
       <!-- About Section -->
       <section id="about">
-        <h2>Something about me...<hr></h2>
-        
+        <h2>
+          <i class="fas fa-angle-double-right w3-text-teal"></i>
+          About me
+          <span class="blink">_</span>
+          <hr>
+        </h2>
         <p><i>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
       by developing technological solutions that improve their life quality and stimulate their abilities.</i>
         </p>
@@ -91,7 +95,7 @@
 
       <!-- Interests Section -->
       <section id="interests">
-        <h2>Interests</h2><hr>
+        <h2>Interests<hr></h2>
         <ul class="nodes">
           <li class="node">Bionics</li>
           <li class="node">STEM Education</li>
@@ -112,7 +116,7 @@
       
       <!-- Skills Section -->
       <section id="skills">
-        <h2>Technical Skills</h2><hr>
+        <h2>Technical Skills<hr></h2>
         <p>Descriptive Language (Basic): VHDL
           Programming languages:
           Intermediate: Java, C, Python
@@ -135,13 +139,13 @@
       
       <!-- Hobbies Section -->
       <section id="hobbies">
-        <h2>Hobbies</h2><hr>
+        <h2>Hobbies<hr></h2>
       <!-- End Hobbies Section -->
       </section>
 
       <!-- Contact Section -->
       <section id="contact">
-        <h2>Contact Me!</h2><hr>
+        <h2>Contact Me!<hr></h2>
 
         <div class="w3-section">
           <p><i class="fas fa-map-marker-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> CDMX, Mexico</p>
@@ -162,7 +166,7 @@
           <p><input type="text" placeholder="Name" required name="Name"></p>
           <p><input type="text" placeholder="Email" required name="Email"></p>
           <p><input type="text" placeholder="Subject" required name="Subject"></p>
-          <p><input type="text" placeholder="Message" required name="Message"></p>
+          <p><textarea type="text" placeholder="Message" required name="Message"></textarea></p>
           <p>
             <button type="submit">
               <i class="fas fa-paper-plane"></i> SEND MESSAGE
@@ -173,9 +177,11 @@
         <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i>
       <!-- End Contact Section -->
       </section>
-
-        <!-- Footer -->
-      <footer>
+    <!-- END PAGE CONTENT -->
+    </main>
+    <!-- Footer -->
+    <footer>
+      <section>
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         <p>Supported by
           <i class="fab fa-chrome w3-xxlarge w3-margin"></i>
@@ -190,11 +196,10 @@
           <i class="fab fa-github w3-xxlarge w3-margin"></i> Pages
           <i class="fas fa-database w3-xxlarge w3-margin"></i>
         </p>
-          <p>Designed by Carlos Escalona March, 2021</p>
-      <!-- End footer -->
-      </footer>
-    <!-- END PAGE CONTENT -->
-    </div>
+        <p>Designed by Carlos Escalona March, 2021</p>
+      </section>
+    <!-- End footer -->
+    </footer>
     <!--Interactivity-->
     <script type:"text/javascript" src="interactivity.js"></script>
     <!---->

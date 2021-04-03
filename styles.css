@@ -6,14 +6,17 @@ html {
     --scrollbarBgH: #272727;
     --thumbBg: #01191f;
     --thumbBgH: #0a3f46;
+    --footerBg: #05050a;
 }
 body{
     color: var(--bodyF);
     background-color: var(--bodyBg);
-}
-
-body, h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    /* Fonts */
     font-family: "Montserrat", sans-serif;
+}
+header, main, footer {
+    margin-left: 120px
 }
 /* h2 {
     display: block;
@@ -25,33 +28,43 @@ body, h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
   } */
 hr {
-    width: 80%;
+    width: 5%;
+    border: 2px solid teal;
+    border-radius: 2px;
+    transition-duration: 1s;
 }
 hr:hover{
-    width: 80vmin;
+    width: 90%;
 }
 a {
     text-decoration: none;
 }
-body::-webkit-scrollbar {
+section {
+    padding: 0px 12px;
+}
+footer{
+    background-color: var(--footerBg);
+}
+/* Scrollbars */
+::-webkit-scrollbar {
     width: 15px;
 }
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--scrollbarBg);
     border: 1px inset #1f1f1f;
 }
-body::-webkit-scrollbar-track:hover {
+::-webkit-scrollbar-track:hover {
     background: var(--scrollbarBgH);
 }
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--thumbBg);
     border-radius: 15px;
     border: 2px outset #082e38;
 }
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--thumbBgH);
     border-color: #216456;
-}  
+}
 
 /* Style The Dropdown Button */
 .dropbtn {
@@ -75,14 +88,13 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 200;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
   }
   
@@ -123,13 +135,38 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0.2em;
 }
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {
+.sidebar {
     width: 120px;
+    height: 100%;
     background: #222;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
 }
+.navIcon {
+    font-size: 32px;
+}
+.blink {
+    color: teal;
+    animation: blinker 1s linear infinite;
+}
+  
+
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {
-    margin-left: 120px
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
 }
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 600px) {
+    header, main, footer{
+        margin-left: 0
+    }
+    .sidebar{
+        display: none;
+    }
+}
