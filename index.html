@@ -17,15 +17,15 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- Avatar image in top left corner -->
-    <aside id="logo" class="topcorner">
-      <!-- <img src="./images/circuits.gif" alt="gif" style="width:100%"> -->
+    <aside class="topcorner">
+      <!-- Avatar image in top left corner -->
+      <a href="#" id="logo" class="logo"></a>
+      <nav id="topping" class="topping">
+        <button id="show" class="showBtn"><i class="fas fa-eye navIcon"></i></button>
+      </nav>
     </aside>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav id="sideNavbar" class="sidebar">
-      <a href="#">
-        <p><i class="fa fa-home navIcon"></i><br><span class="iconName">HOME</span></p>
-      </a>
       <a href="#about">
         <p><i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span></p>
       </a>
@@ -66,7 +66,7 @@
     </nav>
     <!-- Header/Home -->
     <header id="home">
-      <section>
+      <section class="cover">
         <h1>
           <i class="fas fa-angle-double-right w3-text-teal"></i>
           <span class="w3-hide-small"> Hi! I'm</span> Carlos 

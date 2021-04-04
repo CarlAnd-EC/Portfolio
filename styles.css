@@ -18,8 +18,14 @@ body{
     /* Fonts */
     font-family: "Montserrat", sans-serif;
 }
-header, main, footer {
-    margin-left: 100px
+main, footer {
+    margin-left: 140px;
+}
+header{
+    background-image: url("./images/circuits.gif");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 /* h2 {
     display: block;
@@ -116,28 +122,64 @@ footer{
     background-color: #3e8e41;
   } */
 .topcorner{
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+    border: 2px solid teal;
+    position: fixed;
+    top: 10px;
+}
+.logo{
+    width: 120px;
+    height: 120px;
     background: #222;
     text-align: center;
     border-radius: 50%;
     border: 2px solid teal;
+    top: 20px;
+    left: 10px;
     position: fixed;
-    top: 0px;
-    z-index: 1;
-    background-image: url("./images/circuits.gif");
+    z-index: 2;
+    background-image: url("./images/icons/c_3D_kisspng.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
+.topping{
+    width: 140px;
+    height: 30px;
+    background-color:  #222;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0em;
+    padding: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    top: 150px;
+    left: 0px;
+    position: fixed;
+}
+.showBtn{
+    visibility: hidden;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    box-sizing: content-box;
+    margin-top: 5px;
+    margin-left: -18px;
+    padding: 0px;
+    border: 0px none transparent;
+    position: fixed;
+    top: 145px;
+}
 .sidebar {
-    width: 100px;
-    height: 100vh;
+    width: 140px;
+    height: 80vh;
     background: #222;
     text-align: center;
     position: fixed;
-    top: 100px;
-    z-index: 1;
+    top: 180px;
+    z-index: 2;
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s;
@@ -159,6 +201,9 @@ footer{
     margin: 0em;
     padding: 0px;
     border: 0px none transparent;
+}
+.cover{
+    margin-left: 150px;
 }
 .blink {
     color: teal;
@@ -200,8 +245,14 @@ footer{
     main, footer{
         margin-left: 0;
     }
-    .sidebar{
+    .sidebar, .topping{
         display: none;
+    }
+    .topcorner{
+        position: absolute;
+    }
+    .logo {
+        position: inherit;
     }
 }
 @media only screen and (max-height: 99%) {
