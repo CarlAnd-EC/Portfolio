@@ -17,31 +17,34 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Avatar image in top left corner -->
+    <aside id="logo" class="topcorner">
+      <!-- <img src="./images/circuits.gif" alt="gif" style="width:100%"> -->
+    </aside>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="sidebar" id="sideNavbar">
-      <!-- Avatar image in top left corner -->
-      <img src="./images/circuits.gif" alt="gif" style="width:100%">
+    <nav id="sideNavbar" class="sidebar">
       <a href="#">
-        <p><i class="fa fa-home navIcon"></i><br>HOME</p>
+        <p><i class="fa fa-home navIcon"></i><br><span class="iconName">HOME</span></p>
       </a>
       <a href="#about">
-        <p><i class="fa fa-user navIcon"></i><br>ABOUT</p>
+        <p><i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span></p>
       </a>
       <a href="#interests">
-        <p><i class="fas fa-microchip navIcon"></i><br>INTERESTS</p>
+        <p><i class="fas fa-microchip navIcon"></i><br><span class="iconName">INTERESTS</span></p>
       </a>
       <a href="#skills">
-        <p><i class="fas fa-brain navIcon"></i><br>SKILLS</p>
+        <p><i class="fas fa-brain navIcon"></i><br><span class="iconName">SKILLS</span></p>
       </a>
       <a href="#projects">
-        <p><i class="fas fa-laptop-code navIcon"></i><br>PROJECTS</p>
+        <p><i class="fas fa-laptop-code navIcon"></i><br><span class="iconName">PROJECTS</span></p>
       </a>
       <a href="#hobbies">
-        <p><i class="fas fa-volleyball-ball navIcon"></i><br>HOBBIES</p>
+        <p><i class="fas fa-volleyball-ball navIcon"></i><br><span class="iconName">HOBBIES</span></p>
       </a>
       <a href="#contact">
-        <p><i class="fa fa-envelope navIcon"></i><br>CONTACT</p>
+        <p><i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span></p>
       </a>
+      <button id="hide" class="sidebarBtn"><i class="fas fa-eye-slash navIcon"></i></button>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
@@ -79,7 +82,7 @@
       </section>
     </header>
     <!-- Page Content -->
-    <main>
+    <main id="main">
       <!-- About Section -->
       <section id="about">
         <h2>
@@ -108,12 +111,6 @@
       <!-- End Interests Section -->
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects">
-        <h2>Projects</h2><hr>
-      <!-- End Projects Section -->
-      </section>
-      
       <!-- Skills Section -->
       <section id="skills">
         <h2>Technical Skills<hr></h2>
@@ -135,6 +132,12 @@
         </p>
         <p>PCB Design</p>
       <!-- End Skills Section -->
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects</h2><hr>
+      <!-- End Projects Section -->
       </section>
       
       <!-- Hobbies Section -->
@@ -180,9 +183,11 @@
     <!-- END PAGE CONTENT -->
     </main>
     <!-- Footer -->
-    <footer>
+    <footer id="references">
       <section>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> &
+          <a href="https://fontawesome.com/" target="_blank"><i class="fab fa-font-awesome w3-xxlarge w3-margin"></i></a>
+        </p>
         <p>Supported by
           <i class="fab fa-chrome w3-xxlarge w3-margin"></i>
           <i class="fab fa-opera w3-xxlarge w3-margin"></i>
