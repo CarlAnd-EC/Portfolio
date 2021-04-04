@@ -125,7 +125,7 @@ footer{
     width: 140px;
     height: 140px;
     z-index: 1;
-    border: 2px solid teal;
+    /* border: 2px solid teal; */
     position: fixed;
     top: 10px;
 }
@@ -161,7 +161,7 @@ footer{
 }
 .showBtn{
     visibility: hidden;
-    color: white;
+    color: black;
     cursor: pointer;
     background-color: transparent;
     box-sizing: content-box;
@@ -171,6 +171,9 @@ footer{
     border: 0px none transparent;
     position: fixed;
     top: 145px;
+}
+.showBtn:hover{
+    color: var(--bodyF);
 }
 .sidebar {
     width: 140px;
@@ -193,8 +196,8 @@ footer{
 .iconName{
     font-size: 12px;
 }
-.sidebarBtn{
-    color: white;
+.hideBtn{
+    color: black;
     cursor: pointer;
     background-color: transparent;
     box-sizing: content-box;
@@ -202,8 +205,16 @@ footer{
     padding: 0px;
     border: 0px none transparent;
 }
+.hideBtn:hover{
+    color: var(--bodyF);
+}
 .cover{
+    background-color: black;
+    opacity: 85%;
+}
+.headings{
     margin-left: 150px;
+    padding-top: 40px;
 }
 .blink {
     color: teal;
@@ -231,7 +242,9 @@ footer{
     vertical-align: middle;
     margin: 0.2em;
 }
-  
+.fa-angle-double-right{
+    color: teal;
+} 
 
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 

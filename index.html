@@ -44,7 +44,7 @@
       <a href="#contact">
         <p><i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span></p>
       </a>
-      <button id="hide" class="sidebarBtn"><i class="fas fa-eye-slash navIcon"></i></button>
+      <button id="hide" class="hideBtn"><i class="fas fa-eye-slash navIcon"></i></button>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
@@ -67,88 +67,128 @@
     <!-- Header/Home -->
     <header id="home">
       <section class="cover">
-        <h1>
-          <i class="fas fa-angle-double-right w3-text-teal"></i>
-          <span class="w3-hide-small"> Hi! I'm</span> Carlos 
-          <span class="w3-hide-small">Andrés</span> Escalona
-          <span class="w3-hide-small">Contreras</span> 
-          <span class="blink">_</span>
-        </h1>
-        <p>Digital Systems and Robotics Engineer
-          <!-- <img src="./images/Profile/profile_tech_3D.png" alt="photo" width="40%"> -->
-        </p>
-        <i class="fas fa-robot w3-xxlarge"></i>
-        <i class="fas fa-user-astronaut w3-xxlarge"></i>
+        <article class="headings">
+          <h1>
+            <i class="fas fa-angle-double-right"></i>
+            <span class="w3-hide-small"> Hi! I'm</span> Carlos 
+            <span class="w3-hide-small">Andrés</span> Escalona
+            <span class="w3-hide-small">Contreras</span> 
+            <span class="blink">_</span>
+          </h1>
+          <h3>Digital Systems and Robotics Engineer</h3><br>
+        </article>
       </section>
     </header>
     <!-- Page Content -->
     <main id="main">
       <!-- About Section -->
       <section id="about">
-        <h2>
-          <i class="fas fa-angle-double-right w3-text-teal"></i>
-          About me
-          <span class="blink">_</span>
-          <hr>
-        </h2>
-        <p><i>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
-      by developing technological solutions that improve their life quality and stimulate their abilities.</i>
-        </p>
+        <details>
+          <summary>
+            <h2>
+              <i class="fas fa-angle-double-right"></i>
+              About me
+              <span class="blink">_</span>
+              <hr>
+            </h2>
+          </summary>
+          <p>
+            <i>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
+              by developing technological solutions that improve their life quality and stimulate their abilities.</i>
+          </p>
+        </details>
+        <!-- <img src="./images/Profile/profile_tech_3D.png" alt="photo" width="40%"> -->
       </section>
 
       <!-- Interests Section -->
       <section id="interests">
-        <h2>Interests<hr></h2>
-        <ul class="nodes">
-          <li class="node">Bionics</li>
-          <li class="node">STEM Education</li>
-          <li class="node">Embedded systems</li>
-          <li class="node">Domotics</li>
-          <li class="node">Internet of Things</li>
-          <li class="node">Renewable energies</li>
-          <li class="node">Social entrepreneurship</li>
-        </ul>
+        <details>
+          <summary>
+            <h2>
+              <i class="fas fa-angle-double-right"></i>
+              Interests
+              <span class="blink">_</span><hr>
+            </h2>
+          </summary>
+          <ul class="nodes">
+            <li class="node">Bionics</li>
+            <li class="node">STEM Education</li>
+            <li class="node">Embedded systems</li>
+            <li class="node">Domotics</li>
+            <li class="node">Internet of Things</li>
+            <li class="node">Renewable energies</li>
+            <li class="node">Social entrepreneurship</li>
+          </ul>
+        </details>
       <!-- End Interests Section -->
       </section>
 
       <!-- Skills Section -->
       <section id="skills">
-        <h2>Technical Skills<hr></h2>
-        <p>Descriptive Language (Basic): VHDL
-          Programming languages:
-          Intermediate: Java, C, Python
-          Basic: Assembler, C++, JavaScript
-          Basic Web design: React, NodeJS, HTML5, Responsive CSS, AWS
-          Basic Databases (modules for JS): MySQL, MongoDB
-          Networking: Cisco Packet Tracer, Wireshark
-          PCB design (Basic): Proteus, DipTrace
+        <details>
+          <summary>
+            <h2>
+              <i class="fas fa-angle-double-right"></i>
+              Technical Skills
+              <span class="blink">_</span><hr>
+            </h2>
+          </summary>
+          <p>
+            Descriptive Language (Basic): VHDL
+            Programming languages:
+            Basic:
           </p>
-        <p>
-          <img src="./images/ProgLang/python.png" alt="Python" style="width:20%">
-          <img src="./images/ProgLang/java.png" alt="Java" style="width:15%">
-          <img src="./images/ProgLang/c.png" alt="C" style="width:20%">
-          <img src="./images/ProgLang/c++.png" alt="C++" style="width:15%">
-          <img src="./images/ProgLang/javascript.png" alt="Javascript" style="width:20%">
-        </p>
-        <p>PCB Design</p>
+          <p>
+            <img src="./images/ProgLang/python.png" alt="Python" style="width:20%">
+            <img src="./images/ProgLang/java.png" alt="Java" style="width:15%">
+            <img src="./images/ProgLang/c.png" alt="C" style="width:20%">
+            <img src="./images/ProgLang/c++.png" alt="C++" style="width:15%">
+            <img src="./images/ProgLang/javascript.png" alt="Javascript" style="width:20%">
+          </p>
+          <p>PCB Design</p>
+        </details>
       <!-- End Skills Section -->
       </section>
 
       <!-- Projects Section -->
       <section id="projects">
-        <h2>Projects</h2><hr>
+        <details>
+          <summary>
+            <h2>
+              <i class="fas fa-angle-double-right"></i>
+              Projects
+              <span class="blink">_</span><hr>
+            </h2>
+          </summary>
+          <p>Slideshow</p>
+        </details>
+        
       <!-- End Projects Section -->
       </section>
       
       <!-- Hobbies Section -->
       <section id="hobbies">
-        <h2>Hobbies<hr></h2>
+        <details>
+          <summary>
+            <h2>
+              <i class="fas fa-angle-double-right"></i>
+              Hobbies
+              <span class="blink">_</span><hr>
+            </h2>
+          </summary>
+          <p>Slideshow</p>
+        </details>
+        
       <!-- End Hobbies Section -->
       </section>
 
       <!-- Contact Section -->
       <section id="contact">
-        <h2>Contact Me!<hr></h2>
+        <h2>
+          <i class="fas fa-angle-double-right"></i>
+          Contact Me!
+          <span class="blink">_</span><hr>
+        </h2>
 
         <div class="w3-section">
           <p><i class="fas fa-map-marker-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> CDMX, Mexico</p>
