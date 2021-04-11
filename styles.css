@@ -42,14 +42,14 @@ hr {
     border-radius: 2px;
     transition-duration: 1s;
 }
-hr:hover{
-    width: 90%;
-}
 a {
     text-decoration: none;
 }
 section {
     padding: 0px 12px;
+}
+details p{
+    max-width: 75ch;
 }
 footer{
     background-color: var(--footerBg);
@@ -76,7 +76,10 @@ footer{
     background-color: var(--thumbBgH);
     border-color: #216456;
 }
-
+details > summary {
+    cursor: pointer;
+    list-style: none;
+}
 /* Style The Dropdown Button */
 .dropbtn {
     color: white;
@@ -184,7 +187,7 @@ footer{
     top: 180px;
     z-index: 2;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     transition: 0.5s;
 }
 .sidebar a {
@@ -220,6 +223,9 @@ footer{
     color: teal;
     animation: blinker 1s linear infinite;
 }
+.expand-hr{
+    width: 90%;
+}
 .nodes {
     margin-left: 40px;
     list-style-image: url(images/icons/nodes-bp.svg);
@@ -227,7 +233,7 @@ footer{
 }
 .node { 
     vertical-align: middle;
-} 
+}
 .w3-row-padding img {
     margin-bottom: 12px
 }
@@ -267,9 +273,12 @@ footer{
     .logo {
         position: inherit;
     }
-}
-@media only screen and (max-height: 99%) {
-    .sidebar{
-        overflow-y: auto;
+    details > p{
+        max-width: 40ch;
     }
 }
+
+/* @media (orientation:portrait){}
+@media (orientation:landscape){}
+@media screen and (){}
+@media print and (){} */
