@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Website - Carlos Escalona</title>
+    <title>Carlos Escalona</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- add font library -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <!-- add icon link -->
-    <link rel = "icon" href="./images/icons/c_3D_kisspng.png" type="image/x-icon">
+    <link rel = "icon" href="./images/icons/logo.png" type="image/x-icon">
     <!-- add icon library -->
     <script src="https://kit.fontawesome.com/72f033e11e.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
@@ -19,32 +19,33 @@
   <body>
     <aside class="topcorner">
       <!-- Avatar image in top left corner -->
-      <a href="#" id="logo" class="logo"></a>
+      <div class="logo-section"></div>
+        <a href="#" id="logo"><img src="./images/icons/logo.png" alt="Logo" class="logo"></a>
       <nav id="topping" class="topping">
+        <button id="hide" class="hideBtn"><i class="fas fa-eye-slash navIcon"></i></button>
         <button id="show" class="showBtn"><i class="fas fa-eye navIcon"></i></button>
       </nav>
     </aside>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav id="sideNavbar" class="sidebar">
       <a href="#about">
-        <p><i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span></p>
+        <p class="menu"><i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span></p>
       </a>
       <a href="#interests">
-        <p><i class="fas fa-microchip navIcon"></i><br><span class="iconName">INTERESTS</span></p>
+        <p class="menu"><i class="fas fa-microchip navIcon"></i><br><span class="iconName">INTERESTS</span></p>
       </a>
       <a href="#skills">
-        <p><i class="fas fa-brain navIcon"></i><br><span class="iconName">SKILLS</span></p>
+        <p class="menu"><i class="fas fa-brain navIcon"></i><br><span class="iconName">SKILLS</span></p>
       </a>
       <a href="#projects">
-        <p><i class="fas fa-laptop-code navIcon"></i><br><span class="iconName">PROJECTS</span></p>
+        <p class="menu"><i class="fas fa-laptop-code navIcon"></i><br><span class="iconName">PROJECTS</span></p>
       </a>
       <a href="#hobbies">
-        <p><i class="fas fa-volleyball-ball navIcon"></i><br><span class="iconName">HOBBIES</span></p>
+        <p class="menu"><i class="fas fa-volleyball-ball navIcon"></i><br><span class="iconName">HOBBIES</span></p>
       </a>
       <a href="#contact">
-        <p><i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span></p>
+        <p class="menu"><i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span></p>
       </a>
-      <button id="hide" class="hideBtn"><i class="fas fa-eye-slash navIcon"></i></button>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
@@ -83,51 +84,112 @@
     <main id="main">
       <!-- About Section -->
       <section id="about">
-        <details>
+        <details open>
           <summary>
             <h2>
-              <i class="fas fa-angle-double-right"></i>
+              <i id="arrow1" class="fas fa-angle-double-right "></i>
               About me
               <span class="blink">_</span><hr id="hr1">
             </h2>
           </summary>
-          <p>
-            <i>I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
-              by developing technological solutions that improve their life quality and stimulate their abilities.</i>
-          </p>
+          <article class="presentation">
+            <div class="presentation-item">
+              <p>
+                <i class="fas fa-quote-left"></i>
+                <i>
+                  I am passionate about optimizing people daily tasks, maximizing their resources and empowering them as individuals,
+                  by developing technological solutions that improve their life quality and stimulate their abilities.
+                </i>
+                <i class="fas fa-quote-right"></i>
+              </p>
+            </div>
+            <div class="presentation-item">
+              <img src="./images/Profile/profile_no_bg_color.png" alt="photo" class="profilePhoto">
+            </div>
+            <div class="presentation-item">
+
+            </div>
+          </article>
         </details>
         <!-- <img src="./images/Profile/profile_tech_3D.png" alt="photo" width="40%"> -->
       </section>
 
       <!-- Interests Section -->
       <section id="interests">
-        <details>
+        <details open>
           <summary>
             <h2>
-              <i class="fas fa-angle-double-right"></i>
+              <i id="arrow2" class="fas fa-angle-double-right "></i>
               Interests
               <span class="blink">_</span><hr id="hr2">
             </h2>
           </summary>
-          <ul class="nodes">
-            <li class="node">Bionics</li>
+          <!-- <ul class="nodes">
             <li class="node">STEM Education</li>
+            <li class="node">Bionics</li>
             <li class="node">Embedded systems</li>
             <li class="node">Domotics</li>
             <li class="node">Internet of Things</li>
             <li class="node">Renewable energies</li>
             <li class="node">Social entrepreneurship</li>
-          </ul>
+          </ul> -->
+          <article class="tabs-section">
+            <aside class="tabs">
+              <button class="tablink" onclick="describe(event,'STEM')">STEM Education</button>
+              <button class="tablink" onclick="describe(event,'Bionics')">Bionics</button>
+              <button class="tablink" onclick="describe(event,'Embedded')">Embedded systems</button>
+              <button class="tablink" onclick="describe(event,'Domotics')">Domotics</button>
+              <button class="tablink" onclick="describe(event,'IoT')">Internet of Things</button>
+              <button class="tablink" onclick="describe(event,'Energies')">Renewable energies</button>
+              <button class="tablink" onclick="describe(event,'SocialEnt')">Social entrepreneurship</button>
+            </aside>
+            <section class="description-zone">
+              <div id="STEM" class="tabcontent">
+                <h3>STEM Education</h3>
+                <p>STEM stands for: .</p>
+              </div>
+              <div id="Bionics" class="tabcontent">
+                <h3>Bionics</h3>
+                <p>Engineering field.</p>
+              </div>
+              <div id="Embedded" class="tabcontent">
+                <h3>Embedded Systems</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              <div id="Domotics" class="tabcontent">
+                <h3>Domotics</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              <div id="IoT" class="tabcontent">
+                <h3>IoT</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              <div id="Energies" class="tabcontent">
+                <h3>Renewable Energies</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              <div id="SocialEnt" class="tabcontent">
+                <h3>Social Entrepreneurship</h3>
+                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:[2][3]
+                </p>
+                <ul>
+                  <li>Whose primary aim is to address a social problem.</li>
+                  <li>Which is financially self-sufficient.</li>
+                  <li>Which does not pay dividends to its owners.</li>
+                </ul>
+              </div>
+            </section>
+          </article>
         </details>
       <!-- End Interests Section -->
       </section>
 
       <!-- Skills Section -->
       <section id="skills">
-        <details>
+        <details open>
           <summary>
             <h2>
-              <i class="fas fa-angle-double-right"></i>
+              <i id="arrow3" class="fas fa-angle-double-right "></i>
               Technical Skills
               <span class="blink">_</span><hr id="hr3">
             </h2>
@@ -138,11 +200,11 @@
             Basic:
           </p>
           <p>
-            <img src="./images/ProgLang/python.png" alt="Python" style="width:20%">
-            <img src="./images/ProgLang/java.png" alt="Java" style="width:15%">
-            <img src="./images/ProgLang/c.png" alt="C" style="width:20%">
-            <img src="./images/ProgLang/c++.png" alt="C++" style="width:15%">
-            <img src="./images/ProgLang/javascript.png" alt="Javascript" style="width:20%">
+            <img src="./images/ProgLang/python.png" alt="Python" class="languages">
+            <img src="./images/ProgLang/java.png" alt="Java" class="languages">
+            <img src="./images/ProgLang/c.png" alt="C" class="languages">
+            <img src="./images/ProgLang/c++.png" alt="C++" class="languages">
+            <img src="./images/ProgLang/javascript.png" alt="Javascript" class="languages">
           </p>
           <p>PCB Design</p>
         </details>
@@ -151,15 +213,79 @@
 
       <!-- Projects Section -->
       <section id="projects">
-        <details>
+        <details open>
           <summary>
             <h2>
-              <i class="fas fa-angle-double-right"></i>
+              <i id="arrow4" class="fas fa-angle-double-right "></i>
               Projects
               <span class="blink">_</span><hr id="hr4">
             </h2>
           </summary>
-          <p>Slideshow</p>
+          <!-- Container for the image gallery -->
+          <div class="container">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="./images/Slidecovers/1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="./images/Slidecovers/2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="./images/Slidecovers/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="./images/Slidecovers/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="./images/Slidecovers/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="./images/Slidecovers/6.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="./images/Slidecovers/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+              </div>
+            </div>
+          </div>
         </details>
         
       <!-- End Projects Section -->
@@ -167,10 +293,10 @@
       
       <!-- Hobbies Section -->
       <section id="hobbies">
-        <details>
+        <details open>
           <summary>
             <h2>
-              <i class="fas fa-angle-double-right"></i>
+              <i id="arrow5" class="fas fa-angle-double-right "></i>
               Hobbies
               <span class="blink">_</span><hr id="hr5">
             </h2>
@@ -186,61 +312,75 @@
         <h2>
           <i class="fas fa-angle-double-right"></i>
           Contact Me!
-          <span class="blink">_</span><hr id="hr6">
+          <span class="blink">_</span><hr id="hr6" class="expand-hr">
         </h2>
-
-        <div>
-          <p><i class="fas fa-map-marker-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> CDMX, Mexico</p>
-          <p>
-            <i class="fas fa-phone-alt fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 
-            +52 55 13 67 61 72
-            <i class="fab fa-whatsapp w3-xxlarge w3-margin"></i>
-            <i class="fab fa-telegram w3-xxlarge w3-margin-right"></i>
-            <i class="fab fa-viber w3-xxlarge"></i>
-          </p>
-          <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> carl.esc.cont@gmail.com</p>
-          <p><i class="kg-logo w3-xxlarge w3-margin-right"></i> carlos.escalona@theksquaregroup.com</p>
-          <p><i class="fab fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> carl-and-esc-cont</p>
-        </div><br>
-        <p>Let's get in touch! Send me a message:</p>
-
-        <form action="/action_page.php" target="_blank">
-          <p><input type="text" placeholder="Name" required name="Name"></p>
-          <p><input type="text" placeholder="Email" required name="Email"></p>
-          <p><input type="text" placeholder="Subject" required name="Subject"></p>
-          <p><textarea type="text" placeholder="Message" required name="Message"></textarea></p>
-          <p>
-            <button type="submit">
-              <i class="fas fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </p>
-        </form>
-        <i class="fab fa-facebook w3-xxlarge w3-hover-opacity"></i>
-        <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i>
-      <!-- End Contact Section -->
+        <article class="contact">
+          <div class="contact-item">
+            <p><i class="fas fa-map-marker-alt fa-fw icon contact-icon"></i>  CDMX, Mexico</p>
+            <p>
+              <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72
+              <i class="fab fa-whatsapp icon im-icon"></i>
+              <i class="fab fa-telegram icon im-icon"></i>
+              <i class="fab fa-viber icon im-icon"></i>
+            </p>
+            <p><i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com</p>
+            <p><a href="https://ksquare.university/es/"><i class="kg-logo w3-margin-right"></i></a> carlos.escalona@theksquaregroup.com</p>
+            <p><a href="https://www.linkedin.com/in/carlesccont/">
+                <i class="fab fa-linkedin fa-fw icon contact-icon"></i>  carl-and-esc-cont
+            </a></p>
+            <p><a href="https://github.com/CarlosAEC-KS">
+              <i class="fab fa-github icon contact-icon"></i>  CarlosAEC-KS
+            </a></p>
+            <p class="btn"><button>Send me an email</button></p>
+          </div>
+          <div class="contact-item">
+            <p>Let's get in touch! Send me a message:</p>
+            <form action="" method="POST">
+              <p><input type="text" placeholder="Name" required name="Name"></p>
+              <p><input type="text" placeholder="Email" required name="Email"></p>
+              <p><input type="text" placeholder="Subject" required name="Subject"></p>
+              <p><textarea type="text" placeholder="Message" required name="Message"></textarea></p>
+              <p class="btn">
+                <button type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+              </p>
+            </form>
+            <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i>
+          </div>
+        </article>
+        <!-- End Contact Section -->
       </section>
     <!-- END PAGE CONTENT -->
     </main>
     <!-- Footer -->
-    <footer id="references">
-      <section>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> &
-          <a href="https://fontawesome.com/" target="_blank"><i class="fab fa-font-awesome w3-xxlarge w3-margin"></i></a>
+    <footer>
+      <section id="references" class="references">
+        <br>
+        <p>Designed by Carlos Escalona April, 2021</p>
+        <p>Powered by 
+          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3schools">
+            W3.CSS
+          </a> &
+          <a href="https://fontawesome.com/" target="_blank"><i class="fab fa-font-awesome icon ref-icon"></i></a>
         </p>
-        <p>Supported by
-          <i class="fab fa-chrome w3-xxlarge w3-margin"></i>
-          <i class="fab fa-opera w3-xxlarge w3-margin"></i>
-          <i class="fab fa-firefox-browser w3-xxlarge w3-margin"></i>
-          <i class="fab fa-html5 w3-xxlarge w3-margin"></i>
-          <i class="fab fa-css3-alt w3-xxlarge w3-margin"></i>
-          <i class="fab fa-js-square w3-xxlarge w3-margin"></i>
-          <i class="fab fa-node-js w3-xxlarge w3-margin"></i>
-          <i class="fab fa-aws w3-xxlarge w3-margin"></i>
-          <i class="fab fa-git w3-xxlarge w3-margin"></i>	
-          <i class="fab fa-github w3-xxlarge w3-margin"></i> Pages
-          <i class="fas fa-database w3-xxlarge w3-margin"></i>
+        <p>Supported on
+          <a href="https://www.opera.com"><i class="fab fa-opera icon ref-icon"></i></a>
+          <a href="https://www.mozilla.org/en-US/firefox/new/"><i class="fab fa-firefox-browser icon ref-icon"></i></a>
+          <a href="https://www.google.com/intl/en/chrome"><i class="fab fa-chrome icon ref-icon"></i></a>
         </p>
-        <p>Designed by Carlos Escalona March, 2021</p>
+        <p>Implemented using
+          <i class="fab fa-html5 icon ref-icon"></i>
+          <i class="fab fa-css3-alt icon ref-icon"></i>
+          <i class="fab fa-js-square icon ref-icon"></i>
+          <i class="fab fa-node-js icon ref-icon"></i>
+          <i class="fab fa-aws icon ref-icon"></i>
+          <i class="fab fa-git icon ref-icon"></i>
+          <!-- <i class="fas fa-database icon ref-icon"></i> -->
+        </p>
+        <p>Hosted in
+          <a href="https://pages.github.com">
+            <span class="github"><i class="fab fa-github"></i><span>Pages</span></span>
+          </a>
+        </p><br>
       </section>
     <!-- End footer -->
     </footer>

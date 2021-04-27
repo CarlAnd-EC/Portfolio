@@ -9,7 +9,7 @@ My name is **_Carlos Andrés Escalona Contreras_** and here you can find:​
 
 Feel free to contact me:​
 
-- [LinkedIn](https://www.linkedin.com/in/carl-and-esc-cont/)
+- [LinkedIn](https://www.linkedin.com/in/carlesccont/)
 
 - [E-mail](mailto:carlos.escalona@theksquaregroup.com)
 

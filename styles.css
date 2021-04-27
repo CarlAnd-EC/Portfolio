@@ -1,4 +1,5 @@
 html {
+    --angle: 0deg;
     /* Color Palette */
     --bodyBg: #0e0e11;
     --bodyF: #c0bbb4;
@@ -6,6 +7,7 @@ html {
     --scrollbarBgH: #272727;
     --thumbBg: #01191f;
     --thumbBgH: #0a3f46;
+    --sidebar: #222222;
     --footerBg: #05050a;
 }
 body{
@@ -18,8 +20,9 @@ body{
     /* Fonts */
     font-family: "Montserrat", sans-serif;
 }
-main, footer {
-    margin-left: 140px;
+main {
+    /* Add a left margin to the "page content" that matches the width of the sidebar (140px) */
+    margin-left: 150px;
 }
 header{
     background-image: url("./images/circuits.gif");
@@ -27,41 +30,29 @@ header{
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
-/* h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-  } */
+footer{
+    background-color: var(--footerBg);
+    width:100%;
+}
 hr {
     width: 5%;
-    border: 2px solid teal;
+    border: 0px solid teal;
+    height: 5px;
+    background: linear-gradient(to right,navy,indigo 10%,fuchsia 70%,orange 90%);
     border-radius: 2px;
     transition-duration: 1s;
 }
-a {
-    text-decoration: none;
-}
-section {
-    padding: 0px 12px;
-}
-details p{
-    max-width: 75ch;
-}
-footer{
-    background-color: var(--footerBg);
-}
+a {text-decoration: none}
+details p{max-width: 60ch}
+form{text-align: center}
+
 /* Scrollbars */
 ::-webkit-scrollbar {
     width: 15px;
 }
 ::-webkit-scrollbar-track {
     background: var(--scrollbarBg);
-    box-shadow: inset 0 0 5px black; 
-    /* border: 1px inset #1f1f1f; */
+    box-shadow: inset 0 0 5px black;
 }
 ::-webkit-scrollbar-track:hover {
     background: var(--scrollbarBgH);
@@ -79,7 +70,389 @@ footer{
 details > summary {
     cursor: pointer;
     list-style: none;
+    transition: 1s;
 }
+
+.references{
+    margin: 0px 150px;
+    min-width: 45ch;
+}
+.references p{
+    padding: 1ch 0.5ch 0.5ch 0.5ch;
+    text-align: center;
+    margin-left: 140px;
+}
+
+.topcorner{
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+    /* border: 2px solid teal; */
+    position: fixed;
+    top: 10px;
+}
+.logo-section{
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    border: 5px solid;
+    border: double 5px transparent;
+    border-radius: 50%;
+    top: 5px;
+    left: 2px;
+    position: fixed;
+    z-index: 2;
+    background-image: linear-gradient(var(--bodyBg),var(--bodyBg)),
+                      linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 90%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transform: rotate(0deg);
+    animation: 2s rotate linear infinite;
+}
+.logo{
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border: none;
+    top: 15px;
+    left: 8px;
+    position: fixed;
+    z-index: 2;
+}
+.topping{
+    width: 140px;
+    height: 45px;
+    background-color:  #222;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 7px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    top: 150px;
+    left: 0px;
+    position: fixed;
+}
+.showBtn{
+    visibility: hidden;
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    box-sizing: content-box;
+    margin-left: -42px;
+    padding: 0px;
+    border: 0px none transparent;
+    z-index: 4;
+}
+.showBtn:hover{color: var(--bodyF)}
+.hideBtn{
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    box-sizing: content-box;
+    margin: 0em;
+    padding: 0px;
+    border: 0px none transparent;
+    z-index: 3;
+}
+.hideBtn:hover{color: var(--bodyF)}
+
+.sidebar {
+    width: 140px;
+    height: 70vh;
+    max-height: 70vh;
+    background: var(--sidebar);
+    text-align: center;
+    position: fixed;
+    top: 190px;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+.sidebar a {transition: 0.3s}
+
+.navIcon {font-size: 32px}
+.iconName{font-size: 12px}
+.menu{
+    margin: 0;
+    padding: 1ch 0ch;
+}
+.menu:hover{
+    color: teal;
+    background-color: black;
+}
+.cover{
+    background-color: black;
+    opacity: 85%;
+}
+.headings{
+    margin-left: 150px;
+    padding-top: 40px;
+}
+.blink {
+    color: teal;
+    animation: blinker 1s linear infinite;
+}
+.fa-angle-double-right{
+    color: teal;
+    transition: 1s;
+}
+.expand-hr{width: 75vw;}
+.downwards{transform: rotate(90deg);}
+
+.presentation{
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.presentation-item{
+    margin-top: 0;
+    padding: 1ch;
+    min-height: 35ch;
+    max-height: 50ch;
+    border: 0.1em dashed teal;
+}
+.profilePhoto{height: 40ch;}
+.nodes {
+    margin-left: 40px;
+    list-style-image: url(images/icons/nodes-bp.svg);
+    vertical-align: middle;
+}
+.node { 
+    vertical-align: middle;
+}
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+/* Ksquare University Logo Icon*/
+.kg-logo {
+    background: url('./images/icons/KG_logo.svg');
+    background-size: cover;
+    height: 54px;
+    width: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.2em;
+}
+
+.languages{
+    height: 10ch;
+}
+.contact{
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+	grid-template-rows: minmax(max-content, min-content);
+}
+.contact-item{
+    margin-top: 0;
+    padding: 1ch;
+    width: 38ch;
+    min-height: 35ch;
+    max-height: 50ch;
+    border: 0.1em dashed teal;
+}
+.contact-item p.btn{text-align: center;}
+.contact-item button {
+    color: var(--bodyF);
+    border-radius: 20px;
+}
+.w3schools{
+    color: #007070;
+    font-size: x-large;
+    font-weight: 1000;
+}
+.w3schools:hover{color: #00aaaa;}
+
+.icon{
+    font-size: 2.5em;
+    vertical-align: middle;
+}
+.icon.contact-icon{
+    padding: 0.5ch 0.5ch 0.5ch 0ch;
+}
+.icon.im-icon{
+    padding: 0.5ch 0ch 0.5ch 0.5ch;
+}
+.icon.ref-icon{
+    padding: 0.25ch 0.5ch;
+}
+.github{
+    color: #0d589e;
+    font-size: 3em;
+    font-weight: bolder;
+    vertical-align: middle;
+    padding-left: 0.5ch;
+}
+.github:hover{color: #458ed1}
+.github span{
+    font-size: 0.5em;
+    vertical-align: middle;
+    padding: 0.5ch;
+}
+
+/* Footer-icon hover-colors */
+.fa-whatsapp{color: #069b69;}
+.fa-telegram{color: #499de2;}
+.fa-viber{color: #5e09c0}
+.fa-font-awesome{color: #15379c}
+.fa-font-awesome:hover{color: #206bcc}
+.fa-opera:hover{color:darkred}
+.fa-firefox-browser:hover{color: orangered}
+.fa-chrome:hover{color: royalblue}
+.fa-html5:hover{color: orange}
+.fa-css3-alt:hover{color: #1b73bb;}
+.fa-js-square:hover{color: #ffff3c}
+.fa-node-js:hover{color:darkgreen}
+.fa-aws:hover{color: orange}
+.fa-git:hover{color:tomato}
+
+/* Vertical tab gallery */
+/* Style the tab */
+.tabs-section{
+    display: grid;
+    width: 75vw;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+.tabs {
+    border: none;
+    background-color: #222222;
+    width: 100%;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tabs button.tablink {
+    display: block;
+    color: var(--bodyF);
+    background-color: inherit;
+    padding: 2ch 1ch 2ch 2ch;
+    width: 100%;
+    min-width: 22ch;
+    text-align: left;
+    outline: none;
+    border-top: 2px solid #005050;
+    border-left: 2px solid #005050;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 8px 8px 5px black;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tabs button:hover {
+    background-color: #005050;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tabs button.active {
+    background-color: #002222;
+  }
+  .description-zone{
+    width: 100%;
+  }
+  /* Style the tab content */
+  .description-zone .tabcontent {
+    border: 1px solid #ccc;
+    width: 0;
+    opacity: 0;
+    height: 46.5ch;
+    transition-duration: 2s;
+    border-left: none;
+    position: absolute;
+  }
+
+  .description-zone .tabcontent.active {
+    width: 38vw;
+    opacity: 1;
+  }
+/* Slideshow Gallery/Carousel */
+/* Style the tab */
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+    width: 75vw;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
 /* Style The Dropdown Button */
 .dropbtn {
     color: white;
@@ -124,158 +497,26 @@ details > summary {
   /* .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   } */
-.topcorner{
-    width: 140px;
-    height: 140px;
-    z-index: 1;
-    /* border: 2px solid teal; */
-    position: fixed;
-    top: 10px;
-}
-.logo{
-    width: 120px;
-    height: 120px;
-    background: #222;
-    text-align: center;
-    border-radius: 50%;
-    border: 2px solid teal;
-    top: 20px;
-    left: 10px;
-    position: fixed;
-    z-index: 2;
-    background-image: url("./images/icons/c_3D_kisspng.png");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-}
-.topping{
-    width: 140px;
-    height: 30px;
-    background-color:  #222;
-    box-sizing: border-box;
-    text-align: center;
-    margin: 0em;
-    padding: 0px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    top: 150px;
-    left: 0px;
-    position: fixed;
-}
-.showBtn{
-    visibility: hidden;
-    color: black;
-    cursor: pointer;
-    background-color: transparent;
-    box-sizing: content-box;
-    margin-top: 5px;
-    margin-left: -18px;
-    padding: 0px;
-    border: 0px none transparent;
-    position: fixed;
-    top: 145px;
-}
-.showBtn:hover{
-    color: var(--bodyF);
-}
-.sidebar {
-    width: 140px;
-    height: 80vh;
-    background: #222;
-    text-align: center;
-    position: fixed;
-    top: 180px;
-    z-index: 2;
-    overflow-x: hidden;
-    overflow-y: auto;
-    transition: 0.5s;
-}
-.sidebar a {
-    transition: 0.3s;
-  }
-.navIcon {
-    font-size: 32px;
-}
-.iconName{
-    font-size: 12px;
-}
-.hideBtn{
-    color: black;
-    cursor: pointer;
-    background-color: transparent;
-    box-sizing: content-box;
-    margin: 0em;
-    padding: 0px;
-    border: 0px none transparent;
-}
-.hideBtn:hover{
-    color: var(--bodyF);
-}
-.cover{
-    background-color: black;
-    opacity: 85%;
-}
-.headings{
-    margin-left: 150px;
-    padding-top: 40px;
-}
-.blink {
-    color: teal;
-    animation: blinker 1s linear infinite;
-}
-.expand-hr{
-    width: 90%;
-}
-.nodes {
-    margin-left: 40px;
-    list-style-image: url(images/icons/nodes-bp.svg);
-    vertical-align: middle;
-}
-.node { 
-    vertical-align: middle;
-}
-.w3-row-padding img {
-    margin-bottom: 12px
-}
-/* Ksquare University Logo Icon*/
-.kg-logo {
-    background: url('./images/icons/KG_logo.svg');
-    background-size: cover;
-    height: 54px;
-    width: 36px;
-    display: inline-block;
-    cursor: pointer;
-    vertical-align: middle;
-    margin: 0.2em;
-}
-.fa-angle-double-right{
-    color: teal;
-} 
-
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 
 @keyframes blinker {
     50% {
       opacity: 0;
     }
 }
-/* Remove margins from "page content" on small screens */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+  }
 @media only screen and (max-width: 600px) {
-    main, footer{
-        margin-left: 0;
-    }
-    .sidebar, .topping{
-        display: none;
-    }
-    .topcorner{
-        position: absolute;
-    }
-    .logo {
-        position: inherit;
-    }
-    details > p{
-        max-width: 40ch;
-    }
+    /* Remove margins from "page content" on small screens */
+    main{margin-left: 0;}
+    details > p{max-width: 40ch;}
+    .sidebar, .topping{display: none;}
+    .topcorner{position: absolute;}
+    .logo {position: inherit;}
+    .references{margin: 0px 1em;}
+    .references p{margin-left: 0px;}
 }
 
 /* @media (orientation:portrait){}
