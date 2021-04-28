@@ -22,7 +22,7 @@ body{
 }
 main {
     /* Add a left margin to the "page content" that matches the width of the sidebar (140px) */
-    margin-left: 150px;
+    margin-left: 160px;
 }
 header{
     background-image: url("./images/circuits.gif");
@@ -37,9 +37,9 @@ footer{
 hr {
     width: 5%;
     border: 0px solid teal;
-    height: 5px;
-    background: linear-gradient(to right,navy,indigo 10%,fuchsia 70%,orange 90%);
-    border-radius: 2px;
+    height: 8px;
+    background: linear-gradient(to right,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 100%);
+    border-radius: 8px;
     transition-duration: 1s;
 }
 a {text-decoration: none}
@@ -92,7 +92,7 @@ details > summary {
     left: 2px;
     z-index: 1;
     background-image: linear-gradient(var(--bodyBg),var(--bodyBg)),
-                      linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 90%);
+                      linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 95%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     transform: rotate(0deg);
@@ -211,18 +211,101 @@ details > summary {
     max-height: 50ch;
     border: 0.1em dashed teal;
 }
-.profilePhoto{height: 40ch;}
-.nodes {
-    margin-left: 40px;
-    list-style-image: url(images/icons/nodes-bp.svg);
+.profilePhoto{
+    min-height: 20ch;
+    height: 40vw;
+    max-height: 40ch;
+}
+.table{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3);
+    border: 0.1em dashed teal;
+}
+.cell{
+    grid-row: initial;
+}
+
+/* Vertical tab gallery */
+/* Style the tab */
+.tabs-section{
+    display: grid;
+    width: 75vw;
+
+    grid-template-columns: repeat(2, 1fr);
+}
+.tabs {
+    border: none;
+    background-color: #222222;
+    width: 98%;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tabs button.tablink {
+    display: block;
+    color: var(--bodyF);
+    background-color: inherit;
+    padding: 2ch 1ch 2ch 2ch;
+    width: 100%;
+    min-width: 22ch;
+    text-align: left;
+    outline: none;
+    border-top: 2px solid #005050;
+    border-left: 2px solid #005050;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 8px 8px 5px black;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tabs button:hover {
+    background-color: #005050;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tabs button.active {
+    background-color: #002222;
+  }
+  .description-zone{
+    color: black;
+    width: 100%;
+  }
+  /* Style the tab content */
+  .description-zone .tabcontent {
+    width: 0;
+    opacity: 0;
+    height: 46.5ch;
+    padding: 0ch 1ch 0ch 2ch;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #743ad5, #d53a9d,#d74e09,orange);
+    background-color:var(--bodyF);
+    transition-duration: 2s;
+    border-left: none;
+    position: absolute;
+  }
+
+  .description-zone .tabcontent.active {
+    width: 38vw;
+    opacity: 1;
+  }
+  .description-zone .tabcontent p{
+    color: black;
+    
+  }
+.nodesList {
+    margin-left: 1ch;
+    list-style-image: url('images/icons/nodes-bp.svg');
     vertical-align: middle;
 }
-.node { 
+.node {
+    color: black;
     vertical-align: middle;
+    padding: 0ch 1ch 0ch 0ch;
 }
-.w3-row-padding img {
-    margin-bottom: 12px
-}
+.w3-row-padding img {margin-bottom: 12px}
 /* Ksquare University Logo Icon*/
 .kg-logo {
     background: url('./images/icons/KG_logo.svg');
@@ -234,9 +317,7 @@ details > summary {
     margin: 0.2em;
 }
 
-.languages{
-    height: 10ch;
-}
+.languages{height: 8ch}
 .contact{
     width: 75vw;
     display: grid;
@@ -253,7 +334,6 @@ details > summary {
 }
 .contact-item p.btn{text-align: center;}
 .contact-item button {
-    --angle:60deg;
     width: 20ch;
     height: 6ch;
     color: var(--bodyF);
@@ -369,66 +449,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 .fa-aws:hover{color: orange}
 .fa-git:hover{color:tomato}
 
-/* Vertical tab gallery */
-/* Style the tab */
-.tabs-section{
-    display: grid;
-    width: 75vw;
-    padding: 0;
-    grid-template-columns: repeat(2, 1fr);
-}
-.tabs {
-    border: none;
-    background-color: #222222;
-    width: 100%;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tabs button.tablink {
-    display: block;
-    color: var(--bodyF);
-    background-color: inherit;
-    padding: 2ch 1ch 2ch 2ch;
-    width: 100%;
-    min-width: 22ch;
-    text-align: left;
-    outline: none;
-    border-top: 2px solid #005050;
-    border-left: 2px solid #005050;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    box-shadow: 8px 8px 5px black;
-    cursor: pointer;
-    transition-duration: 0.3s;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tabs button:hover {
-    background-color: #005050;
-  }
-  
-  /* Create an active/current "tab button" class */
-  .tabs button.active {
-    background-color: #002222;
-  }
-  .description-zone{
-    width: 100%;
-  }
-  /* Style the tab content */
-  .description-zone .tabcontent {
-    border: 1px solid #ccc;
-    width: 0;
-    opacity: 0;
-    height: 46.5ch;
-    transition-duration: 2s;
-    border-left: none;
-    position: absolute;
-  }
 
-  .description-zone .tabcontent.active {
-    width: 38vw;
-    opacity: 1;
-  }
 /* Slideshow Gallery/Carousel */
 /* Style the tab */
 /* Position the image container (needed to position the left and right arrows) */
@@ -666,8 +687,12 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     .references p {margin-left: 0px}
     .sidebar,.topping {display: none}
     .topcorner,.logo-section,.logo {position: absolute}
-    .expand-hr{width: 95vw}
-    .contact{grid-template-columns: repeat(1, 1fr);}
+    .expand-hr, .container, .presentation, .tabs-section {width: 95vw}
+    .tabs button.tablink {min-width: 20ch;padding: 1.5ch 0ch 1.5ch 1ch;}
+    .description-zone .tabcontent {overflow-y: auto;height: 40ch;padding: 0ch 0.5ch 0ch 1ch;}
+    .description-zone .tabcontent.active {width: 48vw}
+    .contact{grid-template-columns: repeat(1, 1fr)}
+    .profilePhoto{max-height: 20ch}
 }
 
 /* @media (orientation:portrait){}

@@ -71,7 +71,7 @@
         <article class="heading">
           <h1>
             <i class="fas fa-angle-double-right"></i>
-            <span class="w3-hide-small"> Hi! I'm</span> Carlos 
+            <span class="w3-hide-small"> Hi! I'm </span> Carlos 
             <span class="w3-hide-small">Andrés</span> Escalona
             <span class="w3-hide-small">Contreras</span> 
             <span class="blink">_</span>
@@ -93,7 +93,8 @@
             </h2>
           </summary>
           <article class="presentation">
-            <div class="presentation-item">
+            <section class="presentation-item">
+              <h2><i><b>My motivation</b></i></h2>
               <p>
                 <i class="fas fa-quote-left"></i>
                 <i>
@@ -102,16 +103,20 @@
                 </i>
                 <i class="fas fa-quote-right"></i>
               </p>
-            </div>
-            <div class="presentation-item">
+            </section>
+            <section class="presentation-item">
               <img src="./images/Profile/profile_no_bg_color.png" alt="photo" class="profilePhoto">
-            </div>
-            <div class="presentation-item">
-
-            </div>
+            </section>
+            <section class="presentation-item">
+              <h2>Education</h2>
+              <div class="table">
+                <div class="cell">Ksquare University</div>
+                <div class="cell">ITESM (Tec de Monterrey)</div>
+                <div class="cell">CECyT 9 "Juan de Dios Bátiz"</div>
+              </div>
+            </section>
           </article>
         </details>
-        <!-- <img src="./images/Profile/profile_tech_3D.png" alt="photo" width="40%"> -->
       </section>
 
       <!-- Interests Section -->
@@ -124,7 +129,7 @@
               <span class="blink">_</span><hr id="hr2">
             </h2>
           </summary>
-          <!-- <ul class="nodes">
+          <!-- <ul class="nodesList">
             <li class="node">STEM Education</li>
             <li class="node">Bionics</li>
             <li class="node">Embedded systems</li>
@@ -146,7 +151,13 @@
             <section class="description-zone">
               <div id="STEM" class="tabcontent">
                 <h3>STEM Education</h3>
-                <p>STEM stands for: .</p>
+                <p>STEM stands for:</p>
+                <ul class="nodesList">
+                  <li class="node">Science</li>
+                  <li class="node">Technology</li>
+                  <li class="node">Engineering</li>
+                  <li class="node">Mathematics</li>
+                </ul>
               </div>
               <div id="Bionics" class="tabcontent">
                 <h3>Bionics</h3>
@@ -161,7 +172,7 @@
                 <p>Tokyo is the capital of Japan.</p>
               </div>
               <div id="IoT" class="tabcontent">
-                <h3>IoT</h3>
+                <h3>Internet of Things</h3>
                 <p>Tokyo is the capital of Japan.</p>
               </div>
               <div id="Energies" class="tabcontent">
@@ -172,10 +183,10 @@
                 <h3>Social Entrepreneurship</h3>
                 <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:[2][3]
                 </p>
-                <ul>
-                  <li>Whose primary aim is to address a social problem.</li>
-                  <li>Which is financially self-sufficient.</li>
-                  <li>Which does not pay dividends to its owners.</li>
+                <ul class="nodesList">
+                  <li class="node">Whose primary aim is to address a social problem.</li>
+                  <li class="node">Which is financially self-sufficient.</li>
+                  <li class="node">Which does not pay dividends to its owners.</li>
                 </ul>
               </div>
             </section>
@@ -222,8 +233,7 @@
             </h2>
           </summary>
           <!-- Container for the image gallery -->
-          <div class="container">
-
+          <section class="container">
             <!-- Full-width images with number text -->
             <div class="mySlides">
               <div class="numbertext">1 / 6</div>
@@ -285,7 +295,7 @@
                 <img class="demo cursor" src="./images/Slidecovers/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
               </div>
             </div>
-          </div>
+          </section>
         </details>
         
       <!-- End Projects Section -->
