@@ -1,5 +1,5 @@
 html {
-    --angle: 0deg;
+    --angle: 60deg;
     /* Color Palette */
     --bodyBg: #0e0e11;
     --bodyF: #c0bbb4;
@@ -61,7 +61,6 @@ form{text-align: center}
     background-color: var(--thumbBg);
     border-radius: 15px;
     border: 2px outset #082e38;
-    
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--thumbBgH);
@@ -73,35 +72,25 @@ details > summary {
     transition: 1s;
 }
 
-.references{
-    margin: 0px 150px;
-    min-width: 45ch;
-}
-.references p{
-    padding: 1ch 0.5ch 0.5ch 0.5ch;
-    text-align: center;
-    margin-left: 140px;
-}
-
+/*Topcorner classes*/
 .topcorner{
     width: 140px;
     height: 140px;
-    z-index: 1;
     /* border: 2px solid teal; */
     position: fixed;
     top: 10px;
+    z-index: 1;
 }
 .logo-section{
     width: 140px;
     height: 140px;
     text-align: center;
-    border: 5px solid;
     border: double 5px transparent;
     border-radius: 50%;
+    position: fixed;
     top: 5px;
     left: 2px;
-    position: fixed;
-    z-index: 2;
+    z-index: 1;
     background-image: linear-gradient(var(--bodyBg),var(--bodyBg)),
                       linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 90%);
     background-origin: border-box;
@@ -115,10 +104,13 @@ details > summary {
     text-align: center;
     border: none;
     top: 15px;
-    left: 8px;
+    left: 12px;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
 }
+
+/*Main Menu Classes*/
+/*Visibility Button and condensed zone*/
 .topping{
     width: 140px;
     height: 45px;
@@ -131,6 +123,7 @@ details > summary {
     top: 150px;
     left: 0px;
     position: fixed;
+    box-shadow: 8px 8px 5px black;
 }
 .showBtn{
     visibility: hidden;
@@ -155,7 +148,7 @@ details > summary {
     z-index: 3;
 }
 .hideBtn:hover{color: var(--bodyF)}
-
+/*Sidebar*/
 .sidebar {
     width: 140px;
     height: 70vh;
@@ -168,9 +161,9 @@ details > summary {
     overflow-x: hidden;
     overflow-y: auto;
     transition: 0.5s;
+    box-shadow: 8px 8px 5px black;
 }
 .sidebar a {transition: 0.3s}
-
 .navIcon {font-size: 32px}
 .iconName{font-size: 12px}
 .menu{
@@ -181,14 +174,19 @@ details > summary {
     color: teal;
     background-color: black;
 }
+
+
 .cover{
     background-color: black;
-    opacity: 85%;
+    opacity: 80%;
 }
-.headings{
+.heading{
+    color: white;
     margin-left: 150px;
     padding-top: 40px;
 }
+
+
 .blink {
     color: teal;
     animation: blinker 1s linear infinite;
@@ -204,6 +202,7 @@ details > summary {
     width: 75vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
 }
 .presentation-item{
     margin-top: 0;
@@ -241,21 +240,84 @@ details > summary {
 .contact{
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: minmax(max-content, min-content);
 }
 .contact-item{
     margin-top: 0;
     padding: 1ch;
     width: 38ch;
-    min-height: 35ch;
-    max-height: 50ch;
+    min-height: 50ch;
+    max-height: 80ch;
     border: 0.1em dashed teal;
 }
 .contact-item p.btn{text-align: center;}
 .contact-item button {
+    --angle:60deg;
+    width: 20ch;
+    height: 6ch;
     color: var(--bodyF);
+    border: double 0.1ch transparent;
+    padding: 1ch;
+    border-radius: 30px;
+    background-image: linear-gradient(black, black), 
+    linear-gradient(var(--angle),navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 8px 8px 5px black;
+    cursor: pointer;
+    /* animation: 1s rotateLighting linear infinite; */
+}
+.contact-item button:hover {
+    color: white;
+    background-image: linear-gradient(#005050, #005050), 
+    linear-gradient(var(--angle),navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+}
+.click {
+    box-shadow: none;
+    animation: 1200ms rotateLighting linear 1;
+}
+section#contactFormSection{display: none}
+form#contactForm{visibility: hidden}
+form#contactForm input{
+    color: var(--bodyF);
+    background-color: var(--footerBg);
+    width: 35ch;
+    height: 4ch;
+    padding: 0ch 2ch;
+    border: 2px solid gray;
     border-radius: 20px;
+    box-shadow: inset 0 0 5px black,
+                8px 8px 5px black;
+}
+form#contactForm textarea{
+    color: var(--bodyF);
+    background-color: var(--footerBg);
+    width: 35ch;
+    height: 20ch;
+    overflow: auto;
+    resize: none;
+    padding: 1ch 2ch;
+    border: 2px solid gray;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px black,
+                8px 8px 5px black;
+}
+form#contactForm input::placeholder, form#contactForm textarea::placeholder{
+    color: #00d8d8;
+    font-weight: bold;
+    opacity: 50%;
+}
+
+/*Footer classes*/
+.references{
+    margin: 0px 150px;
+    min-width: 35ch;
+}
+.references p{
+    padding: 1ch 0.5ch 0.5ch 0.5ch;
+    text-align: center;
+    margin-left: 140px;
 }
 .w3schools{
     color: #007070;
@@ -272,7 +334,7 @@ details > summary {
     padding: 0.5ch 0.5ch 0.5ch 0ch;
 }
 .icon.im-icon{
-    padding: 0.5ch 0ch 0.5ch 0.5ch;
+    padding: 0.5ch 0ch 0.5ch 0.25ch;
 }
 .icon.ref-icon{
     padding: 0.25ch 0.5ch;
@@ -498,6 +560,8 @@ details > summary {
     background-color: #3e8e41;
   } */
 
+
+/* Animations */
 @keyframes blinker {
     50% {
       opacity: 0;
@@ -507,16 +571,103 @@ details > summary {
     to {
         transform: rotate(360deg);
     }
-  }
+}
+@keyframes rotateLighting {
+    0%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(60deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    5%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(70deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    10%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(80deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    15%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(90deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    20%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(100deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    25%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(110deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    30%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(120deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    35%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(130deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    40%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(140deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    45%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(150deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    50%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(160deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    55%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(180deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    60%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(190deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    65%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(200deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    70%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(210deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    75%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(220deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    80%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(230deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    85%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(240deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    90%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(250deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    95%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(260deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+    100%{
+        background-image: linear-gradient(black, black), 
+        linear-gradient(270deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    }
+}
 @media only screen and (max-width: 600px) {
     /* Remove margins from "page content" on small screens */
-    main{margin-left: 0;}
-    details > p{max-width: 40ch;}
-    .sidebar, .topping{display: none;}
-    .topcorner{position: absolute;}
-    .logo {position: inherit;}
-    .references{margin: 0px 1em;}
-    .references p{margin-left: 0px;}
+    main {margin-left: 0}
+    details > p {max-width: 40ch}
+    .references {margin: 0px 1em}
+    .references p {margin-left: 0px}
+    .sidebar,.topping {display: none}
+    .topcorner,.logo-section,.logo {position: absolute}
+    .expand-hr{width: 95vw}
+    .contact{grid-template-columns: repeat(1, 1fr);}
 }
 
 /* @media (orientation:portrait){}

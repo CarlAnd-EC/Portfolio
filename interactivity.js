@@ -20,8 +20,12 @@ window.onload = function() {
 const main = document.getElementById("main");
 const sideNavbar = document.getElementById("sideNavbar");
 const topping = document.getElementById("topping");
-const show = document.getElementById("show");
-const hide = document.getElementById("hide");
+const showMenu = document.getElementById("show");
+const hideMenu = document.getElementById("hide");
+const showForm = document.getElementById("showForm");
+const contFormSec = document.getElementById("contactFormSection");
+const contactForm = document.getElementById("contactForm");
+const submitMsg = document.getElementById("submitMsg");
 
 function openNav() {
   // sideNavbar.style.width = "100px";
@@ -29,8 +33,8 @@ function openNav() {
   topping.style.transitionDuration = "0s";
   topping.style.borderBottomLeftRadius = "0px";
   topping.style.borderBottomRightRadius = "0px";
-  show.style.visibility = "hidden";
-  hide.style.visibility = "visible";
+  showMenu.style.visibility = "hidden";
+  hideMenu.style.visibility = "visible";
 }
 
 function closeNav() {
@@ -38,13 +42,38 @@ function closeNav() {
   sideNavbar.style.height = "0";
   topping.style.transitionDuration = "1.5s";
   topping.style.borderRadius = "25px";
-  show.style.visibility = "visible";
-  hide.style.visibility = "hidden";
+  showMenu.style.visibility = "visible";
+  hideMenu.style.visibility = "hidden";
 }
 
-hide.onclick= () => closeNav();
-show.onclick= () => openNav();
+function showContactForm(){
+  showForm.style.boxShadow = "none";
+  showForm.classList.toggle("click");
+  setTimeout(() => {
+    showForm.style.boxShadow="8px 8px 5px black";
+  }, 200);
+  setTimeout(() => {
+    showForm.classList.toggle("click");
+    contFormSec.style.display = "block";
+    contactForm.style.visibility = "visible";
+  }, 1100);
+}
 
+function submitMsgEffect(){
+  submitMsg.style.boxShadow = "none";
+  submitMsg.classList.toggle("click");
+  setTimeout(() => {
+    submitMsg.style.boxShadow="8px 8px 5px black";
+  }, 200);
+  setTimeout(() => {
+    showForm.classList.toggle("click");
+  }, 1100);
+}
+
+hideMenu.onclick = () => closeNav();
+showMenu.onclick = () => openNav();
+showForm.onclick = () => showContactForm();
+submitMsg.onclick = () => submitMsgEffect();
 /*Vertical Tab Gallery (Interests section)*/
 function describe(event, topic) {
   // Show the current tab, and add an "active" class to the link that opened the tab

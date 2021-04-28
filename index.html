@@ -20,7 +20,7 @@
     <aside class="topcorner">
       <!-- Avatar image in top left corner -->
       <div class="logo-section"></div>
-        <a href="#" id="logo"><img src="./images/icons/logo.png" alt="Logo" class="logo"></a>
+      <a href="#" id="logo" class="logo-link"><img src="./images/icons/logo.png" alt="Logo" class="logo"></a>
       <nav id="topping" class="topping">
         <button id="hide" class="hideBtn"><i class="fas fa-eye-slash navIcon"></i></button>
         <button id="show" class="showBtn"><i class="fas fa-eye navIcon"></i></button>
@@ -68,7 +68,7 @@
     <!-- Header/Home -->
     <header id="home">
       <section class="cover">
-        <article class="headings">
+        <article class="heading">
           <h1>
             <i class="fas fa-angle-double-right"></i>
             <span class="w3-hide-small"> Hi! I'm</span> Carlos 
@@ -315,37 +315,40 @@
           <span class="blink">_</span><hr id="hr6" class="expand-hr">
         </h2>
         <article class="contact">
-          <div class="contact-item">
+          <section class="contact-item">
             <p><i class="fas fa-map-marker-alt fa-fw icon contact-icon"></i>  CDMX, Mexico</p>
             <p>
-              <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72
+              <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72  
               <i class="fab fa-whatsapp icon im-icon"></i>
               <i class="fab fa-telegram icon im-icon"></i>
               <i class="fab fa-viber icon im-icon"></i>
             </p>
             <p><i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com</p>
-            <p><a href="https://ksquare.university/es/"><i class="kg-logo w3-margin-right"></i></a> carlos.escalona@theksquaregroup.com</p>
-            <p><a href="https://www.linkedin.com/in/carlesccont/">
+            <p>
+              <a href="https://ksquare.university/es/" target="_blank">
+              <i class="kg-logo w3-margin-right"></i></a> carlos.escalona@theksquaregroup.com
+            </p>
+            <p><a href="https://www.linkedin.com/in/carlesccont/" target="_blank">
                 <i class="fab fa-linkedin fa-fw icon contact-icon"></i>  carl-and-esc-cont
             </a></p>
-            <p><a href="https://github.com/CarlosAEC-KS">
+            <p><a href="https://github.com/CarlosAEC-KS" target="_blank">
               <i class="fab fa-github icon contact-icon"></i>  CarlosAEC-KS
             </a></p>
-            <p class="btn"><button>Send me an email</button></p>
-          </div>
-          <div class="contact-item">
-            <p>Let's get in touch! Send me a message:</p>
-            <form action="" method="POST">
-              <p><input type="text" placeholder="Name" required name="Name"></p>
-              <p><input type="text" placeholder="Email" required name="Email"></p>
-              <p><input type="text" placeholder="Subject" required name="Subject"></p>
-              <p><textarea type="text" placeholder="Message" required name="Message"></textarea></p>
+            <!-- <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i> -->
+            <p class="btn"><button id="showForm">Send me a message!</button></p>
+          </section>
+          <section id="contactFormSection" class="contact-item">
+            <form id="contactForm" action="" method="POST">
+              <h3>Let's get in touch!</h3>
+              <p><input type="text" placeholder=">> Name" required name="Name"></p>
+              <p><input type="text" placeholder=">> Email" required name="Email"></p>
+              <p><input type="text" placeholder=">> Subject" required name="Subject"></p>
+              <p><textarea type="text" placeholder=">> Message" required name="Message"></textarea></p>
               <p class="btn">
-                <button type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+                <button id="submitMsg" type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
               </p>
             </form>
-            <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i>
-          </div>
+          </section>
         </article>
         <!-- End Contact Section -->
       </section>
@@ -363,9 +366,9 @@
           <a href="https://fontawesome.com/" target="_blank"><i class="fab fa-font-awesome icon ref-icon"></i></a>
         </p>
         <p>Supported on
-          <a href="https://www.opera.com"><i class="fab fa-opera icon ref-icon"></i></a>
-          <a href="https://www.mozilla.org/en-US/firefox/new/"><i class="fab fa-firefox-browser icon ref-icon"></i></a>
-          <a href="https://www.google.com/intl/en/chrome"><i class="fab fa-chrome icon ref-icon"></i></a>
+          <a href="https://www.opera.com" target="_blank"><i class="fab fa-opera icon ref-icon"></i></a>
+          <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><i class="fab fa-firefox-browser icon ref-icon"></i></a>
+          <a href="https://www.google.com/intl/en/chrome" target="_blank"><i class="fab fa-chrome icon ref-icon"></i></a>
         </p>
         <p>Implemented using
           <i class="fab fa-html5 icon ref-icon"></i>
@@ -377,7 +380,7 @@
           <!-- <i class="fas fa-database icon ref-icon"></i> -->
         </p>
         <p>Hosted in
-          <a href="https://pages.github.com">
+          <a href="https://pages.github.com" target="_blank">
             <span class="github"><i class="fab fa-github"></i><span>Pages</span></span>
           </a>
         </p><br>
