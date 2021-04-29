@@ -49,18 +49,19 @@
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
     <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
-      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-        <a href="#" class="w3-bar-item w3-button" style="width:25%">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button" style="width:25%">ABOUT</a>
-        <a href="#contact" class="w3-bar-item w3-button" style="width:25%">CONTACT</a>
+      <div class="w3-bar w3-black w3-center w3-small">
+        <a href="#" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
         <!-- Unicode 3 bars: -->
         <!-- &#9776; -->
-        <div class="dropdown w3-bar-item w3-button" style="width:25%">
+        <div class="dropdown w3-bar-item w3-button">
           <a class="dropbtn" ><i class="fa fa-bars"></i></a>
           <div class="dropdown-content">
-            <a href="#">PROJECTS</a>
-            <a href="#">SKILLS</a>
-            <a href="#">HOBBIES</a>
+            <a href="#interests">INTERESTS</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#hobbies">HOBBIES</a>
           </div>
         </div>
       </div>
@@ -93,7 +94,7 @@
             </h2>
           </summary>
           <article class="presentation">
-            <section class="presentation-item">
+            <section class="presentation-item moto">
               <h2><i><b>My motivation</b></i></h2>
               <p>
                 <i class="fas fa-quote-left"></i>
@@ -104,15 +105,15 @@
                 <i class="fas fa-quote-right"></i>
               </p>
             </section>
-            <section class="presentation-item">
+            <section class="presentation-item photo">
               <img src="./images/Profile/profile_no_bg_color.png" alt="photo" class="profilePhoto">
             </section>
-            <section class="presentation-item">
+            <section class="presentation-item education">
               <h2>Education</h2>
               <div class="table">
-                <div class="cell">Ksquare University</div>
-                <div class="cell">ITESM (Tec de Monterrey)</div>
-                <div class="cell">CECyT 9 "Juan de Dios Bátiz"</div>
+                <div class="row">Ksquare University</div>
+                <div class="row">ITESM (Tec de Monterrey)</div>
+                <div class="row">CECyT 9 "Juan de Dios Bátiz"</div>
               </div>
             </section>
           </article>
@@ -325,7 +326,7 @@
           <span class="blink">_</span><hr id="hr6" class="expand-hr">
         </h2>
         <article class="contact">
-          <section class="contact-item">
+          <section class="contact-item contact-info">
             <p><i class="fas fa-map-marker-alt fa-fw icon contact-icon"></i>  CDMX, Mexico</p>
             <p>
               <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72  
@@ -336,18 +337,24 @@
             <p><i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com</p>
             <p>
               <a href="https://ksquare.university/es/" target="_blank">
-              <i class="kg-logo w3-margin-right"></i></a> carlos.escalona@theksquaregroup.com
+                <i class="kg-logo w3-margin-right"></i>
+              </a>
+              <span>carlos.escalona@theksquaregroup.com</span>
             </p>
             <p><a href="https://www.linkedin.com/in/carlesccont/" target="_blank">
                 <i class="fab fa-linkedin fa-fw icon contact-icon"></i>  carl-and-esc-cont
             </a></p>
             <p><a href="https://github.com/CarlosAEC-KS" target="_blank">
-              <i class="fab fa-github icon contact-icon"></i>  CarlosAEC-KS
+              <i class="fab fa-github fa-fw icon contact-icon"></i>  CarlosAEC-KS
             </a></p>
             <!-- <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i> -->
-            <p class="btn"><button id="showForm">Send me a message!</button></p>
+            <p class="btn">
+              <a href="javascript:delay('#contactForm',1100)">
+                <button id="showForm">Send me a message!</button>
+              </a>
+            </p>
           </section>
-          <section id="contactFormSection" class="contact-item">
+          <section id="contactFormSection" class="contact-item contact-form">
             <form id="contactForm" action="" method="POST">
               <h3>Let's get in touch!</h3>
               <p><input type="text" placeholder=">> Name" required name="Name"></p>

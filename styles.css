@@ -79,7 +79,7 @@ details > summary {
     /* border: 2px solid teal; */
     position: fixed;
     top: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 .logo-section{
     width: 140px;
@@ -90,7 +90,7 @@ details > summary {
     position: fixed;
     top: 5px;
     left: 2px;
-    z-index: 1;
+    z-index: 2;
     background-image: linear-gradient(var(--bodyBg),var(--bodyBg)),
                       linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 95%);
     background-origin: border-box;
@@ -201,44 +201,55 @@ details > summary {
 .presentation{
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
-.presentation-item{
-    margin-top: 0;
-    padding: 1ch;
-    min-height: 35ch;
-    max-height: 50ch;
+/* .presentation-item{
     border: 0.1em dashed teal;
+} */
+.presentation-item.photo{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.presentation-item.moto{
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 0ch 1ch 0ch 2ch;
 }
 .profilePhoto{
     min-height: 20ch;
     height: 40vw;
     max-height: 40ch;
 }
+.presentation-item.education{
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
 .table{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3);
-    border: 0.1em dashed teal;
 }
-.cell{
-    grid-row: initial;
+.row{
+    grid-column: span 3;
+    border: 0.1em dashed teal;
 }
 
 /* Vertical tab gallery */
 /* Style the tab */
 .tabs-section{
-    display: grid;
     width: 75vw;
-
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .tabs {
     border: none;
     background-color: #222222;
-    width: 98%;
-  }
+    grid-column: span 1;
+    min-width: 16ch;
+    max-width: max-content;
+}
   
   /* Style the buttons that are used to open the tab content */
   .tabs button.tablink {
@@ -246,7 +257,7 @@ details > summary {
     color: var(--bodyF);
     background-color: inherit;
     padding: 2ch 1ch 2ch 2ch;
-    width: 100%;
+    width: 25vw;
     min-width: 22ch;
     text-align: left;
     outline: none;
@@ -271,6 +282,7 @@ details > summary {
   .description-zone{
     color: black;
     width: 100%;
+    grid-column: span 2;
   }
   /* Style the tab content */
   .description-zone .tabcontent {
@@ -279,16 +291,18 @@ details > summary {
     height: 46.5ch;
     padding: 0ch 1ch 0ch 2ch;
     border: 5px solid;
+    border-left: none;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right, #743ad5, #d53a9d,#d74e09,orange);
     background-color:var(--bodyF);
-    transition-duration: 2s;
-    border-left: none;
+    box-shadow: 8px 8px 5px black;
+    transition-duration: 1s;
     position: absolute;
+    overflow-y: auto;
   }
 
   .description-zone .tabcontent.active {
-    width: 38vw;
+    width: 50vw;
     opacity: 1;
   }
   .description-zone .tabcontent p{
@@ -322,15 +336,22 @@ details > summary {
     width: 75vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: minmax(max-content, min-content);
 }
 .contact-item{
     margin-top: 0;
     padding: 1ch;
-    width: 38ch;
     min-height: 50ch;
     max-height: 80ch;
     border: 0.1em dashed teal;
+}
+.contact-item.contact-info{
+    grid-column: span 1;
+}
+.contact-item.contact-info p{
+    margin: 1ch 0ch;
+}
+.contact-item.contact-form{
+    grid-column: span 1;
 }
 .contact-item p.btn{text-align: center;}
 .contact-item button {
@@ -353,7 +374,7 @@ details > summary {
     background-image: linear-gradient(#005050, #005050), 
     linear-gradient(var(--angle),navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
 }
-.click {
+.contact-item button.click {
     box-shadow: none;
     animation: 1200ms rotateLighting linear 1;
 }
@@ -411,7 +432,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     vertical-align: middle;
 }
 .icon.contact-icon{
-    padding: 0.5ch 0.5ch 0.5ch 0ch;
+    padding-right: 1ch;
 }
 .icon.im-icon{
     padding: 0.5ch 0ch 0.5ch 0.25ch;
@@ -554,7 +575,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -680,19 +701,20 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     }
 }
 @media only screen and (max-width: 600px) {
-    /* Remove margins from "page content" on small screens */
+    .topcorner{top: 60px;z-index: 1;}
     main {margin-left: 0}
     details > p {max-width: 40ch}
     .references {margin: 0px 1em}
     .references p {margin-left: 0px}
     .sidebar,.topping {display: none}
     .topcorner,.logo-section,.logo {position: absolute}
-    .expand-hr, .container, .presentation, .tabs-section {width: 95vw}
-    .tabs button.tablink {min-width: 20ch;padding: 1.5ch 0ch 1.5ch 1ch;}
-    .description-zone .tabcontent {overflow-y: auto;height: 40ch;padding: 0ch 0.5ch 0ch 1ch;}
-    .description-zone .tabcontent.active {width: 48vw}
-    .contact{grid-template-columns: repeat(1, 1fr)}
     .profilePhoto{max-height: 20ch}
+    .expand-hr, .presentation, .tabs-section, .container, .contact {width: 95vw}
+    .tabs button.tablink {min-width: 16ch;padding: 1.2ch 0ch 1.2ch 1ch;}
+    .description-zone .tabcontent {height: 42ch;padding: 0ch 0.5ch 0ch 1ch;}
+    .description-zone .tabcontent.active {width: 58vw}
+    .contact{grid-template-columns: repeat(1, 1fr)}
+    
 }
 
 /* @media (orientation:portrait){}
