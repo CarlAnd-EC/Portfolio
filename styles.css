@@ -621,7 +621,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 .navbar-top{
     top: 0;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     color: white;
     position: fixed;
     text-align: center;
@@ -832,6 +832,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     .description-zone .tabcontent {height: 42ch;padding: 0ch 0.5ch 0ch 1ch;}
     .description-zone .tabcontent.active {width: 58vw}
     .contact{grid-template-columns: repeat(1, max-content)}
+    .contact-item.contact-form{background-color: #003f52;border: none;border-radius: 0;}
     .fa-opera,.fa-firefox-browser,.fa-chrome{animation: fade 2s ease infinite alternate-reverse;}
     .fa-html5,.fa-css3-alt,.fa-js-square,.fa-node-js,.fa-aws,.fa-git{animation: fade 2s ease infinite alternate-reverse;}
     .fa-opera{color:darkred}
