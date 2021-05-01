@@ -619,12 +619,11 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 
 /* Style The Dropdown Button */
 .navbar-top{
-    top: 0;
     position: fixed;
-    z-index: 200;
+    top: 0;
     width: 100vw;
+    z-index: 200;
     color: white;
-    
     text-align: center;
     background-color: black;
     height: max-content;
@@ -658,9 +657,8 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     display: none;
     color: var(--bodyF);
     position: fixed;
-    right: 1vw;
     margin-top: 7px;
-    margin-right: 15px;
+    margin-left: -80px;
     max-width: max-content;
     background-color: var(--sidebar);
     z-index: 20;
