@@ -26,6 +26,7 @@ const showForm = document.getElementById("showForm");
 const contFormSec = document.getElementById("contactFormSection");
 const contactForm = document.getElementById("contactForm");
 const submitMsg = document.getElementById("submitMsg");
+const dropBtn = document.getElementById("dropBtn");
 
 function openNav() {
   // sideNavbar.style.width = "100px";
@@ -69,11 +70,15 @@ function submitMsgEffect(){
     showForm.classList.toggle("click");
   }, 1100);
 }
-
+function drop() {
+  document.getElementById("dropdownContent").classList.toggle("active");
+  // console.log("Botón Drop fue presionado");
+}
 hideMenu.onclick = () => closeNav();
 showMenu.onclick = () => openNav();
 showForm.onclick = () => showContactForm();
 submitMsg.onclick = () => submitMsgEffect();
+dropBtn.onclick = () => drop();
 /*Vertical Tab Gallery (Interests section)*/
 function describe(event, topic) {
   // Show the current tab, and add an "active" class to the link that opened the tab

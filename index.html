@@ -7,7 +7,7 @@
     <!-- add font library -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <!-- add icon link -->
-    <link rel = "icon" href="./images/icons/logo.png" type="image/x-icon">
+    <link rel = "icon" href="./images/icons/logos/logo.png" type="image/x-icon">
     <!-- add icon library -->
     <script src="https://kit.fontawesome.com/72f033e11e.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
@@ -20,7 +20,7 @@
     <aside class="topcorner">
       <!-- Avatar image in top left corner -->
       <div class="logo-section"></div>
-      <a href="#" id="logo" class="logo-link"><img src="./images/icons/logo.png" alt="Logo" class="logo"></a>
+      <a href="#" id="logo" class="logo-link"><img src="./images/icons/logos/logo.png" alt="Logo" class="logo"></a>
       <nav id="topping" class="topping">
         <button id="hide" class="hideBtn"><i class="fas fa-eye-slash navIcon"></i></button>
         <button id="show" class="showBtn"><i class="fas fa-eye navIcon"></i></button>
@@ -48,23 +48,23 @@
       </a>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <nav class="w3-top w3-hide-large w3-hide-medium" id="mobileNavbar">
-      <div class="w3-bar w3-black w3-center w3-small">
-        <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <nav class="navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
+        <a href="#" class="w3-bar-item w3-button">
+          <img src="./images/icons/logos/logo.png" alt="HOME">
+        </a>
         <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
         <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
         <!-- Unicode 3 bars: -->
         <!-- &#9776; -->
-        <div class="dropdown w3-bar-item w3-button">
-          <a class="dropbtn" ><i class="fa fa-bars"></i></a>
-          <div class="dropdown-content">
+        <div class="dropdown w3-bar-item">
+          <button id="dropBtn" class="dropbtn" ><i class="fa fa-bars"></i></button>
+          <div id="dropdownContent" class="dropdown-content">
             <a href="#interests">INTERESTS</a>
             <a href="#skills">SKILLS</a>
             <a href="#projects">PROJECTS</a>
             <a href="#hobbies">HOBBIES</a>
           </div>
         </div>
-      </div>
     </nav>
     <!-- Header/Home -->
     <header id="home">
@@ -95,6 +95,7 @@
           </summary>
           <article class="presentation">
             <section class="presentation-item moto">
+              <img src="./images/profile/profile_no_bg_color.png" alt="photo" class="profilePhoto">
               <h2><i><b>My motivation</b></i></h2>
               <p>
                 <i class="fas fa-quote-left"></i>
@@ -105,15 +106,27 @@
                 <i class="fas fa-quote-right"></i>
               </p>
             </section>
-            <section class="presentation-item photo">
-              <img src="./images/Profile/profile_no_bg_color.png" alt="photo" class="profilePhoto">
-            </section>
             <section class="presentation-item education">
               <h2>Education</h2>
               <div class="table">
-                <div class="row">Ksquare University</div>
-                <div class="row">ITESM (Tec de Monterrey)</div>
-                <div class="row">CECyT 9 "Juan de Dios Bátiz"</div>
+                <div class="cell image">
+                  <p><img src="./images/icons/logos/KG_logo.png" alt="KU" class="shield"></p>
+                </div>
+                <div class="cell text"><p>Ksquare University</p></div>
+                <div class="cell text"><p>February 2021 - Actuality</p></div>
+                <div class="cell text"><p>Javascript Associate Software Engineer</p></div>
+                <div class="cell image">
+                  <p><img src="./images/icons/logos/Tec_logo.png" alt="TEC" class="shield"></p>
+                </div>
+                <div class="cell text"><p>ITESM (Tec de Monterrey)</p></div>
+                <div class="cell text"><p>August 2015 - December 2019</p></div>
+                <div class="cell text"><p>Digital Systems and Robotics Engineer</p></div>
+                <div class="cell image">
+                  <p><img src="./images/icons/logos/CECyT9-logo.png" alt="CECyT9" class="shield rounded"></p>
+                </div>
+                <div class="cell text"><p>CECyT 9 "Juan de Dios Bátiz"</p></div>
+                <div class="cell text"><p>August 2012 - July 2015</p></div>
+                <div class="cell text"><p>Digital Systems Technician</p></div>
               </div>
             </section>
           </article>
@@ -154,10 +167,10 @@
                 <h3>STEM Education</h3>
                 <p>STEM stands for:</p>
                 <ul class="nodesList">
-                  <li class="node">Science</li>
-                  <li class="node">Technology</li>
-                  <li class="node">Engineering</li>
-                  <li class="node">Mathematics</li>
+                  <li class="node black">Science</li>
+                  <li class="node black">Technology</li>
+                  <li class="node black">Engineering</li>
+                  <li class="node black">Mathematics</li>
                 </ul>
               </div>
               <div id="Bionics" class="tabcontent">
@@ -185,9 +198,9 @@
                 <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:[2][3]
                 </p>
                 <ul class="nodesList">
-                  <li class="node">Whose primary aim is to address a social problem.</li>
-                  <li class="node">Which is financially self-sufficient.</li>
-                  <li class="node">Which does not pay dividends to its owners.</li>
+                  <li class="node black">Whose primary aim is to address a social problem.</li>
+                  <li class="node black">Which is financially self-sufficient.</li>
+                  <li class="node black">Which does not pay dividends to its owners.</li>
                 </ul>
               </div>
             </section>
@@ -212,11 +225,11 @@
             Basic:
           </p>
           <p>
-            <img src="./images/ProgLang/python.png" alt="Python" class="languages">
-            <img src="./images/ProgLang/java.png" alt="Java" class="languages">
-            <img src="./images/ProgLang/c.png" alt="C" class="languages">
-            <img src="./images/ProgLang/c++.png" alt="C++" class="languages">
-            <img src="./images/ProgLang/javascript.png" alt="Javascript" class="languages">
+            <img src="./images/icons/progLang/python.png" alt="Python" class="languages">
+            <img src="./images/icons/progLang/java.png" alt="Java" class="languages">
+            <img src="./images/icons/progLang/c.png" alt="C" class="languages">
+            <img src="./images/icons/progLang/c++.png" alt="C++" class="languages">
+            <img src="./images/icons/progLang/javascript.png" alt="Javascript" class="languages">
           </p>
           <p>PCB Design</p>
         </details>
@@ -238,32 +251,32 @@
             <!-- Full-width images with number text -->
             <div class="mySlides">
               <div class="numbertext">1 / 6</div>
-                <img src="./images/Slidecovers/1.jpg" style="width:100%">
+                <img src="./images/slidecovers/1.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 6</div>
-                <img src="./images/Slidecovers/2.jpg" style="width:100%">
+                <img src="./images/slidecovers/2.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 6</div>
-                <img src="./images/Slidecovers/3.jpg" style="width:100%">
+                <img src="./images/slidecovers/3.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 6</div>
-                <img src="./images/Slidecovers/4.jpg" style="width:100%">
+                <img src="./images/slidecovers/4.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 6</div>
-                <img src="./images/Slidecovers/5.jpg" style="width:100%">
+                <img src="./images/slidecovers/5.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">6 / 6</div>
-                <img src="./images/Slidecovers/6.jpg" style="width:100%">
+                <img src="./images/slidecovers/6.jpg" style="width:100%">
             </div>
 
             <!-- Next and previous buttons -->
@@ -349,7 +362,7 @@
             </a></p>
             <!-- <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i> -->
             <p class="btn">
-              <a href="javascript:delay('#contactForm',1100)">
+              <a href="javascript:delay('#contactFormSection',1100)">
                 <button id="showForm">Send me a message!</button>
               </a>
             </p>
@@ -391,9 +404,9 @@
           <i class="fab fa-html5 icon ref-icon"></i>
           <i class="fab fa-css3-alt icon ref-icon"></i>
           <i class="fab fa-js-square icon ref-icon"></i>
-          <i class="fab fa-node-js icon ref-icon"></i>
+          <!-- <i class="fab fa-node-js icon ref-icon"></i>
           <i class="fab fa-aws icon ref-icon"></i>
-          <i class="fab fa-git icon ref-icon"></i>
+          <i class="fab fa-git icon ref-icon"></i> -->
           <!-- <i class="fas fa-database icon ref-icon"></i> -->
         </p>
         <p>Hosted in

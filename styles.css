@@ -43,7 +43,7 @@ hr {
     transition-duration: 1s;
 }
 a {text-decoration: none}
-details p{max-width: 60ch}
+details p{max-width: 50ch}
 form{text-align: center}
 
 /* Scrollbars */
@@ -92,7 +92,7 @@ details > summary {
     left: 2px;
     z-index: 2;
     background-image: linear-gradient(var(--bodyBg),var(--bodyBg)),
-                      linear-gradient(0deg,navy,indigo 10%,fuchsia 70%,orange 95%);
+                      linear-gradient(0deg,#008bcc,#02243b 10%,#0a3f46 50%,teal 90%,#00dddd 95%);
     background-origin: border-box;
     background-clip: content-box, border-box;
     transform: rotate(0deg);
@@ -201,41 +201,76 @@ details > summary {
 .presentation{
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, max-content);
+    grid-template-rows: repeat(2, max-content);
 }
-/* .presentation-item{
-    border: 0.1em dashed teal;
-} */
-.presentation-item.photo{
-    grid-column: span 1;
-    grid-row: span 1;
+.presentation-item{
+    /* border: 0.1em dashed teal; */
 }
 .presentation-item.moto{
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1;
-    padding: 0ch 1ch 0ch 2ch;
+    min-width: min-content;
+    max-width: max-content;
+    height: max-content;
+    padding: 0ch 1ch 0ch 4ch;
+    background-color: #222222;
+    box-shadow: 8px 8px 5px black;
+}
+.presentation-item.moto p{
+    min-width: 65ch;
+    max-width: 72vw;
 }
 .profilePhoto{
-    min-height: 20ch;
-    height: 40vw;
-    max-height: 40ch;
+    float: right;
+    min-height: 20vh;
+    max-height: 50vh;
+    padding: 1ch 0ch 1ch 0ch;
 }
 .presentation-item.education{
-    grid-column: span 3;
+    grid-column: span 1;
     grid-row: span 1;
+    padding: 0ch 4ch;
 }
 
 .table{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3);
+    grid-template-columns: max-content repeat(3, max-content);
+    grid-template-rows: repeat(3, max-content);
 }
-.row{
-    grid-column: span 3;
-    border: 0.1em dashed teal;
+.cell{
+    grid-column: span 1;
+    grid-row: span 1;
+    text-align: center;
+    /* width: max-content; */
+    /* border: 0.1em dashed teal; */
 }
-
+.cell.text{
+    min-width: 10ch;
+    width: 20vw;
+    max-width: 25ch;
+    padding: 1ch 1ch;
+}
+.cell.text p{
+    height: inherit;
+    padding: 10% 0%;
+}
+.cell.image p{
+    padding: 0.5em 1em;
+}
+.shield{
+    min-width: 5vw;
+    min-height: 10vh;
+    max-width: 10vw;
+    max-height: 20vh;
+    vertical-align: middle;
+}
+.shield.rounded{
+    min-width: 5vw;
+    min-height: 10vh;
+    max-width: 10vw;
+    max-height: 15vh;
+}
 /* Vertical tab gallery */
 /* Style the tab */
 .tabs-section{
@@ -307,42 +342,63 @@ details > summary {
   }
   .description-zone .tabcontent p{
     color: black;
-    
   }
 .nodesList {
-    margin-left: 1ch;
-    list-style-image: url('images/icons/nodes-bp.svg');
-    vertical-align: middle;
+    list-style: none;
 }
 .node {
     color: black;
+    padding-left: 1ch;
+}
+.node.black::before{
+    content: url('images/icons/nodes_bk.png');
+    margin-left: -1ch;
+    margin-right: 1ch;
+    font-size: 1.8em;
+    width: 1ch;
+    height: 1ch;
+    min-width: 1ch;
+    padding-top: 0.5ch;
+    line-height: 1.5;
+    text-align: center;
     vertical-align: middle;
-    padding: 0ch 1ch 0ch 0ch;
+}
+.node.white::before{
+    content: url('images/icons/nodes-wt.svg');
+    margin-left: -1ch;
+    margin-right: 1ch;
+    font-size: 1.8em;
+    width: 1ch;
+    height: 1ch;
+    min-width: 1ch;
+    padding-top: 0.5ch;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
 }
 .w3-row-padding img {margin-bottom: 12px}
 /* Ksquare University Logo Icon*/
 .kg-logo {
-    background: url('./images/icons/KG_logo.svg');
+    background: url('./images/icons/logos/KG_logo.svg');
     background-size: cover;
     height: 54px;
     width: 36px;
     display: inline-block;
     vertical-align: middle;
-    margin: 0.2em;
+    margin: 0.2em 0.2em 0.2em 0em;
 }
 
 .languages{height: 8ch}
 .contact{
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(1, max-content);
 }
 .contact-item{
     margin-top: 0;
     padding: 1ch;
-    min-height: 50ch;
-    max-height: 80ch;
-    border: 0.1em dashed teal;
+    /* border: 0.1em dashed teal; */
 }
 .contact-item.contact-info{
     grid-column: span 1;
@@ -352,6 +408,10 @@ details > summary {
 }
 .contact-item.contact-form{
     grid-column: span 1;
+    background-color: #000d11;
+    border: 2px solid black;
+    /* border: 4px solid #4715fc; */
+    border-radius: 40px;
 }
 .contact-item p.btn{text-align: center;}
 .contact-item button {
@@ -515,7 +575,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000000cc;
   }
   
   /* Number text (1/3 etc) */
@@ -558,44 +618,65 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
   }
 
 /* Style The Dropdown Button */
+.navbar-top{
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    color: white;
+    position: fixed;
+    text-align: center;
+    background-color: black;
+    height: max-content;
+}
+.navbar-top a img{
+    width: 4ch;
+}
 .dropbtn {
     color: white;
-    padding: 16px;
+    margin: 0;
+    padding: 1.5ch 1.8ch;
     font-size: 16px;
     border: none;
+    background-color: transparent;
     cursor: pointer;
-  }
-  
+}
+.dropbtn:hover {
+    background-color: teal;
+}
+
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
+    width: min-content;
     display: inline-block;
+    /* border: 4px orange solid; */
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: fixed;
+    right: 0;
+    margin-top: 7px;
+    margin-right: 15px;
+    max-width: max-content;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 200;
+    z-index: 20;
   }
-  
+  .dropdown-content.active {
+    display: block;
+  }
   /* Links inside the dropdown */
   .dropdown-content a {
+    display: block;
     color: black;
-    padding: 12px 16px;
-    display: block;
+    padding: 12px 1ch;
   }
-  
+  .dropdown-content a:hover {
+    background-color: red;
+  }
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  .dropdown-content:hover {background-color: #f1f1f1}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   /* .dropdown:hover .dropbtn {
@@ -607,6 +688,11 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 @keyframes blinker {
     50% {
       opacity: 0;
+    }
+}
+@keyframes fade {
+    from {
+      color: var(--bodyF);
     }
 }
 @keyframes rotate {
@@ -708,13 +794,55 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     .references p {margin-left: 0px}
     .sidebar,.topping {display: none}
     .topcorner,.logo-section,.logo {position: absolute}
-    .profilePhoto{max-height: 20ch}
     .expand-hr, .presentation, .tabs-section, .container, .contact {width: 95vw}
+    .profilePhoto{min-height: 15vh;max-height:20vh;padding-bottom: 0;padding-left: 0.1ch;}
+    .presentation-item.moto{min-width: 35ch;max-width: min-content;padding-left: 1ch;}
+    .presentation-item.moto p{min-width: 10ch;max-width:100%}
+    .presentation-item.education{padding: 0ch 0ch}
+    .presentation-item.education h2{padding-left: 1ch}
+    .cell.text{
+        min-width: 5ch;
+        width: 10ch;
+        padding: 0ch 0ch;
+        max-height: max-content;
+    }
+    .cell.text p{
+        width: 10ch;
+        margin: 0;
+        padding: 10% 10%;
+    }
+    .cell.image p{
+        margin-left: 0.25em;
+        padding: 0em 0em;
+    }
+    .shield{
+        max-width: 50px;
+        max-height: 50px;
+        vertical-align: middle;
+    }
+    .shield.rounded{
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 50px;
+        max-height: 50px;
+        margin: 1em 0;
+        vertical-align: middle;
+    }
     .tabs button.tablink {min-width: 16ch;padding: 1.2ch 0ch 1.2ch 1ch;}
     .description-zone .tabcontent {height: 42ch;padding: 0ch 0.5ch 0ch 1ch;}
     .description-zone .tabcontent.active {width: 58vw}
-    .contact{grid-template-columns: repeat(1, 1fr)}
-    
+    .contact{grid-template-columns: repeat(1, max-content)}
+    .fa-opera,.fa-firefox-browser,.fa-chrome{animation: fade 2s ease infinite alternate-reverse;}
+    .fa-html5,.fa-css3-alt,.fa-js-square,.fa-node-js,.fa-aws,.fa-git{animation: fade 2s ease infinite alternate-reverse;}
+    .fa-opera{color:darkred}
+    .fa-firefox-browser{color: orangered}
+    .fa-chrome{color: royalblue}
+    .fa-html5{color: orange}
+    .fa-css3-alt{color: #1b73bb;}
+    .fa-js-square{color: #ffff3c}
+    .fa-node-js{color:darkgreen}
+    .fa-aws{color: orange}
+    .fa-git{color:tomato}
 }
 
 /* @media (orientation:portrait){}
