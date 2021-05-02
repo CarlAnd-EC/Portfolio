@@ -71,8 +71,8 @@ function submitMsgEffect(){
   }, 1100);
 }
 function drop() {
+  document.getElementById("dropBtn").classList.toggle("active");
   document.getElementById("dropdownContent").classList.toggle("active");
-  // console.log("Botón Drop fue presionado");
 }
 hideMenu.onclick = () => closeNav();
 showMenu.onclick = () => openNav();

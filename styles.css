@@ -619,17 +619,40 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 
 /* Style The Dropdown Button */
 .navbar-top{
-    position: fixed;
     top: 0;
-    width: max-content;
-    z-index: 200;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr); */
     color: white;
     text-align: center;
     background-color: black;
     height: max-content;
 }
+.navbar-button{
+    /* display: inline-block; */
+    /* grid-row: span 1;
+    grid-column: span 1; */
+    padding: 1ch 2ch;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
 .navbar-top a img{
     width: 4ch;
+} 
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    width: min-content;
+    display: inline-block;
+    /* border: 4px orange solid; */
 }
 .dropbtn {
     color: white;
@@ -640,28 +663,19 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     background-color: transparent;
     cursor: pointer;
 }
-.dropbtn:hover {
+.dropbtn.active {
     background-color: #0080807e;
 }
-
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    width: min-content;
-    display: inline-block;
-    /* border: 4px orange solid; */
-  }
-  
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     color: var(--bodyF);
     position: fixed;
-    margin-top: 7px;
-    margin-left: -80px;
+    /* margin-top: 7px;
+    margin-left: -80px; */
     max-width: max-content;
     background-color: var(--sidebar);
-    z-index: 20;
+    z-index: 1;
   }
   .dropdown-content.active {
     display: block;
@@ -786,7 +800,8 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
         linear-gradient(270deg,navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (orientation:portrait) and (max-width: 600px) {
+    /* .navbar-top{display: grid;} */
     .topcorner{top: 60px;z-index: 1;}
     main {margin-left: 0}
     details > p {max-width: 40ch}
