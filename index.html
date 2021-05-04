@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Personal logo and home icon -->
     <aside class="topcorner">
       <!-- Avatar image in top left corner -->
       <div class="logo-section"></div>
@@ -26,6 +27,7 @@
         <button id="show" class="showBtn"><i class="fas fa-eye navIcon"></i></button>
       </nav>
     </aside>
+
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav id="sideNavbar" class="sidebar">
       <a href="#about">
@@ -48,15 +50,15 @@
       </a>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <nav class=" navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
-        <a href="#" class="navbar-button">
+    <nav class="w3-top w3-bar navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
+        <a href="#" class="w3-bar-item button">
           <img src="./images/icons/logos/logo.png" alt="HOME">
         </a>
-        <a href="#about" class="navbar-button">ABOUT</a>
-        <a href="#contact" class="navbar-button">CONTACT</a>
+        <a href="#about" class="w3-bar-item w3-button navbar-button">ABOUT</a>
+        <a href="#contact" class=" w3-bar-item w3-button navbar-button">CONTACT</a>
         <!-- Unicode 3 bars: -->
         <!-- &#9776; -->
-        <div class="button">
+        <div class="w3-bar-item w3-button navbar-button">
           <button id="dropBtn" class="dropbtn" ><i class="fa fa-bars"></i></button>
           <div id="dropdownContent" class="dropdown-content">
             <a href="#interests">INTERESTS</a>
@@ -66,6 +68,7 @@
           </div>
         </div>
     </nav>
+
     <!-- Header/Home -->
     <header id="home">
       <section class="cover">
@@ -81,6 +84,7 @@
         </article>
       </section>
     </header>
+
     <!-- Page Content -->
     <main id="main">
       <!-- About Section -->
@@ -172,30 +176,84 @@
                   <li class="node black">Engineering</li>
                   <li class="node black">Mathematics</li>
                 </ul>
+                <p>
+                  It is a broad term used to group together these four academic and specific disciplines.
+                </p>
+                <p>
+                  STEM education is a curriculum based on the idea of educating students in these disciplines in an interdisciplinary and applied approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a cohesive learning paradigm based on real-world applications.
+                </p>
+                <a href="https://www.livescience.com/43296-what-is-stem-education.html">Source</a>
               </div>
               <div id="Bionics" class="tabcontent">
                 <h3>Bionics</h3>
-                <p>Engineering field.</p>
+                <p>
+                  Bionics or biologically inspired engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
+                </p>
+                <p>
+                  The word bionic, coined by Jack E. Steele in August 1958, is a portmanteau from biology and electronics.
+                </p>
+                <p>
+                  In robotics, bionics and biomimetics are used to apply the way animals move to the design of robots.
+                </p>
+                <p>
+                  In medicine, bionics means the replacement or enhancement of organs or other body parts by mechanical versions. Bionic implants differ from mere prostheses by mimicking the original function very closely, or even surpassing it.
+                </p>
               </div>
               <div id="Embedded" class="tabcontent">
                 <h3>Embedded Systems</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <p>
+                  Embedded systems are special-purpose computing systems embedded in application environments or in other computing systems that provide specialized support.
+                </p>
+                <p>
+                  The decreasing cost of processing power, combined with the decreasing cost of memory and the ability to design low-cost systems on chip, has led to the development and deployment of embedded computing systems in a wide range of application environments.
+                </p>
+                <p>
+                  Examples include network adapters for computing systems and mobile phones, control systems for home appliances, air conditioning, industrial systems, cars, and surveillance systems.
+                </p>
+                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems">Source</a>
               </div>
               <div id="Domotics" class="tabcontent">
                 <h3>Domotics</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <p>
+                  Also known as home automation, it is the encounter of information technology, electrotechnics and electronics that makes a home become "smart". It's the tool that allows us to control systems, devices and automations with the aim of increasing the living and comfort quality of the domestic space
+                </p>
+                <p>
+                  The word "domotics" (and "domotica" when used as a verb) is a contraction of the Latin word for a home (domus) and the word robotics.[1] The word "smart" in "smart home" refers to the system being aware of the state of its devices, which is done through the information and communication technologies (ICT) protocol and the Internet of Things (IoT).
+                </p>
+                <a href="">Source</a>
               </div>
               <div id="IoT" class="tabcontent">
                 <h3>Internet of Things</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <p>
+                  The term IoT encompasses everything connected to the internet, but it is increasingly being used to define objects that "talk" to each other via Internet. "Simply, the Internet of Things is made up of devices – from simple sensors to smartphones and wearables – connected together," Matthew Evans, the IoT programme head at techUK, says.
+                </p>
+                <p>
+                  By combining these connected devices with automated systems, it is possible to "gather information, analyse it and create an action" to help someone with a particular task, or learn from a process.
+                </p>
+                <p>
+                  "It's about networks, it's about devices, and it's about data," Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more connected world."
+                  </p>
+                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot">Source</a>
               </div>
               <div id="Energies" class="tabcontent">
                 <h3>Renewable Energies</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <p>
+                  Renewable energy, often referred to as clean energy, comes from natural sources or processes that are constantly replenished. For example, sunlight or wind keep shining and blowing, even if their availability depends on time and weather.
+                </p>
+                <p>Examples:</p>
+                <ul class="nodesList">
+                  <li class="node black">Solar Energy</li>
+                  <li class="node black">Wind Energy</li>
+                  <li class="node black">Ocean Energy (Waves)</li>
+                  <li class="node black">Biomass Energy</li>
+                  <li class="node black">Hydroelectric Power</li>
+                  <li class="node black">Geothermal Energy</li>
+                </ul>
+                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts">Source</a>
               </div>
               <div id="SocialEnt" class="tabcontent">
                 <h3>Social Entrepreneurship</h3>
-                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:[2][3]
+                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:
                 </p>
                 <ul class="nodesList">
                   <li class="node black">Whose primary aim is to address a social problem.</li>
@@ -341,12 +399,12 @@
         <article class="contact">
           <section class="contact-item contact-info">
             <p><i class="fas fa-map-marker-alt fa-fw icon contact-icon"></i>  CDMX, Mexico</p>
-            <p>
+            <!-- <p>
               <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72  
               <i class="fab fa-whatsapp icon im-icon"></i>
               <i class="fab fa-telegram icon im-icon"></i>
               <i class="fab fa-viber icon im-icon"></i>
-            </p>
+            </p> -->
             <p><i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com</p>
             <p>
               <a href="https://ksquare.university/es/" target="_blank">
@@ -354,13 +412,14 @@
               </a>
               <span>carlos.escalona@theksquaregroup.com</span>
             </p>
-            <p><a href="https://www.linkedin.com/in/carlesccont/" target="_blank">
+            <p>
+              <a href="https://www.linkedin.com/in/carlesccont/" target="_blank" class="linkedin">
                 <i class="fab fa-linkedin fa-fw icon contact-icon"></i>  carl-and-esc-cont
-            </a></p>
-            <p><a href="https://github.com/CarlosAEC-KS" target="_blank">
+              </a>
+            </p>
+            <p><a href="https://github.com/CarlosAEC-KS" target="_blank" class="github">
               <i class="fab fa-github fa-fw icon contact-icon"></i>  CarlosAEC-KS
             </a></p>
-            <!-- <i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i> -->
             <p class="btn">
               <a href="javascript:delay('#contactFormSection',1100)">
                 <button id="showForm">Send me a message!</button>
@@ -384,6 +443,7 @@
       </section>
     <!-- END PAGE CONTENT -->
     </main>
+
     <!-- Footer -->
     <footer>
       <section id="references" class="references">
@@ -411,12 +471,13 @@
         </p>
         <p>Hosted in
           <a href="https://pages.github.com" target="_blank">
-            <span class="github"><i class="fab fa-github"></i><span>Pages</span></span>
+            <span class="github-pages"><i class="fab fa-github"></i><span>Pages</span></span>
           </a>
         </p><br>
       </section>
     <!-- End footer -->
     </footer>
+
     <!--Interactivity-->
     <script type:"text/javascript" src="interactivity.js"></script>
     <!---->
