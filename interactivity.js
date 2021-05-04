@@ -1,6 +1,7 @@
 window.onload = function() {
   console.log("Page loaded...");
-  var detailedSections = document.getElementsByTagName('summary');
+  var detailedSections = document.getElementsByClassName('summary-main-section');
+  console.log(detailedSections);
   for(let i = 0; i < detailedSections.length; i++) {
     const hr = `hr${i+1}`;
     const arrow = `arrow${i+1}`;

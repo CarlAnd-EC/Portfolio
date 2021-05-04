@@ -75,9 +75,9 @@
         <article class="heading">
           <h1>
             <i class="fas fa-angle-double-right"></i>
-            <span class="w3-hide-small"> Hi! I'm </span> Carlos 
-            <span class="w3-hide-small">Andrés</span> Escalona
-            <span class="w3-hide-small">Contreras</span> 
+            <span class="hide-small"> Hi! I'm </span> Carlos 
+            <span class="hide-small">Andrés</span> Escalona
+            <span class="hide-small">Contreras</span> 
             <span class="blink">_</span>
           </h1>
           <h3>Digital Systems and Robotics Engineer</h3><br>
@@ -90,7 +90,7 @@
       <!-- About Section -->
       <section id="about">
         <details open>
-          <summary>
+          <summary class="summary-main-section">
             <h2>
               <i id="arrow1" class="fas fa-angle-double-right "></i>
               About me
@@ -122,8 +122,8 @@
                 <div class="cell image">
                   <p><img src="./images/icons/logos/Tec_logo.png" alt="TEC" class="shield"></p>
                 </div>
-                <div class="cell text"><p>ITESM (Tec de Monterrey)</p></div>
-                <div class="cell text"><p>August 2015 - December 2019</p></div>
+                <div class="cell text"><p>ITESM <span class="hide-small">(Tec de Monterrey)</span></p></div>
+                <div class="cell text"><p>August 2015 - Dec<span class="hide-small">ember</span> 2019</p></div>
                 <div class="cell text"><p>Digital Systems and Robotics Engineer</p></div>
                 <div class="cell image">
                   <p><img src="./images/icons/logos/CECyT9-logo.png" alt="CECyT9" class="shield rounded"></p>
@@ -140,7 +140,7 @@
       <!-- Interests Section -->
       <section id="interests">
         <details open>
-          <summary>
+          <summary class="summary-main-section">
             <h2>
               <i id="arrow2" class="fas fa-angle-double-right "></i>
               Interests
@@ -156,7 +156,8 @@
             <li class="node">Renewable energies</li>
             <li class="node">Social entrepreneurship</li>
           </ul> -->
-          <article class="tabs-section">
+          <!-- Tabs section for large screens -->
+          <article class="tabs-section hide-small">
             <aside class="tabs">
               <button class="tablink" onclick="describe(event,'STEM')">STEM Education</button>
               <button class="tablink" onclick="describe(event,'Bionics')">Bionics</button>
@@ -263,6 +264,125 @@
               </div>
             </section>
           </article>
+
+          <!-- Tabs section for small screens -->
+          <article class="tabs-section-mobile hide-large">
+            <details>
+              <summary class="tab-title">STEM Education</summary>
+              <div id="STEM" class="tab-content">
+                <h3>STEM Education</h3>
+                <p>STEM stands for:</p>
+                <ul class="nodesList">
+                  <li class="node black">Science</li>
+                  <li class="node black">Technology</li>
+                  <li class="node black">Engineering</li>
+                  <li class="node black">Mathematics</li>
+                </ul>
+                <p>
+                  It is a broad term used to group together these four academic and specific disciplines.
+                </p>
+                <p>
+                  STEM education is a curriculum based on the idea of educating students in these disciplines in an interdisciplinary and applied approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a cohesive learning paradigm based on real-world applications.
+                </p>
+                <a href="https://www.livescience.com/43296-what-is-stem-education.html">Source</a>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title">Bionics</summary>
+              <div id="Bionics" class="tab-content">
+                <h3>Bionics</h3>
+                <p>
+                  Bionics or biologically inspired engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
+                </p>
+                <p>
+                  The word bionic, coined by Jack E. Steele in August 1958, is a portmanteau from biology and electronics.
+                </p>
+                <p>
+                  In robotics, bionics and biomimetics are used to apply the way animals move to the design of robots.
+                </p>
+                <p>
+                  In medicine, bionics means the replacement or enhancement of organs or other body parts by mechanical versions. Bionic implants differ from mere prostheses by mimicking the original function very closely, or even surpassing it.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title">Embedded systems</summary>
+              <div id="Embedded" class="tab-content">
+                <h3>Embedded Systems</h3>
+                <p>
+                  Embedded systems are special-purpose computing systems embedded in application environments or in other computing systems that provide specialized support.
+                </p>
+                <p>
+                  The decreasing cost of processing power, combined with the decreasing cost of memory and the ability to design low-cost systems on chip, has led to the development and deployment of embedded computing systems in a wide range of application environments.
+                </p>
+                <p>
+                  Examples include network adapters for computing systems and mobile phones, control systems for home appliances, air conditioning, industrial systems, cars, and surveillance systems.
+                </p>
+                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems">Source</a>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title">Domotics</summary>
+              <div id="Domotics" class="tab-content">
+                <h3>Domotics</h3>
+                <p>
+                  Also known as home automation, it is the encounter of information technology, electrotechnics and electronics that makes a home become "smart". It's the tool that allows us to control systems, devices and automations with the aim of increasing the living and comfort quality of the domestic space
+                </p>
+                <p>
+                  The word "domotics" (and "domotica" when used as a verb) is a contraction of the Latin word for a home (domus) and the word robotics.[1] The word "smart" in "smart home" refers to the system being aware of the state of its devices, which is done through the information and communication technologies (ICT) protocol and the Internet of Things (IoT).
+                </p>
+                <a href="">Source</a>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title">Internet of Things</summary>
+              <div id="IoT" class="tab-content">
+                <h3>Internet of Things</h3>
+                <p>
+                  The term IoT encompasses everything connected to the internet, but it is increasingly being used to define objects that "talk" to each other via Internet. "Simply, the Internet of Things is made up of devices – from simple sensors to smartphones and wearables – connected together," Matthew Evans, the IoT programme head at techUK, says.
+                </p>
+                <p>
+                  By combining these connected devices with automated systems, it is possible to "gather information, analyse it and create an action" to help someone with a particular task, or learn from a process.
+                </p>
+                <p>
+                  "It's about networks, it's about devices, and it's about data," Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more connected world."
+                  </p>
+                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot">Source</a>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title">Renewable energies</summary>
+              <div id="Energies" class="tab-content">
+                <h3>Renewable Energies</h3>
+                <p>
+                  Renewable energy, often referred to as clean energy, comes from natural sources or processes that are constantly replenished. For example, sunlight or wind keep shining and blowing, even if their availability depends on time and weather.
+                </p>
+                <p>Examples:</p>
+                <ul class="nodesList">
+                  <li class="node black">Solar Energy</li>
+                  <li class="node black">Wind Energy</li>
+                  <li class="node black">Ocean Energy (Waves)</li>
+                  <li class="node black">Biomass Energy</li>
+                  <li class="node black">Hydroelectric Power</li>
+                  <li class="node black">Geothermal Energy</li>
+                </ul>
+                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts">Source</a>
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title last">Social entrepreneurship</summary>
+              <div id="SocialEnt" class="tab-content last">
+                <h3>Social Entrepreneurship</h3>
+                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:
+                </p>
+                <ul class="nodesList">
+                  <li class="node black">Whose primary aim is to address a social problem.</li>
+                  <li class="node black">Which is financially self-sufficient.</li>
+                  <li class="node black">Which does not pay dividends to its owners.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
         </details>
       <!-- End Interests Section -->
       </section>
@@ -270,7 +390,7 @@
       <!-- Skills Section -->
       <section id="skills">
         <details open>
-          <summary>
+          <summary class="summary-main-section">
             <h2>
               <i id="arrow3" class="fas fa-angle-double-right "></i>
               Technical Skills
@@ -297,7 +417,7 @@
       <!-- Projects Section -->
       <section id="projects">
         <details open>
-          <summary>
+          <summary class="summary-main-section">
             <h2>
               <i id="arrow4" class="fas fa-angle-double-right "></i>
               Projects
@@ -376,7 +496,7 @@
       <!-- Hobbies Section -->
       <section id="hobbies">
         <details open>
-          <summary>
+          <summary class="summary-main-section">
             <h2>
               <i id="arrow5" class="fas fa-angle-double-right "></i>
               Hobbies
@@ -410,7 +530,7 @@
               <a href="https://ksquare.university/es/" target="_blank">
                 <i class="kg-logo w3-margin-right"></i>
               </a>
-              <span>carlos.escalona@theksquaregroup.com</span>
+              carlos.escalona<span class="hide-small">@theksquaregroup.com</span>
             </p>
             <p>
               <a href="https://www.linkedin.com/in/carlesccont/" target="_blank" class="linkedin">

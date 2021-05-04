@@ -208,7 +208,7 @@ details > summary {
     grid-template-rows: repeat(2, max-content);
 }
 .presentation-item{
-    /* border: 0.1em dashed teal; */
+    border: 0.1em dashed teal;
 }
 .presentation-item.moto{
     grid-column: span 1;
@@ -274,12 +274,15 @@ details > summary {
     max-width: 10vw;
     max-height: 15vh;
 }
-/* Vertical tab gallery */
+/* Vertical tab gallery for large screens*/
 /* Style the tab */
 .tabs-section{
     width: 75vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, max-content);
+}
+.tabs-section.hide-small{
+    display: grid;
 }
 .tabs {
     border: none;
@@ -288,7 +291,6 @@ details > summary {
     min-width: 16ch;
     max-width: max-content;
 }
-  
   /* Style the buttons that are used to open the tab content */
   .tabs button.tablink {
     display: block;
@@ -307,12 +309,10 @@ details > summary {
     cursor: pointer;
     transition-duration: 0.3s;
   }
-  
   /* Change background color of buttons on hover */
   .tabs button:hover {
     background-color: #005050;
   }
-  
   /* Create an active/current "tab button" class */
   .tabs button.active {
     background-color: #002222;
@@ -320,7 +320,7 @@ details > summary {
   .description-zone{
     color: black;
     width: 100%;
-    grid-column: span 2;
+    grid-column: span 1;
   }
   /* Style the tab content */
   .description-zone .tabcontent {
@@ -379,7 +379,54 @@ details > summary {
     text-align: center;
     vertical-align: middle;
 }
+
+/* Vertical tab gallery for small screens*/
+/* Style the tab */
+.tabs-section-mobile{
+    width: 95vw;
+}
+/* Style the buttons that are used to open the tab content */
+.tab-title {
+    color: var(--bodyF);
+    background-color: inherit;
+    padding: 2ch 1ch 2ch 2ch;
+    /* width: 25vw;
+    min-width: 22ch; */
+    text-align: center;
+    outline: none;
+    border: 2px solid #005050;
+    border-bottom: none;
+    box-shadow: 8px 0px 5px black;
+    cursor: pointer;
+}
+.tab-title.last{
+    border-bottom: 2px solid #005050;
+    box-shadow: 8px 8px 5px black,0px 0px 5px black;
+}
+
+/* Create an active/current "tab button" class */
+.tab-title.active {
+    background-color: #002222;
+}
+
+  /* Style the tab content */
+.tab-content {
+    color: black;
+    padding: 0ch 1ch 0ch 2ch;
+    border: 5px solid;
+    border-top: none;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d,#d74e09,orange);
+    background-color:var(--bodyF);
+    box-shadow: 8px 0px 5px black;
+    transition-duration: 1s;
+    overflow-y: auto;
+}
+.tab-content.last{
+    box-shadow: 8px 8px 5px black,0px 0px 5px black;
+}
 .w3-row-padding img {margin-bottom: 12px}
+
 /* Ksquare University Logo Icon*/
 .kg-logo {
     height: 54px;
@@ -495,6 +542,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 .references{
     margin: 0px 150px;
     min-width: 35ch;
+    text-align: center;
 }
 .references p{
     padding: 1ch 0.5ch 0.5ch 0.5ch;
@@ -707,7 +755,12 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     background-color: #3e8e41;
   } */
 
-
+span.hide-small{
+    display: inline-block;
+}
+.hide-large{
+    display: none;
+}
 /* Animations */
 @keyframes blinker {
     50% {
@@ -813,41 +866,40 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 
 /*Responsive design (screen width smaller than 600px)*/
 @media only screen and (orientation:portrait) and (max-width: 600px) {
+    span.hide-small,.tabs-section.hide-small{display: none}
+    .hide-large{display: block}
     /* .navbar-top{display: grid;} */
     .topcorner{top: 60px;z-index: 1;}
     main {margin-left: 0}
-    details > p {max-width: 40ch}
-    .references {margin: 0px 1em}
-    .references p {margin-left: 0px}
+    header,main,footer{width:100vw}
+    details > p {max-width: 20ch}
     .sidebar,.topping {display: none}
     .topcorner,.logo-section,.logo {position: absolute}
     .expand-hr, .presentation, .tabs-section, .container, .contact {width: 95vw}
-    .profilePhoto{min-height: 15vh;max-height:20vh;padding-bottom: 0;padding-left: 0.1ch;}
-    .presentation-item.moto{min-width: 35ch;max-width: min-content;padding-left: 1ch;}
+    .profilePhoto{min-height: 10vh;max-height:20vh;padding-bottom: 0;padding-left: 1px;}
+    /* Mozilla */
+    /* .presentation-item.moto{min-width: 10ch;max-width: 95vw;padding-left: 8px;} */
+    /* Chromium */
+    .presentation-item.moto{min-width: 10ch;max-width: 88vw;padding-left: 8px;}
     .presentation-item.moto p{min-width: 10ch;max-width:100%}
-    .presentation-item.education{padding: 0ch 0ch}
+    .presentation-item.education{max-width: 95vw;padding: 0px 0px}
     .presentation-item.education h2{padding-left: 1ch}
     .cell.text{
-        min-width: 5ch;
-        width: 10ch;
-        padding: 0ch 0ch;
+        min-width: 8ch;
+        padding: 0px 5px;
         max-height: max-content;
-    }
-    .cell.text p{
-        width: 10ch;
+    }.cell.text p{
+        width: 8ch;
         margin: 0;
-        padding: 10% 10%;
-    }
-    .cell.image p{
+        padding: 10px 10px;
+    }.cell.image p{
         margin-left: 0.25em;
         padding: 0em 0em;
-    }
-    .shield{
+    }.shield{
         max-width: 50px;
         max-height: 50px;
         vertical-align: middle;
-    }
-    .shield.rounded{
+    }.shield.rounded{
         min-width: 20px;
         min-height: 20px;
         max-width: 50px;
@@ -855,11 +907,19 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
         margin: 1em 0;
         vertical-align: middle;
     }
-    .tabs button.tablink {min-width: 16ch;padding: 1.2ch 0ch 1.2ch 1ch;}
-    .description-zone .tabcontent {height: 42ch;padding: 0ch 0.5ch 0ch 1ch;}
-    .description-zone .tabcontent.active {width: 58vw}
+
+    .tabs{min-width: 15ch}
+    .tabs button.tablink {min-width: 15ch;padding: 1.2ch 0ch 1.2ch 4px;}
+    .description-zone{width:50vw}
+    .description-zone .tabcontent {height: 42ch;padding: 0px 2px 0px 4px;}
+    .description-zone .tabcontent.active {width: 50vw}
+
     .contact{grid-template-columns: repeat(1, max-content)}
     .contact-item.contact-form{background-color: #003f52;border: none;border-radius: 0;}
+    .nodesList{padding-inline-start: 4px;}
+    .node,.node.black::before{padding-left: 0px;margin-left: 0px;}
+    .references {margin: 0px 0px;min-width: 18ch;}
+    .references p {margin-left: 0px}
     .fa-opera,.fa-firefox-browser,.fa-chrome{animation: fade 2s ease infinite alternate-reverse;}
     .fa-html5,.fa-css3-alt,.fa-js-square,.fa-node-js,.fa-aws,.fa-git{animation: fade 2s ease infinite alternate-reverse;}
     .fa-opera{color:darkred}
