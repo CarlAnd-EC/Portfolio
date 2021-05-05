@@ -31,42 +31,57 @@
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav id="sideNavbar" class="sidebar">
       <a href="#about">
-        <p class="menu"><i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fa fa-user navIcon"></i><br><span class="iconName">ABOUT</span>
+        </p>
       </a>
       <a href="#interests">
-        <p class="menu"><i class="fas fa-microchip navIcon"></i><br><span class="iconName">INTERESTS</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fas fa-microchip navIcon"></i><br><span class="iconName">INTERESTS</span>
+        </p>
       </a>
       <a href="#skills">
-        <p class="menu"><i class="fas fa-brain navIcon"></i><br><span class="iconName">SKILLS</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fas fa-brain navIcon"></i><br><span class="iconName">SKILLS</span>
+        </p>
       </a>
       <a href="#projects">
-        <p class="menu"><i class="fas fa-laptop-code navIcon"></i><br><span class="iconName">PROJECTS</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fas fa-laptop-code navIcon"></i><br><span class="iconName">PROJECTS</span>
+        </p>
       </a>
       <a href="#hobbies">
-        <p class="menu"><i class="fas fa-volleyball-ball navIcon"></i><br><span class="iconName">HOBBIES</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fas fa-volleyball-ball navIcon"></i><br><span class="iconName">HOBBIES</span>
+        </p>
       </a>
       <a href="#contact">
-        <p class="menu"><i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span></p>
+        <p class="section-link" onclick="highlightSelectedBtn(event,'section-link')">
+          <i class="fa fa-envelope navIcon"></i><br><span class="iconName">CONTACT</span>
+        </p>
       </a>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <nav class="w3-top w3-bar navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
-        <a href="#" class="w3-bar-item button">
-          <img src="./images/icons/logos/logo.png" alt="HOME">
-        </a>
-        <a href="#about" class="w3-bar-item w3-button navbar-button">ABOUT</a>
-        <a href="#contact" class=" w3-bar-item w3-button navbar-button">CONTACT</a>
-        <!-- Unicode 3 bars: -->
-        <!-- &#9776; -->
-        <div class="w3-bar-item w3-button navbar-button">
-          <button id="dropBtn" class="dropbtn" ><i class="fa fa-bars"></i></button>
-          <div id="dropdownContent" class="dropdown-content">
-            <a href="#interests">INTERESTS</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#hobbies">HOBBIES</a>
-          </div>
+    <nav class="navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
+      <a id="homeBtn" href="#" class="navbar-button home">
+        <img src="./images/icons/logos/logo.png" alt="HOME">
+      </a>
+      <a href="#about" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
+        ABOUT
+      </a>
+      <a href="#contact" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
+        CONTACT
+      </a>
+      <!-- Unicode 3 bars: &#9776;-->
+      <div class="navbar-button dropdown">
+        <button id="dropBtn" class="dropbtn" ><i class="fa fa-bars"></i></button>
+        <div id="dropdownContent" class="dropdown-content">
+          <a href="#interests">INTERESTS</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#hobbies">HOBBIES</a>
         </div>
+      </div>
     </nav>
 
     <!-- Header/Home -->
@@ -147,18 +162,9 @@
               <span class="blink">_</span><hr id="hr2">
             </h2>
           </summary>
-          <!-- <ul class="nodesList">
-            <li class="node">STEM Education</li>
-            <li class="node">Bionics</li>
-            <li class="node">Embedded systems</li>
-            <li class="node">Domotics</li>
-            <li class="node">Internet of Things</li>
-            <li class="node">Renewable energies</li>
-            <li class="node">Social entrepreneurship</li>
-          </ul> -->
           <!-- Tabs section for large screens -->
-          <article class="tabs-section hide-small">
-            <aside class="tabs">
+          <article class="vertical-tabs-section hide-small">
+            <aside class="tabs-section">
               <button class="tablink" onclick="describe(event,'STEM')">STEM Education</button>
               <button class="tablink" onclick="describe(event,'Bionics')">Bionics</button>
               <button class="tablink" onclick="describe(event,'Embedded')">Embedded systems</button>
@@ -269,7 +275,7 @@
           <article class="tabs-section-mobile hide-large">
             <details>
               <summary class="tab-title">STEM Education</summary>
-              <div id="STEM" class="tab-content">
+              <div class="tab-content">
                 <h3>STEM Education</h3>
                 <p>STEM stands for:</p>
                 <ul class="nodesList">
@@ -289,7 +295,7 @@
             </details>
             <details>
               <summary class="tab-title">Bionics</summary>
-              <div id="Bionics" class="tab-content">
+              <div class="tab-content">
                 <h3>Bionics</h3>
                 <p>
                   Bionics or biologically inspired engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
@@ -307,7 +313,7 @@
             </details>
             <details>
               <summary class="tab-title">Embedded systems</summary>
-              <div id="Embedded" class="tab-content">
+              <div class="tab-content">
                 <h3>Embedded Systems</h3>
                 <p>
                   Embedded systems are special-purpose computing systems embedded in application environments or in other computing systems that provide specialized support.
@@ -323,7 +329,7 @@
             </details>
             <details>
               <summary class="tab-title">Domotics</summary>
-              <div id="Domotics" class="tab-content">
+              <div class="tab-content">
                 <h3>Domotics</h3>
                 <p>
                   Also known as home automation, it is the encounter of information technology, electrotechnics and electronics that makes a home become "smart". It's the tool that allows us to control systems, devices and automations with the aim of increasing the living and comfort quality of the domestic space
@@ -336,7 +342,7 @@
             </details>
             <details>
               <summary class="tab-title">Internet of Things</summary>
-              <div id="IoT" class="tab-content">
+              <div class="tab-content">
                 <h3>Internet of Things</h3>
                 <p>
                   The term IoT encompasses everything connected to the internet, but it is increasingly being used to define objects that "talk" to each other via Internet. "Simply, the Internet of Things is made up of devices – from simple sensors to smartphones and wearables – connected together," Matthew Evans, the IoT programme head at techUK, says.
@@ -352,7 +358,7 @@
             </details>
             <details>
               <summary class="tab-title">Renewable energies</summary>
-              <div id="Energies" class="tab-content">
+              <div class="tab-content">
                 <h3>Renewable Energies</h3>
                 <p>
                   Renewable energy, often referred to as clean energy, comes from natural sources or processes that are constantly replenished. For example, sunlight or wind keep shining and blowing, even if their availability depends on time and weather.
@@ -371,7 +377,7 @@
             </details>
             <details>
               <summary class="tab-title last">Social entrepreneurship</summary>
-              <div id="SocialEnt" class="tab-content last">
+              <div class="tab-content last">
                 <h3>Social Entrepreneurship</h3>
                 <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:
                 </p>
@@ -504,6 +510,15 @@
             </h2>
           </summary>
           <p>Slideshow</p>
+          <ul class="nodesList">
+            <li class="node white">Watching anime</li>
+            <li class="node white">Dancing</li>
+            <li class="node white">Drawing</li>
+            <li class="node white">Writing</li>
+            <li class="node white">Boxing</li>
+            <li class="node white">Cycling</li>
+            <li class="node white">Eating</li>
+          </ul>
         </details>
         
       <!-- End Hobbies Section -->
@@ -525,7 +540,9 @@
               <i class="fab fa-telegram icon im-icon"></i>
               <i class="fab fa-viber icon im-icon"></i>
             </p> -->
-            <p><i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com</p>
+            <!-- <p>
+              <i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com
+            </p> -->
             <p>
               <a href="https://ksquare.university/es/" target="_blank">
                 <i class="kg-logo w3-margin-right"></i>
@@ -568,7 +585,9 @@
     <footer>
       <section id="references" class="references">
         <br>
-        <p>Designed by Carlos Escalona April, 2021</p>
+        <p>
+          Designed by <b>Carlos <span class="hide-small">Andrés</span> Escalona <span class="hide-small">Contreras</span></b> April, 2021
+        </p>
         <p>Powered by 
           <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3schools">
             W3.CSS

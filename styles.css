@@ -169,15 +169,108 @@ details > summary {
 }
 .navIcon {font-size: 32px}
 .iconName{font-size: 12px}
-.menu{
+.section-link{
     margin: 0;
     padding: 1ch 0ch;
 }
-.menu:hover{
+.section-link.active, .section-link:hover{
     color: teal;
     background-color: black;
 }
 
+/* Navbar on small screens (Hidden on medium and large screens) */
+.navbar-top{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr); */
+    color: white;
+    text-align: center;
+    background-color: black;
+    height: max-content;
+    /* z-index: 20; */
+}
+.navbar-button{
+    /* display: inline-block; */
+    /* grid-row: span 1;
+    grid-column: span 1; */
+    display: block;
+    float: left;
+    width: auto;
+    border: none;
+    outline: 0;
+    padding: 18px 18px;
+}
+.navbar-button.active,.navbar-button:hover{
+    background-color: teal;
+}
+.navbar-button.home{
+    padding: 0px;
+    margin: 8px 16px 8px 16px;
+    border-radius: 50%;
+}
+.navbar-button.home.active,.navbar-button.home:hover{
+    box-shadow: 0px 0px 5px 8px teal;
+}
+
+.navbar-top a img{
+    width: 45px;
+    vertical-align: middle;
+} 
+
+/* The container needed to position the dropdown content */
+.dropdown {
+    float: right;
+    position: relative;
+    width: min-content;
+    padding: 0px;
+}
+
+/*Dropdown Button */
+.dropbtn {
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+    padding: 16px 20px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.dropbtn.active {
+    background-color: teal;
+    border: 2px solid #00c7eb;
+}
+.dropbtn:hover {
+    background-color: teal;
+    /* background-color: #003636; */
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    color: var(--bodyF);
+    position: fixed;
+    margin-left: -50px;
+    max-width: max-content;
+    background-color: var(--sidebar);
+    z-index: 1;
+}
+.dropdown-content.active {
+    display: block;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+}
+.dropdown-content a:hover {
+    color: teal;
+    background-color: black;
+}
 
 .cover{
     background-color: black;
@@ -208,7 +301,7 @@ details > summary {
     grid-template-rows: repeat(2, max-content);
 }
 .presentation-item{
-    border: 0.1em dashed teal;
+    /* border: 0.1em dashed teal; */
 }
 .presentation-item.moto{
     grid-column: span 1;
@@ -276,7 +369,7 @@ details > summary {
 }
 /* Vertical tab gallery for large screens*/
 /* Style the tab */
-.tabs-section{
+.vertical-tabs-section{
     width: 75vw;
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -284,7 +377,7 @@ details > summary {
 .tabs-section.hide-small{
     display: grid;
 }
-.tabs {
+.tabs-section {
     border: none;
     background-color: #222222;
     grid-column: span 1;
@@ -292,7 +385,7 @@ details > summary {
     max-width: max-content;
 }
   /* Style the buttons that are used to open the tab content */
-  .tabs button.tablink {
+  .tabs-section button.tablink {
     display: block;
     color: var(--bodyF);
     background-color: inherit;
@@ -310,11 +403,11 @@ details > summary {
     transition-duration: 0.3s;
   }
   /* Change background color of buttons on hover */
-  .tabs button:hover {
+  .tabs-section button:hover {
     background-color: #005050;
   }
   /* Create an active/current "tab button" class */
-  .tabs button.active {
+  .tabs-section button.active {
     background-color: #002222;
   }
   .description-zone{
@@ -326,7 +419,10 @@ details > summary {
   .description-zone .tabcontent {
     width: 0;
     opacity: 0;
+    /* Mozilla */
     height: 46.5ch;
+    /* Chromium */
+    height: 45ch;
     padding: 0ch 1ch 0ch 2ch;
     border: 5px solid;
     border-left: none;
@@ -340,22 +436,26 @@ details > summary {
   }
 
   .description-zone .tabcontent.active {
+    /* Mozilla */
     width: 50vw;
+    /* Chromium */
+    width:45vw;
     opacity: 1;
   }
   .description-zone .tabcontent p{
     color: black;
   }
+
 .nodesList {
     list-style: none;
 }
 .node {
-    color: black;
+    color: inherit;
     padding-left: 1ch;
 }
 .node.black::before{
     content: url('images/icons/nodes_bk.png');
-    margin-left: -1ch;
+    margin-left: 1ch;
     margin-right: 1ch;
     font-size: 1.8em;
     width: 1ch;
@@ -367,8 +467,8 @@ details > summary {
     vertical-align: middle;
 }
 .node.white::before{
-    content: url('images/icons/nodes-wt.svg');
-    margin-left: -1ch;
+    content: url('images/icons/nodes-bp1.svg');
+    margin-left: 1ch;
     margin-right: 1ch;
     font-size: 1.8em;
     width: 1ch;
@@ -381,11 +481,9 @@ details > summary {
 }
 
 /* Vertical tab gallery for small screens*/
-/* Style the tab */
 .tabs-section-mobile{
     width: 95vw;
 }
-/* Style the buttons that are used to open the tab content */
 .tab-title {
     color: var(--bodyF);
     background-color: inherit;
@@ -403,13 +501,9 @@ details > summary {
     border-bottom: 2px solid #005050;
     box-shadow: 8px 8px 5px black,0px 0px 5px black;
 }
-
-/* Create an active/current "tab button" class */
 .tab-title.active {
     background-color: #002222;
 }
-
-  /* Style the tab content */
 .tab-content {
     color: black;
     padding: 0ch 1ch 0ch 2ch;
@@ -419,12 +513,12 @@ details > summary {
     border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d,#d74e09,orange);
     background-color:var(--bodyF);
     box-shadow: 8px 0px 5px black;
-    transition-duration: 1s;
-    overflow-y: auto;
+    overflow: hidden;
 }
 .tab-content.last{
     box-shadow: 8px 8px 5px black,0px 0px 5px black;
 }
+
 .w3-row-padding img {margin-bottom: 12px}
 
 /* Ksquare University Logo Icon*/
@@ -440,7 +534,9 @@ details > summary {
 .kg:hover{
     text-shadow: 2px 2px 5px salmon;
 }
+
 .languages{height: 8ch}
+
 .contact{
     width: 75vw;
     display: grid;
@@ -673,87 +769,6 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     opacity: 1;
   }
 
-/* Style The Dropdown Button */
-.navbar-top{
-    /* top: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-    display: block; */
-    /* grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr); */
-    color: white;
-    text-align: center;
-    background-color: black;
-    height: max-content;
-    /* z-index: 20; */
-}
-.navbar-button{
-    /* display: inline-block; */
-    /* grid-row: span 1;
-    grid-column: span 1; */
-    padding: 1ch 2ch;
-    float: left;
-    width: auto;
-    border: none;
-    display: block;
-    outline: 0;
-}
-.navbar-top a img{
-    width: 4ch;
-    vertical-align: middle;
-} 
-
-  /* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    width: min-content;
-    display: inline-block;
-    border: 4px orange solid;
-}
-.dropbtn {
-    color: white;
-    margin: 0;
-    /* padding: 1.5ch 1.8ch; */
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-.dropbtn.active {
-    background-color: #0080807e;
-}
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    color: var(--bodyF);
-    position: fixed;
-    /* margin-top: 7px;
-    margin-left: -80px; */
-    max-width: max-content;
-    background-color: var(--sidebar);
-    z-index: 1;
-  }
-  .dropdown-content.active {
-    display: block;
-  }
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    display: block;
-    padding: 12px 1ch;
-  }
-  
-  .dropdown-content a:hover {
-    color: teal;
-    background-color: black;
-  }
-
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  /* .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  } */
 
 span.hide-small{
     display: inline-block;
@@ -866,7 +881,7 @@ span.hide-small{
 
 /*Responsive design (screen width smaller than 600px)*/
 @media only screen and (orientation:portrait) and (max-width: 600px) {
-    span.hide-small,.tabs-section.hide-small{display: none}
+    span.hide-small,.vertical-tabs-section.hide-small{display: none}
     .hide-large{display: block}
     /* .navbar-top{display: grid;} */
     .topcorner{top: 60px;z-index: 1;}
@@ -910,6 +925,7 @@ span.hide-small{
 
     .tabs{min-width: 15ch}
     .tabs button.tablink {min-width: 15ch;padding: 1.2ch 0ch 1.2ch 4px;}
+    /* Mozilla */
     .description-zone{width:50vw}
     .description-zone .tabcontent {height: 42ch;padding: 0px 2px 0px 4px;}
     .description-zone .tabcontent.active {width: 50vw}
