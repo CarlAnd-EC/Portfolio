@@ -13,6 +13,9 @@ window.onload = function() {
   console.log("Page loaded...");
 }
 const main = document.getElementById("main");
+const logoBtn = document.getElementById("logo");
+const homeBtn = document.getElementById("homeBtn");
+const dropBtn = document.getElementById("dropBtn");
 const sideNavbar = document.getElementById("sideNavbar");
 const topping = document.getElementById("topping");
 const showMenu = document.getElementById("show");
@@ -21,13 +24,18 @@ const showForm = document.getElementById("showForm");
 const contFormSec = document.getElementById("contactFormSection");
 const contactForm = document.getElementById("contactForm");
 const submitMsg = document.getElementById("submitMsg");
-const homeBtn = document.getElementById("homeBtn");
-const dropBtn = document.getElementById("dropBtn");
 
 // Get all elements with class="tabcontent"
 description = document.getElementsByClassName("tabcontent");
 for (let i = 0; i < description.length; i++) {
   description[i].style.zIndex = `${i}`;
+}
+function speedUpRotation(){
+  const logoSection = document.getElementsByClassName("logo-section");
+  logoSection[0].style.animation = "400ms rotate linear infinite";
+  setTimeout(() => {
+    logoSection[0].style.animation = "4s rotate linear infinite";
+  }, 500);
 }
 function clickGlow(){
   homeBtn.classList.toggle("active");
@@ -41,6 +49,12 @@ function highlightSelectedBtn(event,className){
     button[i].classList.remove("active");
   }
   event.currentTarget.classList.add("active");
+}
+function resetSelection(className){
+  const button = document.getElementsByClassName(className);
+  for (let i = 0; i < button.length; i++) {
+    button[i].classList.remove("active");
+  }
 }
 function openNav() {
   // sideNavbar.style.width = "100px";
@@ -104,12 +118,18 @@ function submitMsgEffect(){
   }, 1100);
 }
 
-
 hideMenu.onclick = () => closeNav();
 showMenu.onclick = () => openNav();
 showForm.onclick = () => showContactForm();
 submitMsg.onclick = () => submitMsgEffect();
-homeBtn.onclick = () => clickGlow();
+logoBtn.onclick = () => {
+  resetSelection('section-link');
+  speedUpRotation();
+};
+homeBtn.onclick = () => {
+  resetSelection('navbar-button');
+  clickGlow();
+};
 dropBtn.onclick = () => drop();
 
 /*Slideshow (Projects section) */
@@ -137,7 +157,7 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace("active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
