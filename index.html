@@ -62,13 +62,13 @@
       </a>
     </nav>
     <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <nav class="navbar-top w3-hide-large w3-hide-medium" id="mobileNavbar">
+    <nav class="navbar-top" id="mobileNavbar">
       <a id="homeBtn" href="#" class="navbar-button home">
         <img src="./images/icons/logos/logo.png" alt="HOME">
       </a>
-      <a href="#about" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
+      <!-- <a href="#about" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
         ABOUT
-      </a>
+      </a> -->
       <a href="#contact" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
         CONTACT
       </a>
@@ -76,6 +76,7 @@
       <div class="navbar-button dropdown">
         <button id="dropBtn" class="dropbtn" ><i class="fa fa-bars"></i></button>
         <div id="dropdownContent" class="dropdown-content">
+          <a href="#about">ABOUT</a>
           <a href="#interests">INTERESTS</a>
           <a href="#skills">SKILLS</a>
           <a href="#projects">PROJECTS</a>
@@ -107,7 +108,7 @@
         <details open>
           <summary class="summary-main-section">
             <h2>
-              <i id="arrow1" class="fas fa-angle-double-right "></i>
+              <i id="arrow1" class="fas fa-angle-double-right"></i>
               About me
               <span class="blink">_</span><hr id="hr1">
             </h2>
@@ -129,19 +130,21 @@
               <h2>Education</h2>
               <div class="table">
                 <div class="cell image">
-                  <p><img src="./images/icons/logos/KG_logo.png" alt="KU" class="shield"></p>
+                  <a href="https://ksquare.university/es/" target="_blank">
+                    <img src="./images/icons/logos/KG_logo.png" alt="KU" class="shield">
+                  </a>
                 </div>
                 <div class="cell text"><p>Ksquare University</p></div>
                 <div class="cell text"><p>February 2021 - Actuality</p></div>
                 <div class="cell text"><p>Javascript Associate Software Engineer</p></div>
                 <div class="cell image">
-                  <p><img src="./images/icons/logos/Tec_logo.png" alt="TEC" class="shield"></p>
+                  <img src="./images/icons/logos/Tec_logo.png" alt="TEC" class="shield">
                 </div>
                 <div class="cell text"><p>ITESM <span class="hide-small">(Tec de Monterrey)</span></p></div>
                 <div class="cell text"><p>August 2015 - Dec<span class="hide-small">ember</span> 2019</p></div>
                 <div class="cell text"><p>Digital Systems and Robotics Engineer</p></div>
                 <div class="cell image">
-                  <p><img src="./images/icons/logos/CECyT9-logo.png" alt="CECyT9" class="shield rounded"></p>
+                  <img src="./images/icons/logos/CECyT9-logo.png" alt="CECyT9" class="shield rounded">
                 </div>
                 <div class="cell text"><p>CECyT 9 "Juan de Dios Bátiz"</p></div>
                 <div class="cell text"><p>August 2012 - July 2015</p></div>
@@ -165,16 +168,37 @@
           <!-- Tabs section for large screens -->
           <article class="vertical-tabs-section hide-small">
             <aside class="tabs-section">
-              <button class="tablink" onclick="describe(event,'STEM')">STEM Education</button>
-              <button class="tablink" onclick="describe(event,'Bionics')">Bionics</button>
-              <button class="tablink" onclick="describe(event,'Embedded')">Embedded systems</button>
-              <button class="tablink" onclick="describe(event,'Domotics')">Domotics</button>
-              <button class="tablink" onclick="describe(event,'IoT')">Internet of Things</button>
-              <button class="tablink" onclick="describe(event,'Energies')">Renewable energies</button>
-              <button class="tablink" onclick="describe(event,'SocialEnt')">Social entrepreneurship</button>
+              <button class="tablink" onclick="describe(event,'STEM')">
+                STEM Education
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Bionics')">
+                Bionics
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Embedded')">
+                Embedded systems
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Domotics')">
+                Domotics
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'IoT')">
+                Internet of Things
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Energies')">
+                Renewable energies
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'SocialEnt')">
+                Social entrepreneurship
+                <i class="fas fa-angle-right"></i>
+              </button>
             </aside>
             <section class="description-zone">
-              <div id="STEM" class="tabcontent">
+              <div id="STEM" class="tabcontent" name="interests">
                 <h3>STEM Education</h3>
                 <p>STEM stands for:</p>
                 <ul class="nodesList">
@@ -187,65 +211,81 @@
                   It is a broad term used to group together these four academic and specific disciplines.
                 </p>
                 <p>
-                  STEM education is a curriculum based on the idea of educating students in these disciplines in an interdisciplinary and applied approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a cohesive learning paradigm based on real-world applications.
+                  <b>STEM education</b> is a curriculum based on the idea of educating students in these disciplines in an <b>interdisciplinary and applied</b> approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a <i><b>cohesive learning paradigm</b></i> based on real-world applications.
                 </p>
-                <a href="https://www.livescience.com/43296-what-is-stem-education.html">Source</a>
+                <a href="https://www.livescience.com/43296-what-is-stem-education.html" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="Bionics" class="tabcontent">
+              <div id="Bionics" class="tabcontent" name="interests">
                 <h3>Bionics</h3>
                 <p>
-                  Bionics or biologically inspired engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
+                  <i><b>Bionics</b></i> or <i><b>biologically inspired engineering</b></i> is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
                 </p>
                 <p>
-                  The word bionic, coined by Jack E. Steele in August 1958, is a portmanteau from biology and electronics.
+                  The word <b>bionics</b>, coined by Jack E. Steele in August 1958, is a portmanteau from <i><b>bio</b></i>logy and electro<i><b>nics</b></i>.
                 </p>
                 <p>
-                  In robotics, bionics and biomimetics are used to apply the way animals move to the design of robots.
+                  In robotics, bionics and <i><b>biomimetics</b></i> are used to apply the way animals move to the design of robots.
                 </p>
                 <p>
                   In medicine, bionics means the replacement or enhancement of organs or other body parts by mechanical versions. Bionic implants differ from mere prostheses by mimicking the original function very closely, or even surpassing it.
                 </p>
+                <a href="https://en.wikipedia.org/wiki/Bionics" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="Embedded" class="tabcontent">
+              <div id="Embedded" class="tabcontent" name="interests">
                 <h3>Embedded Systems</h3>
                 <p>
-                  Embedded systems are special-purpose computing systems embedded in application environments or in other computing systems that provide specialized support.
+                  Embedded systems are <i><b>special-purpose computing systems embedded</b></i> in application environments or in other computing systems that provide specialized support.
                 </p>
                 <p>
-                  The decreasing cost of processing power, combined with the decreasing cost of memory and the ability to design low-cost systems on chip, has led to the development and deployment of embedded computing systems in a wide range of application environments.
+                  The <u><b>decreasing cost of processing power</b></u>, combined with the <u><b>decreasing cost of memory</b></u> and the ability to design <u><b>low-cost systems on chip</b></u>, has led to the development and deployment of embedded computing systems in a wide range of application environments.
                 </p>
                 <p>
                   Examples include network adapters for computing systems and mobile phones, control systems for home appliances, air conditioning, industrial systems, cars, and surveillance systems.
                 </p>
-                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems">Source</a>
+                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="Domotics" class="tabcontent">
+              <div id="Domotics" class="tabcontent" name="interests">
                 <h3>Domotics</h3>
                 <p>
-                  Also known as home automation, it is the encounter of information technology, electrotechnics and electronics that makes a home become "smart". It's the tool that allows us to control systems, devices and automations with the aim of increasing the living and comfort quality of the domestic space
+                  Also known as <i><b>home automation</b></i>, it is the encounter of information technology, electrotechnics and electronics that makes a home become <i>"<b>smart</b>"</i>. It's the tool that allows us to control systems, devices and automations with the aim of <b>increasing the living and comfort quality</b> of the domestic space.
                 </p>
                 <p>
-                  The word "domotics" (and "domotica" when used as a verb) is a contraction of the Latin word for a home (domus) and the word robotics.[1] The word "smart" in "smart home" refers to the system being aware of the state of its devices, which is done through the information and communication technologies (ICT) protocol and the Internet of Things (IoT).
+                  The word <i>"<b>domotics</b>"</i> (and <i>"<b>domotica</b>"</i> when used as a verb) is a contraction of the Latin word for home (<i><b>dom</b>us</i>) and the word rob<i><b>otics</b></i>. The word <i>"smart"</i> in <i>"smart home"</i> refers to the system being <b>aware</b> of the state of its devices, which is done through the information and communication technologies (<b>ICT</b>) protocol and the Internet of Things (<b>IoT</b>).
                 </p>
-                <a href="">Source</a>
+                <a href="http://www.easydom.com/en/discover/what-is-domotics" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="IoT" class="tabcontent">
+              <div id="IoT" class="tabcontent" name="interests">
                 <h3>Internet of Things</h3>
                 <p>
-                  The term IoT encompasses everything connected to the internet, but it is increasingly being used to define objects that "talk" to each other via Internet. "Simply, the Internet of Things is made up of devices – from simple sensors to smartphones and wearables – connected together," Matthew Evans, the IoT programme head at techUK, says.
+                  The term <b>IoT</b> encompasses <i><b>everything connected to the internet</b></i>, but it is increasingly being used to define objects that <i>"<b>talk</b>"</i> to each other <b>via Internet</b>. <i>"Simply, the Internet of Things is made up of <b>devices</b> – from simple sensors to smartphones and wearables – <b>connected together</b>"</i>, Matthew Evans, the IoT programme head at techUK, says.
                 </p>
                 <p>
-                  By combining these connected devices with automated systems, it is possible to "gather information, analyse it and create an action" to help someone with a particular task, or learn from a process.
+                  By combining these connected devices with automated systems, it is possible to <i>"<b>gather information, analyse it and create an action</b>"</i> to help someone with a particular task, or learn from a process.
                 </p>
                 <p>
-                  "It's about networks, it's about devices, and it's about data," Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more connected world."
+                  <i>"It's about <b>networks</b>, it's about <b>devices</b>, and it's about <b>data</b>, ..."</i>, Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more <b>connected world</b>."
                   </p>
-                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot">Source</a>
+                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="Energies" class="tabcontent">
+              <div id="Energies" class="tabcontent" name="interests">
                 <h3>Renewable Energies</h3>
                 <p>
-                  Renewable energy, often referred to as clean energy, comes from natural sources or processes that are constantly replenished. For example, sunlight or wind keep shining and blowing, even if their availability depends on time and weather.
+                  <b>Renewable energy</b>, often referred to as <i><b>clean energy</b></i>, comes from natural sources or processes that are <i><b>constantly replenished</b></i>. For example, sunlight or wind keep shining and blowing, <i><b>even if their availability depends on time and weather</b></i>.
                 </p>
                 <p>Examples:</p>
                 <ul class="nodesList">
@@ -256,17 +296,24 @@
                   <li class="node black">Hydroelectric Power</li>
                   <li class="node black">Geothermal Energy</li>
                 </ul>
-                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts">Source</a>
+                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
-              <div id="SocialEnt" class="tabcontent">
+              <div id="SocialEnt" class="tabcontent" name="interests">
                 <h3>Social Entrepreneurship</h3>
-                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:
+                <p>Professor <b>Muhammad Yunus</b>, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines <i><b>social business</b></i> more narrowly as a kind of business:
                 </p>
                 <ul class="nodesList">
-                  <li class="node black">Whose primary aim is to address a social problem.</li>
-                  <li class="node black">Which is financially self-sufficient.</li>
-                  <li class="node black">Which does not pay dividends to its owners.</li>
+                  <li class="node black">Whose primary aim is to address a <i><b>social problem</b></i>.</li>
+                  <li class="node black">Which is financially <i><b>self-sufficient</b></i>.</li>
+                  <li class="node black">Which <i><b>does not pay dividends</b></i> to its owners.</li>
                 </ul>
+                <a href="https://www.yunussb.com/about-us" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </section>
           </article>
@@ -274,7 +321,10 @@
           <!-- Tabs section for small screens -->
           <article class="tabs-section-mobile hide-large">
             <details>
-              <summary class="tab-title">STEM Education</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                STEM Education
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>STEM Education</h3>
                 <p>STEM stands for:</p>
@@ -288,80 +338,111 @@
                   It is a broad term used to group together these four academic and specific disciplines.
                 </p>
                 <p>
-                  STEM education is a curriculum based on the idea of educating students in these disciplines in an interdisciplinary and applied approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a cohesive learning paradigm based on real-world applications.
+                  <b>STEM education</b> is a curriculum based on the idea of educating students in these disciplines in an <b>interdisciplinary and applied</b> approach. Rather than teach them as separate and discrete subjects, STEM integrates them into a <i><b>cohesive learning paradigm</b></i> based on real-world applications.
                 </p>
-                <a href="https://www.livescience.com/43296-what-is-stem-education.html">Source</a>
+                <a href="https://www.livescience.com/43296-what-is-stem-education.html" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title">Bionics</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Bionics
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>Bionics</h3>
                 <p>
-                  Bionics or biologically inspired engineering is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
+                  <i><b>Bionics</b></i> or <i><b>biologically inspired engineering</b></i> is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology.
                 </p>
                 <p>
-                  The word bionic, coined by Jack E. Steele in August 1958, is a portmanteau from biology and electronics.
+                  The word <b>bionics</b>, coined by Jack E. Steele in August 1958, is a portmanteau from <i><b>bio</b></i>logy and electro<i><b>nics</b></i>.
                 </p>
                 <p>
-                  In robotics, bionics and biomimetics are used to apply the way animals move to the design of robots.
+                  In robotics, bionics and <i><b>biomimetics</b></i> are used to apply the way animals move to the design of robots.
                 </p>
                 <p>
                   In medicine, bionics means the replacement or enhancement of organs or other body parts by mechanical versions. Bionic implants differ from mere prostheses by mimicking the original function very closely, or even surpassing it.
                 </p>
+                <a href="https://en.wikipedia.org/wiki/Bionics" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title">Embedded systems</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Embedded systems
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>Embedded Systems</h3>
                 <p>
-                  Embedded systems are special-purpose computing systems embedded in application environments or in other computing systems that provide specialized support.
+                  Embedded systems are <i><b>special-purpose computing systems embedded</b></i> in application environments or in other computing systems that provide specialized support.
                 </p>
                 <p>
-                  The decreasing cost of processing power, combined with the decreasing cost of memory and the ability to design low-cost systems on chip, has led to the development and deployment of embedded computing systems in a wide range of application environments.
+                  The <u><b>decreasing cost of processing power</b></u>, combined with the <u><b>decreasing cost of memory</b></u> and the ability to design <u><b>low-cost systems on chip</b></u>, has led to the development and deployment of embedded computing systems in a wide range of application environments.
                 </p>
                 <p>
                   Examples include network adapters for computing systems and mobile phones, control systems for home appliances, air conditioning, industrial systems, cars, and surveillance systems.
                 </p>
-                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems">Source</a>
+                <a href="https://www.sciencedirect.com/topics/computer-science/embedded-systems" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title">Domotics</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Domotics
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>Domotics</h3>
                 <p>
-                  Also known as home automation, it is the encounter of information technology, electrotechnics and electronics that makes a home become "smart". It's the tool that allows us to control systems, devices and automations with the aim of increasing the living and comfort quality of the domestic space
+                  Also known as <i><b>home automation</b></i>, it is the encounter of information technology, electrotechnics and electronics that makes a home become <i>"<b>smart</b>"</i>. It's the tool that allows us to control systems, devices and automations with the aim of <b>increasing the living and comfort quality</b> of the domestic space.
                 </p>
                 <p>
-                  The word "domotics" (and "domotica" when used as a verb) is a contraction of the Latin word for a home (domus) and the word robotics.[1] The word "smart" in "smart home" refers to the system being aware of the state of its devices, which is done through the information and communication technologies (ICT) protocol and the Internet of Things (IoT).
+                  The word <i>"<b>domotics</b>"</i> (and <i>"<b>domotica</b>"</i> when used as a verb) is a contraction of the Latin word for home (<i><b>dom</b>us</i>) and the word rob<i><b>otics</b></i>. The word <i>"smart"</i> in <i>"smart home"</i> refers to the system being <b>aware</b> of the state of its devices, which is done through the information and communication technologies (<b>ICT</b>) protocol and the Internet of Things (<b>IoT</b>).
                 </p>
-                <a href="">Source</a>
+                <a href="http://www.easydom.com/en/discover/what-is-domotics" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title">Internet of Things</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Internet of Things
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>Internet of Things</h3>
                 <p>
-                  The term IoT encompasses everything connected to the internet, but it is increasingly being used to define objects that "talk" to each other via Internet. "Simply, the Internet of Things is made up of devices – from simple sensors to smartphones and wearables – connected together," Matthew Evans, the IoT programme head at techUK, says.
+                  The term <b>IoT</b> encompasses <i><b>everything connected to the internet</b></i>, but it is increasingly being used to define objects that <i>"<b>talk</b>"</i> to each other <b>via Internet</b>. <i>"Simply, the Internet of Things is made up of <b>devices</b> – from simple sensors to smartphones and wearables – <b>connected together</b>"</i>, Matthew Evans, the IoT programme head at techUK, says.
                 </p>
                 <p>
-                  By combining these connected devices with automated systems, it is possible to "gather information, analyse it and create an action" to help someone with a particular task, or learn from a process.
+                  By combining these connected devices with automated systems, it is possible to <i>"<b>gather information, analyse it and create an action</b>"</i> to help someone with a particular task, or learn from a process.
                 </p>
                 <p>
-                  "It's about networks, it's about devices, and it's about data," Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more connected world."
+                  <i>"It's about <b>networks</b>, it's about <b>devices</b>, and it's about <b>data</b>, ..."</i>, Caroline Gorski, the head of IoT at Digital Catapult explains. IoT allows devices on closed private internet connections to communicate with others and "the Internet of Things brings those networks together. It gives the opportunity for devices to communicate not only within close silos but across different networking types and creates a much more <b>connected world</b>."
                   </p>
-                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot">Source</a>
+                <a href="https://www.wired.co.uk/article/internet-of-things-what-is-explained-iot" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title">Renewable energies</summary>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Renewable energies
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
               <div class="tab-content">
                 <h3>Renewable Energies</h3>
                 <p>
-                  Renewable energy, often referred to as clean energy, comes from natural sources or processes that are constantly replenished. For example, sunlight or wind keep shining and blowing, even if their availability depends on time and weather.
+                  <b>Renewable energy</b>, often referred to as <i><b>clean energy</b></i>, comes from natural sources or processes that are <i><b>constantly replenished</b></i>. For example, sunlight or wind keep shining and blowing, <i><b>even if their availability depends on time and weather</b></i>.
                 </p>
                 <p>Examples:</p>
                 <ul class="nodesList">
@@ -372,20 +453,30 @@
                   <li class="node black">Hydroelectric Power</li>
                   <li class="node black">Geothermal Energy</li>
                 </ul>
-                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts">Source</a>
+                <a href="https://www.nrdc.org/stories/renewable-energy-clean-facts" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
             <details>
-              <summary class="tab-title last">Social entrepreneurship</summary>
-              <div class="tab-content last">
+              <summary class="tab-title last" onclick="describeMobile(event)">
+                Social entrepreneurship
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
                 <h3>Social Entrepreneurship</h3>
-                <p>Professor Muhammad Yunus, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines social business more narrowly as a kind of business:
+                <p>Professor <b>Muhammad Yunus</b>, Nobel Peace Prize laureate and founder of the first micro-credit organization Grameen Bank, defines <i><b>social business</b></i> more narrowly as a kind of business:
                 </p>
                 <ul class="nodesList">
-                  <li class="node black">Whose primary aim is to address a social problem.</li>
-                  <li class="node black">Which is financially self-sufficient.</li>
-                  <li class="node black">Which does not pay dividends to its owners.</li>
+                  <li class="node black">Whose primary aim is to address a <i><b>social problem</b></i>.</li>
+                  <li class="node black">Which is financially <i><b>self-sufficient</b></i>.</li>
+                  <li class="node black">Which <i><b>does not pay dividends</b></i> to its owners.</li>
                 </ul>
+                <a href="https://www.yunussb.com/about-us" target="_blank">
+                  <i class="fas fa-link"></i>
+                  Source: Know more about this topic.
+                </a>
               </div>
             </details>
           </article>
@@ -509,16 +600,187 @@
               <span class="blink">_</span><hr id="hr5">
             </h2>
           </summary>
-          <p>Slideshow</p>
-          <ul class="nodesList">
-            <li class="node white">Watching anime</li>
-            <li class="node white">Dancing</li>
-            <li class="node white">Drawing</li>
-            <li class="node white">Writing</li>
-            <li class="node white">Boxing</li>
-            <li class="node white">Cycling</li>
-            <li class="node white">Eating</li>
-          </ul>
+          <article class="vertical-tabs-section hide-small">
+            <aside class="tabs-section">
+              <button class="tablink" onclick="describe(event,'Anime')">
+                Watching anime
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Music')">
+                Listening to music
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Dancing')">
+                Dancing
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Drawing')">
+                Drawing
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Writing')">
+                Writing
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Boxing')">
+                Boxing
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Cycling')">
+                Cycling
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Volleyball')">
+                Volleyball
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="tablink" onclick="describe(event,'Food')">
+                Eating & Cooking
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </aside>
+            <section class="description-zone">
+              <div id="Anime" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>My anime watchlist</h3>
+                
+              </div>
+              <div id="Music" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>My favourite music</h3>
+                
+              </div>
+              <div id="Dancing" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>Dancing styles & rythms</h3>
+                
+              </div>
+              <div id="Drawing" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>My drawings</h3>
+                
+              </div>
+              <div id="Writing" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>My writings</h3>
+                
+              </div>
+              <div id="Boxing" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>Boxing</h3>
+                
+              </div>
+              <div id="Cycling" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>Cycling</h3>
+                
+              </div>
+              <div id="Volleyball" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>Volleyball</h3>
+                
+              </div>
+              <div id="Food" class="tabcontent" onclick="describe(event,'Food')">
+                <h3>Eating & Cooking</h3>
+                
+              </div>
+            </section>
+          </article>
+
+          <!-- Tabs section for small screens -->
+          <article class="tabs-section-mobile hide-large">
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Watching anime
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>My anime watchlist</h3>
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Listening to music
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>My favourite music</h3>
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Dancing
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>Dancing styles & rythms</h3>
+                
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Drawing
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>My drawings</h3>
+                
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Writing
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>My writings</h3>
+                
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Boxing
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>Boxing</h3>
+                
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Cycling
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>Cycling</h3>
+                
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title" onclick="describeMobile(event)">
+                Volleyball
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content">
+                <h3>Volleyball</h3>
+                
+              </div>
+            </details>
+            <details>
+              <summary class="tab-title last" onclick="describeMobile(event)">
+                Eating & Cooking
+                <i class="fas fa-chevron-circle-down"></i>
+              </summary>
+              <div class="tab-content last">
+                <h3>Eating & Cooking</h3>
+                <ul class="nodesList">
+                  <li class="node black">Whose primary aim is to address a social problem.</li>
+                  <li class="node black">Which is financially self-sufficient.</li>
+                  <li class="node black">Which does not pay dividends to its owners.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
         </details>
         
       <!-- End Hobbies Section -->
@@ -534,21 +796,6 @@
         <article class="contact">
           <section class="contact-item contact-info">
             <p><i class="fas fa-map-marker-alt fa-fw icon contact-icon"></i>  CDMX, Mexico</p>
-            <!-- <p>
-              <i class="fas fa-phone-alt fa-fw icon contact-icon"></i>  +52 55 13 67 61 72  
-              <i class="fab fa-whatsapp icon im-icon"></i>
-              <i class="fab fa-telegram icon im-icon"></i>
-              <i class="fab fa-viber icon im-icon"></i>
-            </p> -->
-            <!-- <p>
-              <i class="fa fa-envelope fa-fw icon contact-icon"></i>  carl.esc.cont@gmail.com
-            </p> -->
-            <p>
-              <a href="https://ksquare.university/es/" target="_blank">
-                <i class="kg-logo w3-margin-right"></i>
-              </a>
-              carlos.escalona<span class="hide-small">@theksquaregroup.com</span>
-            </p>
             <p>
               <a href="https://www.linkedin.com/in/carlesccont/" target="_blank" class="linkedin">
                 <i class="fab fa-linkedin fa-fw icon contact-icon"></i>  carl-and-esc-cont
@@ -557,22 +804,18 @@
             <p><a href="https://github.com/CarlosAEC-KS" target="_blank" class="github">
               <i class="fab fa-github fa-fw icon contact-icon"></i>  CarlosAEC-KS
             </a></p>
-            <p class="btn">
-              <a href="javascript:delay('#contactFormSection',1100)">
-                <button id="showForm">Send me a message!</button>
-              </a>
-            </p>
+            <a id="showForm" href="javascript:delay('#contactFormSection',1100)" class="button">
+              Send me a message!
+            </a>
           </section>
           <section id="contactFormSection" class="contact-item contact-form">
             <form id="contactForm" action="" method="POST">
               <h3>Let's get in touch!</h3>
-              <p><input type="text" placeholder=">> Name" required name="Name"></p>
+              <p></p><input type="text" placeholder=">> Name" required name="Name"></p>
               <p><input type="text" placeholder=">> Email" required name="Email"></p>
               <p><input type="text" placeholder=">> Subject" required name="Subject"></p>
               <p><textarea type="text" placeholder=">> Message" required name="Message"></textarea></p>
-              <p class="btn">
-                <button id="submitMsg" type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
-              </p>
+              <button id="submitMsg" type="submit" class="button"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
             </form>
           </section>
         </article>
@@ -584,11 +827,10 @@
     <!-- Footer -->
     <footer>
       <section id="references" class="references">
-        <br>
         <p>
           Designed by <b>Carlos <span class="hide-small">Andrés</span> Escalona <span class="hide-small">Contreras</span></b> April, 2021
         </p>
-        <p>Powered by 
+        <p class="hide-large">Powered by 
           <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3schools">
             W3.CSS
           </a> &
@@ -599,7 +841,15 @@
           <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><i class="fab fa-firefox-browser icon ref-icon"></i></a>
           <a href="https://www.google.com/intl/en/chrome" target="_blank"><i class="fab fa-chrome icon ref-icon"></i></a>
         </p>
-        <p>Implemented using
+        <p>
+          <span class="hide-small">
+            Powered by 
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3schools">
+              W3.CSS
+            </a> &
+            <a href="https://fontawesome.com/" target="_blank"><i class="fab fa-font-awesome icon ref-icon"></i></a>
+          </span>
+          Implemented using
           <i class="fab fa-html5 icon ref-icon"></i>
           <i class="fab fa-css3-alt icon ref-icon"></i>
           <i class="fab fa-js-square icon ref-icon"></i>
@@ -612,7 +862,7 @@
           <a href="https://pages.github.com" target="_blank">
             <span class="github-pages"><i class="fab fa-github"></i><span>Pages</span></span>
           </a>
-        </p><br>
+        </p>
       </section>
     <!-- End footer -->
     </footer>

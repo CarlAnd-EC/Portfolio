@@ -69,14 +69,12 @@ form{text-align: center}
 details > summary {
     cursor: pointer;
     list-style: none;
-    transition: 1s;
 }
 
 /*Topcorner classes*/
 .topcorner{
     width: 140px;
     height: 140px;
-    /* border: 2px solid teal; */
     position: fixed;
     top: 10px;
     z-index: 2;
@@ -151,7 +149,6 @@ details > summary {
 /*Sidebar*/
 .sidebar {
     width: 140px;
-    height: 70vh;
     max-height: 70vh;
     background: var(--sidebar);
     text-align: center;
@@ -165,7 +162,7 @@ details > summary {
 }
 .sidebar a {
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .navIcon {font-size: 32px}
 .iconName{font-size: 12px}
@@ -180,19 +177,16 @@ details > summary {
 
 /* Navbar on small screens (Hidden on medium and large screens) */
 .navbar-top{
-    top: 0;
+    display: none;
+    top: 0px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     overflow: hidden;
-    display: block;
-    /* grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr); */
     color: white;
     text-align: center;
     background-color: black;
     height: max-content;
-    /* z-index: 20; */
 }
 .navbar-button{
     /* display: inline-block; */
@@ -260,7 +254,7 @@ details > summary {
     margin-left: -50px;
     max-width: max-content;
     background-color: var(--sidebar);
-    z-index: 1;
+    z-index: 10;
 }
 .dropdown-content.active {
     display: block;
@@ -292,7 +286,7 @@ details > summary {
 }
 .fa-angle-double-right{
     color: teal;
-    transition: 1s;
+    transition: 0.2s;
 }
 .expand-hr{width: 75vw;}
 .downwards{transform: rotate(90deg);}
@@ -304,11 +298,11 @@ details > summary {
     grid-template-rows: repeat(2, max-content);
 }
 .presentation-item{
+    grid-column: span 1;
+    grid-row: span 1;
     /* border: 0.1em dashed teal; */
 }
 .presentation-item.moto{
-    grid-column: span 1;
-    grid-row: span 1;
     min-width: min-content;
     max-width: max-content;
     height: max-content;
@@ -316,19 +310,26 @@ details > summary {
     background-color: #222222;
     box-shadow: 8px 8px 5px black;
 }
+.presentation-item.moto h2{
+    padding: 1em 1em 0em 0em;
+}
 .presentation-item.moto p{
-    min-width: 65ch;
-    max-width: 72vw;
+    min-width: 50ch;
+    /*Mozilla*/
+    max-width: 75vw;
+    /*Chromium*/
+    max-width: 65vw;
+    font-size: 18px;
+    padding: 1em;
 }
 .profilePhoto{
     float: right;
     min-height: 20vh;
     max-height: 50vh;
     padding: 1ch 0ch 1ch 0ch;
+    margin-left: 1em;
 }
 .presentation-item.education{
-    grid-column: span 1;
-    grid-row: span 1;
     padding: 0ch 4ch;
 }
 
@@ -351,24 +352,20 @@ details > summary {
     padding: 1ch 1ch;
 }
 .cell.text p{
+    font-size: 18px;
     height: inherit;
     padding: 10% 0%;
 }
-.cell.image p{
-    padding: 0.5em 1em;
+.cell.image{
+    padding: 1em 1em;
 }
 .shield{
-    min-width: 5vw;
-    min-height: 10vh;
-    max-width: 10vw;
-    max-height: 20vh;
-    vertical-align: middle;
+    min-height: 50px;
+    max-height: 100px;
 }
 .shield.rounded{
-    min-width: 5vw;
-    min-height: 10vh;
-    max-width: 10vw;
-    max-height: 15vh;
+    min-height: 40px;
+    max-height: 75px;
 }
 /* Vertical tab gallery for large screens*/
 /* Style the tab */
@@ -391,8 +388,11 @@ details > summary {
   .tabs-section button.tablink {
     display: block;
     color: var(--bodyF);
+    font-size: 18px;
+    text-align: left;
     background-color: inherit;
     padding: 2ch 1ch 2ch 2ch;
+    padding: 1em 10px 1em 1em;
     width: 25vw;
     min-width: 22ch;
     text-align: left;
@@ -403,41 +403,65 @@ details > summary {
     border-bottom: 2px solid black;
     box-shadow: 8px 8px 5px black;
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
   }
   /* Change background color of buttons on hover */
   .tabs-section button:hover {
     background-color: #005050;
   }
+  .tabs-section button:hover .fa-angle-right{
+    color: royalblue;
+  }
   /* Create an active/current "tab button" class */
   .tabs-section button.active {
     background-color: #002222;
   }
-  .description-zone{
+.fa-angle-right{
+    font-size: 1.5em;
+    font-weight: 900;
+    float: right;
+    color: black;
+}
+.tabs-section button.active .fa-angle-right{
+    color: royalblue;
+    transform: rotate(180deg);
+}
+.description-zone{
     color: black;
     width: 100%;
     grid-column: span 1;
-  }
+}
   /* Style the tab content */
   .description-zone .tabcontent {
     width: 0;
     opacity: 0;
-    /* Mozilla */
-    height: 46.5ch;
-    /* Chromium */
-    height: 45ch;
+    color: black;
+    height: auto;
     padding: 0ch 1ch 0ch 2ch;
     border: 5px solid;
     border-left: none;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right, #743ad5, #d53a9d,#d74e09,orange);
     background-color:var(--bodyF);
-    box-shadow: 8px 8px 5px black;
+    box-shadow: 8px 8px 5px 2px black;
     transition-duration: 1s;
     position: absolute;
     overflow-y: auto;
   }
-
+  #interests .tabcontent {
+    /* Mozilla */
+    height: 47ch;
+    /* Chromium */
+    height: 458px;
+  }
+  #hobbies .tabcontent {
+    /* Mozilla */
+    height: 60.5ch;
+    /* Chromium */
+    height: 591px;
+    color: var(--bodyF);
+    background-color:var(--bodyBg);
+  }
   .description-zone .tabcontent.active {
     /* Mozilla */
     width: 50vw;
@@ -445,9 +469,9 @@ details > summary {
     width:45vw;
     opacity: 1;
   }
-  .description-zone .tabcontent p{
-    color: black;
-  }
+  .description-zone .tabcontent p{padding: 0ch 2ch 0ch 1ch}
+  .description-zone .tabcontent a{color: navy}
+  .description-zone .tabcontent a:hover{font-weight: 900}
 
 .nodesList {
     list-style: none;
@@ -489,12 +513,11 @@ details > summary {
 }
 .tab-title {
     color: var(--bodyF);
-    background-color: inherit;
-    padding: 2ch 1ch 2ch 2ch;
-    /* width: 25vw;
-    min-width: 22ch; */
+    font-size: 18px;
     text-align: center;
+    background-color: #222222;
     outline: none;
+    padding: 2ch 1ch 2ch 2ch;
     border: 2px solid #005050;
     border-bottom: none;
     box-shadow: 8px 0px 5px black;
@@ -504,10 +527,11 @@ details > summary {
     border-bottom: 2px solid #005050;
     box-shadow: 8px 8px 5px black,0px 0px 5px black;
 }
-.tab-title.active {
+.tab-title.active{
     background-color: #002222;
+    box-shadow: 8px 8px 25px 1px #4a008080;
 }
-.tab-content {
+.tab-content{
     color: black;
     padding: 0ch 1ch 0ch 2ch;
     border: 5px solid;
@@ -515,12 +539,21 @@ details > summary {
     border-image-slice: 1;
     border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d,#d74e09,orange);
     background-color:var(--bodyF);
-    box-shadow: 8px 0px 5px black;
+    box-shadow: 8px 8px 25px 1px #4a008080;
     overflow: hidden;
 }
-.tab-content.last{
-    box-shadow: 8px 8px 5px black,0px 0px 5px black;
+.tab-content a{
+    color: navy;
+  }
+.tab-content a:hover{
+    font-weight: 900;
 }
+.fa-chevron-circle-up,.fa-chevron-circle-down{
+    float: right;
+    font-size: 22px;
+}
+.fa-chevron-circle-up{color: teal}
+.fa-chevron-circle-down{color: black}
 
 .w3-row-padding img {margin-bottom: 12px}
 
@@ -534,9 +567,6 @@ details > summary {
     vertical-align: middle;
     margin: 0.1em 0.1em 0.1em 0em;
 }
-.kg:hover{
-    text-shadow: 2px 2px 5px salmon;
-}
 
 .languages{height: 8ch}
 
@@ -545,52 +575,66 @@ details > summary {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-rows: repeat(1, max-content);
+    padding-bottom: 20px;
 }
 .contact-item{
     margin-top: 0;
-    padding: 1ch;
+    padding: 0px 20px;
     /* border: 0.1em dashed teal; */
 }
 .contact-item.contact-info{
     grid-column: span 1;
+    width: 30ch;
 }
 .contact-item.contact-info p{
+    font-size: 20px;
     margin: 1ch 0ch;
 }
 .contact-item.contact-form{
     grid-column: span 1;
     background-color: #000d11;
     border: 2px solid black;
-    /* border: 4px solid #4715fc; */
     border-radius: 40px;
 }
-.contact-item p.btn{text-align: center;}
-.contact-item button {
-    width: 20ch;
-    height: 6ch;
+.contact-item .button {
+    display: block;
+    width: 220px;
+    height: max-content;
     color: var(--bodyF);
-    border: double 0.1ch transparent;
-    padding: 1ch;
-    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    margin: 1.5em 12% 1em 12%;
+    border: double 5px transparent;
+    border-radius: 50px;
     background-image: linear-gradient(black, black), 
     linear-gradient(var(--angle),navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    box-shadow: 8px 8px 5px black;
+    box-shadow: 2px 4px 5px 1px indigo;
     cursor: pointer;
-    /* animation: 1s rotateLighting linear infinite; */
 }
-.contact-item button:hover {
+.contact-item .button:hover {
     color: white;
-    background-image: linear-gradient(#005050, #005050), 
-    linear-gradient(var(--angle),navy,indigo 30%,fuchsia 60%,orangered 75%,orange 85%);
+    font-weight: bolder;
+    padding: 9px 0px;
+    border-top: double 4px transparent;
+    border-bottom: double 4px transparent;
+    border-left: double 10px transparent;
+    border-right: double 10px transparent;
+    background-image: 
+    linear-gradient(var(--angle),navy,indigo 50%), 
+    linear-gradient(var(--angle),navy,indigo 50%);
+    box-shadow: 2px 4px 5px 1px teal;
 }
-.contact-item button.click {
+.contact-item .button.click {
     box-shadow: none;
     animation: 1200ms rotateLighting linear 1;
 }
 section#contactFormSection{display: none}
+section#contactFormSection.active{display: block}
 form#contactForm{visibility: hidden}
+form#contactForm.active{visibility: visible}
 form#contactForm input{
     color: var(--bodyF);
     background-color: var(--footerBg);
@@ -622,7 +666,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 }
 
 .icon{
-    font-size: 2.5em;
+    font-size: 2.2em;
     vertical-align: middle;
 }
 .icon.contact-icon{
@@ -632,25 +676,27 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     padding: 8px 0px 8px 4px;
 }
 .icon.ref-icon{
-    padding: 4px 8px;
+    padding: 0px 8px;
 }
 .linkedin:hover{color: #458ed1}
 .github:hover{color: #0d589e}
 
 /*Footer classes*/
 .references{
-    margin: 0px 150px;
+    padding: 20px 22% 0px 25%;
+    margin: 0px 0px 0px 140px;
     min-width: 35ch;
+    max-width: max-content;
     text-align: center;
 }
 .references p{
-    padding: 1ch 0.5ch 0.5ch 0.5ch;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
     text-align: center;
-    margin-left: 140px;
 }
 .w3schools{
     color: #007070;
-    font-size: x-large;
+    font-size: 18px;
     font-weight: 1000;
 }
 .w3schools:hover{color: #00aaaa;}
@@ -666,7 +712,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 .github-pages span{
     font-size: 0.5em;
     vertical-align: middle;
-    padding: 0.5ch;
+    padding: 0px 0.5ch;
 }
 
 /* Footer-icon hover-colors */
@@ -740,8 +786,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    background-color: #000000a4;
-    border-top-right-radius: 10px;
+    background-color: #000000cc;
     border-bottom-right-radius: 10px;
   }
   
@@ -889,23 +934,26 @@ span.hide-small{
 }
 
 /*Responsive design (screen width smaller than 600px)*/
-@media only screen and (orientation:portrait) and (max-width: 600px) {
+@media only screen /*and (orientation:portrait)*/ and (max-width: 600px) {
     span.hide-small,.vertical-tabs-section.hide-small{display: none}
     .hide-large{display: block}
-    /* .navbar-top{display: grid;} */
+    .navbar-top{display: block}
     .topcorner{top: 60px;z-index: 1;}
     main {margin-left: 0}
     header,main,footer{width:100vw}
     details > p {max-width: 20ch}
     .sidebar,.topping {display: none}
     .topcorner,.logo-section,.logo {position: absolute}
+    .logo-link{cursor: default}
     .expand-hr, .presentation, .tabs-section, .container, .contact {width: 95vw}
     .profilePhoto{min-height: 10vh;max-height:20vh;padding-bottom: 0;padding-left: 1px;}
     /* Mozilla */
     /* .presentation-item.moto{min-width: 10ch;max-width: 95vw;padding-left: 8px;} */
     /* Chromium */
     .presentation-item.moto{min-width: 10ch;max-width: 88vw;padding-left: 8px;}
-    .presentation-item.moto p{min-width: 10ch;max-width:100%}
+    .presentation-item.moto h2{padding: 0px}
+
+    .presentation-item.moto p{min-width: 10ch;max-width:100%;font-size: 15px;padding: 0;}
     .presentation-item.education{max-width: 95vw;padding: 0px 0px}
     .presentation-item.education h2{padding-left: 1ch}
     .cell.text{
@@ -913,21 +961,20 @@ span.hide-small{
         padding: 0px 5px;
         max-height: max-content;
     }.cell.text p{
+        font-size: 15px;
         width: 8ch;
         margin: 0;
         padding: 10px 10px;
-    }.cell.image p{
+    }.cell.image{
         margin-left: 0.25em;
         padding: 0em 0em;
     }.shield{
-        max-width: 50px;
+        min-height: 20px;
         max-height: 50px;
         vertical-align: middle;
     }.shield.rounded{
-        min-width: 20px;
         min-height: 20px;
-        max-width: 50px;
-        max-height: 50px;
+        max-height: 40px;
         margin: 1em 0;
         vertical-align: middle;
     }
@@ -939,11 +986,14 @@ span.hide-small{
     .description-zone .tabcontent {height: 42ch;padding: 0px 2px 0px 4px;}
     .description-zone .tabcontent.active {width: 50vw}
 
-    .contact{grid-template-columns: repeat(1, max-content)}
+    .contact{grid-template-columns: repeat(1, max-content);padding: 20px 0px 0px 0px;}
     .contact-item.contact-form{background-color: #003f52;border: none;border-radius: 0;}
+    section#contactFormSection{width:100vw}
+    form#contactForm{width:max-content}
+    form#contactForm input, form#contactForm textarea{width: 85vw;}
     .nodesList{padding-inline-start: 4px;}
     .node,.node.black::before{padding-left: 0px;margin-left: 0px;}
-    .references {margin: 0px 0px;min-width: 18ch;}
+    .references {margin: 0px 0px;min-width: 18ch;padding: 5px 10px;}
     .references p {margin-left: 0px}
     .fa-opera,.fa-firefox-browser,.fa-chrome{animation: fade 2s ease infinite alternate-reverse;}
     .fa-html5,.fa-css3-alt,.fa-js-square,.fa-node-js,.fa-aws,.fa-git{animation: fade 2s ease infinite alternate-reverse;}
@@ -956,6 +1006,12 @@ span.hide-small{
     .fa-node-js{color:darkgreen}
     .fa-aws{color: orange}
     .fa-git{color:tomato;color: #262626;}
+    :target[id]:before {
+        content: '';
+        display: block;
+        height: 50px;
+        margin: -1px 0 0;
+    }
 }
 /* @media (orientation:portrait){}
 @media (orientation:landscape){}
