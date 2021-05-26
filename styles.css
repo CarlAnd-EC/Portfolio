@@ -851,10 +851,14 @@ p#caption {
     height: 88vh; 
 }
 .mySlides article{
+    /*Mozilla*/
     width: 92%;
-    position: absolute;
     margin:  5vh 3vw;
+    /*Chromium*/
+    width: 90%;
+    margin:  5vh 1.5vw;
     padding: 0em 2em;
+    position: absolute;
     border-radius: 20px;
     background-color: #00000085;
 }
