@@ -861,6 +861,10 @@ p#caption {
 .mySlides article h3{
     text-align: center;
 }
+.mySlides article iframe{
+    margin: 0px 15%;
+}
+
 
 .skills-section{
     /*Mozilla*/
