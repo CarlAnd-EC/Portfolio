@@ -21,6 +21,9 @@ const topping = document.getElementById("topping");
 const sideNavbar = document.getElementById("sideNavbar");
 const showMenu = document.getElementById("show");
 const hideMenu = document.getElementById("hide");
+const lp = document.getElementById("LP");
+const recordInfo = document.getElementsByClassName("record-info")[0];
+const audio = document.getElementById("audio");
 const showForm = document.getElementById("showForm");
 const contFormSec = document.getElementById("contactFormSection");
 const contactForm = document.getElementById("contactForm");
@@ -175,4 +178,13 @@ function showSlides(n) {
 
 function delay (URL,delay) {
   setTimeout( function() { window.location = URL }, delay);
+}
+
+audio.onplay = ()=> playRecord();
+audio.onpause = ()=> playRecord();
+// audio.addEventListener("play", ()=>{playfunc()});
+
+function playRecord(){
+  lp.classList.toggle("playing");
+  recordInfo.classList.toggle("active");
 }

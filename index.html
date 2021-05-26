@@ -66,9 +66,10 @@
       <a id="homeBtn" href="#" class="navbar-button home">
         <img src="./images/icons/logos/logo.png" alt="HOME">
       </a>
-      <!-- <a href="#about" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
-        ABOUT
-      </a> -->
+      <form action="" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
+        <input type="text" name="" id="" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
       <a href="#contact" class="navbar-button" onclick="highlightSelectedBtn(event,'navbar-button')">
         CONTACT
       </a>
@@ -494,19 +495,62 @@
               <span class="blink">_</span><hr id="hr3">
             </h2>
           </summary>
-          <p>
-            Descriptive Language (Basic): VHDL
-            Programming languages:
-            Basic:
-          </p>
-          <p>
-            <img src="./images/icons/progLang/python.png" alt="Python" class="languages">
-            <img src="./images/icons/progLang/java.png" alt="Java" class="languages">
-            <img src="./images/icons/progLang/c.png" alt="C" class="languages">
-            <img src="./images/icons/progLang/c++.png" alt="C++" class="languages">
-            <img src="./images/icons/progLang/javascript.png" alt="Javascript" class="languages">
-          </p>
-          <p>PCB Design</p>
+          <section class="skills-section"><!-- Temporal name for this class -->
+            <h3>
+              Descriptive Language 
+              <span>Level: Basic</span>
+            </h3>
+            <p class="skills">
+              <img src="./images/icons/fpga.png" alt="FPGA" class="skill-icon">
+              <span>VHDL</span>
+              <span>Program: Quartus</span>
+              <img src="./images/icons/programs/quartus_logo.png" alt="QUARTUS" class="skill-icon">
+            </p>
+            <h3>
+              Programming languages
+              <span>Level: Basic</span>
+            </h3>
+            <div>
+              <img src="./images/icons/progLang/python.png" alt="Python" class="skill-icon">
+              <img src="./images/icons/progLang/java.png" alt="Java" class="skill-icon">
+              <img src="./images/icons/progLang/c.png" alt="C" class="skill-icon">
+              <img src="./images/icons/progLang/c++.png" alt="C++" class="skill-icon">
+              <img src="./images/icons/progLang/javascript.png" alt="Javascript" class="skill-icon">
+            </div>
+            <h3>
+              PCB Design
+              <span>Level: Basic</span>
+            </h3>
+            <p class="skills">
+              <span>Proteus</span>
+              <img src="./images/icons/programs/proteus_logo.png" alt="Proteus" class="skill-icon">
+              <span>DipTrace</span>
+              <img src="./images/icons/programs/diptrace_logo.png" alt="DipTrace" class="skill-icon">
+            </p>
+            <h3>
+              Web Development
+              <span>Level: Basic</span>
+            </h3>
+            <p>
+              <i class="fab fa-html5 tech-icon"></i>
+              <i class="fab fa-css3-alt tech-icon"></i>
+              <i class="fab fa-js-square tech-icon"></i>
+            </p>
+            <h4>MERN:</h4>
+            <p id="mern">
+              <img src="./images/icons/mongodb-logo_1.png" alt="MongoDB" class="tech-icon">
+              <img src="./images/icons/web-development-express-js.png" alt="Express" class="tech-icon">
+              <i class="fab fa-react tech-icon"></i>
+              <i class="fab fa-node tech-icon"></i>
+            </p>
+            <h4>Others:</h4>
+            <p class="skills">
+              <span>Cloud computing</span>
+              <i class="fab fa-aws tech-icon"></i>
+              <span>Version control</span>
+              <i class="fab fa-git tech-icon"></i>
+            </p>
+          </section>
         </details>
       <!-- End Skills Section -->
       </section>
@@ -524,45 +568,38 @@
           <!-- Container for the image gallery -->
           <section class="container">
             <!-- Full-width images with number text -->
-            <div class="mySlides">
+            <div class="mySlides" id="BubbleTower">
               <div class="numbertext">1 / 6</div>
-<<<<<<< HEAD
-                <img src="./images/slidecovers/1.jpg" style="width:100%">
-=======
-              <div id="project1">
-                <article>
-                  <!-- <video controls>
-                    <source src="./videos/bubble_tower.mp4" type="video/mp4" muted>
-                    Your browser does not support the video tag.
-                  </video> -->
-                </article>
-              </div>
->>>>>>> 2021f02... V1.8.2.2.7.3 Issuing embedded videos
+              <article>
+                <h3>Reparation of Therapeutic Device for Sensorial Stimuli</h3>
+                <p></p>
+                <iframe src="https://drive.google.com/file/d/1UlQk6hM6BySvHdsurNuaGPck5A54RM-X/preview" width="640" height="480" muted></iframe>
+              </article>
             </div>
 
             <div class="mySlides">
               <div class="numbertext">2 / 6</div>
-                <img src="./images/slidecovers/2.jpg" style="width:100%">
+              <img src="./images/slidecovers/2.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">3 / 6</div>
-                <img src="./images/slidecovers/3.jpg" style="width:100%">
+              <img src="./images/slidecovers/3.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">4 / 6</div>
-                <img src="./images/slidecovers/4.jpg" style="width:100%">
+              <img src="./images/slidecovers/4.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 6</div>
-                <img src="./images/slidecovers/5.jpg" style="width:100%">
+              <img src="./images/slidecovers/5.jpg" style="width:100%">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">6 / 6</div>
-                <img src="./images/slidecovers/6.jpg" style="width:100%">
+              <img src="./images/slidecovers/6.jpg" style="width:100%">
             </div>
 
             <!-- Next and previous buttons -->
@@ -577,7 +614,7 @@
             <!-- Thumbnail images -->
             <div class="row">
               <div class="column">
-                <img class="demo cursor" src="./images/slidecovers/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Project 1">
+                <img class="demo cursor" src="./images/slidecovers/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bubble Tower">
               </div>
               <div class="column">
                 <img class="demo cursor" src="./images/slidecovers/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Project 2">
@@ -611,7 +648,7 @@
               <span class="blink">_</span><hr id="hr5">
             </h2>
           </summary>
-          <article class="vertical-tabs-section hide-small">
+          <section class="vertical-tabs-section hide-small">
             <aside class="tabs-section">
               <button class="tablink" onclick="describe(event,'Anime')">
                 Watching anime
@@ -653,32 +690,62 @@
             <section class="description-zone">
               <div id="Anime" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>My anime watchlist</h3>
-<<<<<<< HEAD
-                
-=======
                 <ul class="nodesList">
                   <li class="node white">Saint Seiya</li>
+                  <li class="node white">Yū Yū Hakusho</li>
                   <li class="node white">Kimetsu no Yaiba</li>
-                  <li class="node white">Yuyu Hakusho</li>
                   <li class="node white">Tengen Toppa Gurren-Lagann</li>
                   <li class="node white">Neon Genenis Evangelion</li>
                   <li class="node white">Fullmetal Alchemist</li>
                   <li class="node white">Devilman Crybaby</li>
                   <li class="node white">Dragon Ball Z</li>
                 </ul>
-                <iframe width="400" height="250" src="https://www.youtube.com/embed/NyPf5ipLFkU?controls=1">
-                </iframe>
->>>>>>> 2021f02... V1.8.2.2.7.3 Issuing embedded videos
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iGWyN2Lq36M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div id="Music" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>My favourite music</h3>
-                
+                <h4>Genres</h4>
+                <ul class="nodesList">
+                  <li class="node white">Rock</li>
+                  <li class="node white">Pop (Mainly 80s & 90s)</li>
+                  <li class="node white">Disco</li>
+                  <li class="node white">Eurodance</li>
+                  <li class="node white">Ballads</li>
+                  <li class="node white">Instrumental</li>
+                  <li class="node white">EDM & House</li>
+                </ul>
+                <h3 class="record-title"><i class="fas fa-music"></i> <i>One More Time</i></h3>
+                <section class="record-section">
+                  <img id="LP" src="./images/photos/interstella5555.png" alt="Daft Punk" class="record-cover">
+                  <aside class="record-info">
+                    <div>
+                      <p><span><i class="fas fa-compact-disc"></i> Released:</span>	November 13, 2000</p>
+                      <p><span><i class="fas fa-compact-disc"></i> Recorded:</span>	1998</p>
+                      <p><span><i class="fas fa-compact-disc"></i> Genre:</span>	French house</p>
+                      <p><span><i class="fas fa-compact-disc"></i> Length:</span>	
+                        3:55 (short radio edit)
+                        5:20 (radio edit)
+                        8:00 (club mix)
+                      </p>
+                      <p><span><i class="fas fa-compact-disc"></i> Label:</span>	Virgin</p>
+                      <p>
+                        <span><i class="fas fa-compact-disc"></i> Songwriter(s):</span>	
+                        Thomas BangalterGuy-Manuel de Homem-ChristoAnthony Moore
+                      </p>
+                      <p><span><i class="fas fa-compact-disc"></i> Producer:</span>	Daft Punk</p>
+                      <p><span><i class="fas fa-compact-disc"></i> Description:</span>  
+                        Daft Punk first released it as a single on 13 November 2000 and later it was included in their 2001 album, Discovery. It is a French house song featuring a stylistically autotuned vocal performance by Romanthony. The music video of the song forms part of the 2003 anime film, Interstella 5555: The 5tory of the 5ecret 5tar 5ystem.
+                      </p>
+                    </div>
+                  </aside>
+                </section>
+                <audio controls id="audio">
+                  <source src="./sounds/One More Time.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
               </div>
               <div id="Dancing" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>Dancing styles & rythms</h3>
-<<<<<<< HEAD
-                
-=======
                 <h4>Rythms</h4>
                 <ul class="nodesList">
                   <li class="node white">Salsa</li>
@@ -689,15 +756,12 @@
                   <li class="node white">Rock & roll</li>
                 </ul>
                 <h4>Last Salsa Presentation</h4>
-                <!-- <video width="360" height="270" controls>
-                  <source src="./videos/salsa.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video> -->
->>>>>>> 2021f02... V1.8.2.2.7.3 Issuing embedded videos
+                <iframe src="https://drive.google.com/file/d/1bq3gMUjutKUuSx_l0Z5LRfBfIKRRrGEF/preview" width="420" height="250"></iframe>
               </div>
               <div id="Drawing" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>My drawings</h3>
-                
+                <img src="./images/photos/dw1.jpg" alt="Unicorn" class="photo">
+                <img src="./images/photos/dw2.jpg" alt="Guy" class="photo">
               </div>
               <div id="Writing" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>My writings</h3>
@@ -705,33 +769,26 @@
               </div>
               <div id="Boxing" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>Boxing</h3>
-<<<<<<< HEAD
-                
-=======
                 <h4>Sparring round</h4>
-                <!-- <video width="320" height="240" controls>
-                  <source src="./videos/sparring.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video> -->
->>>>>>> 2021f02... V1.8.2.2.7.3 Issuing embedded videos
+                <iframe src="https://drive.google.com/file/d/1gyUcDInA9wLwwfdL97lUlnILrbfaJpg1/preview" width="640" height="480"></iframe>
               </div>
               <div id="Cycling" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>Cycling</h3>
-                
+                <img src="./images/photos/cycling.jpg" alt="Bike" class="photo">
               </div>
               <div id="Volleyball" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>Volleyball</h3>
-                
+                <img src="./images/photos/volleyball.jpg" alt="Volley" class="photo">
               </div>
               <div id="Food" class="tabcontent" onclick="describe(event,'Food')">
                 <h3>Eating & Cooking</h3>
                 
               </div>
             </section>
-          </article>
+          </section>
 
           <!-- Tabs section for small screens -->
-          <article class="tabs-section-mobile hide-large">
+          <section class="tabs-section-mobile hide-large">
             <details>
               <summary class="tab-title" onclick="describeMobile(event)">
                 Watching anime
@@ -831,7 +888,7 @@
                 </ul>
               </div>
             </details>
-          </article>
+          </section>
         </details>
         
       <!-- End Hobbies Section -->
@@ -904,10 +961,6 @@
           <i class="fab fa-html5 icon ref-icon"></i>
           <i class="fab fa-css3-alt icon ref-icon"></i>
           <i class="fab fa-js-square icon ref-icon"></i>
-          <!-- <i class="fab fa-node-js icon ref-icon"></i>
-          <i class="fab fa-aws icon ref-icon"></i>
-          <i class="fab fa-git icon ref-icon"></i> -->
-          <!-- <i class="fas fa-database icon ref-icon"></i> -->
         </p>
         <p>Hosted in
           <a href="https://pages.github.com" target="_blank">

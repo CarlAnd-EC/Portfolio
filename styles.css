@@ -94,7 +94,7 @@ details > summary {
     background-origin: border-box;
     background-clip: content-box, border-box;
     transform: rotate(0deg);
-    animation: 2s rotate linear infinite;
+    animation: 2s spin linear infinite;
 }
 .logo{
     width: 120px;
@@ -367,6 +367,7 @@ details > summary {
     min-height: 40px;
     max-height: 75px;
 }
+
 /* Vertical tab gallery for large screens*/
 /* Style the tab */
 .vertical-tabs-section{
@@ -568,7 +569,7 @@ details > summary {
     margin: 0.1em 0.1em 0.1em 0em;
 }
 
-.languages{height: 8ch}
+
 
 .contact{
     width: 75vw;
@@ -678,6 +679,22 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
 .icon.ref-icon{
     padding: 0px 8px;
 }
+.tech-icon{
+    font-size: 64px;
+    padding: 0px 16px;
+}
+img.tech-icon{
+    height: 80px;
+    vertical-align: middle;
+}
+.tech-icon.fa-html5{color: orange}
+.tech-icon.fa-css3-alt{color: #1b73bb;}
+.tech-icon.fa-js-square{color: #ffff3c}
+.tech-icon.fa-node{color:darkgreen}
+.tech-icon.fa-react{color:turquoise}
+.tech-icon.fa-aws{color: orange}
+.tech-icon.fa-git{color:tomato}
+
 .linkedin:hover{color: #458ed1}
 .github:hover{color: #0d589e}
 
@@ -765,6 +782,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+    z-index: 1;
   }
   
   /* Position the "next button" to the right */
@@ -786,6 +804,7 @@ form#contactForm input::placeholder, form#contactForm textarea::placeholder{
     padding: 8px 12px;
     position: absolute;
     top: 0;
+    z-index: 1;
     background-color: #000000cc;
     border-bottom-right-radius: 10px;
   }
@@ -823,6 +842,109 @@ p#caption {
     text-align: center;
     font-size: 24px;
 }
+.mySlides#BubbleTower{
+    background-image: url("./images/slidecovers/1.jpg");
+    background-attachment: scroll;
+    background-clip: content-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 88vh; 
+}
+.mySlides article{
+    width: 92%;
+    position: absolute;
+    margin:  5vh 3vw;
+    padding: 0em 2em;
+    border-radius: 20px;
+    background-color: #00000085;
+}
+.mySlides article h3{
+    text-align: center;
+}
+
+.skills-section{
+    /*Mozilla*/
+    width: 75vw;
+    /*Chromium*/
+    width: 72vw;
+    padding: 2px 20px;
+    background-color: #222222;
+    box-shadow: 8px 8px 5px black;
+}
+.skills-section h3 span{
+    color: teal;
+    float: right;
+}
+.skills-section p#mern, .skills{
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+.skills span{
+    font-size: 18px;
+    padding: 0px 16px;
+}
+.skill-icon{
+    height: 64px;
+    margin: 16px 16px;
+}
+
+
+
+.record-title{
+    margin: 20px 0px 20px 55px;
+}
+.record-section{
+    display: flex;
+}
+.record-cover{
+    height:300px;
+    margin: 10px;
+}
+.record-cover.playing{
+    animation: 5s spin linear infinite;
+}
+.record-info{
+    opacity: 0;
+    display: inline-block;
+    width: 20vw;
+    height: 300px;
+    border-radius: 25px;
+    background-color: #222222;
+    transition: 2s;
+}
+.record-info.active{
+    opacity: 1;
+}
+.record-info div{
+    /*Chromium*/
+    height: 86%;
+    margin: 10% 0px 10% 1em;
+    overflow-y: scroll;
+}
+.record-info div p:first-child{
+    margin-top: 0;
+}
+.record-info div p span{
+    color: teal;
+}
+audio{
+    margin: 20px;
+    border-radius: 25px;
+    background-color: teal;
+}
+
+.photo{
+    margin: 16px;
+    padding: 10px;
+    max-width: 290px;
+    max-height: 300px;
+    transform: rotate(-2deg);
+    background-color: whitesmoke;
+    box-shadow: 8px 8px 5px black;
+}
+
+
 
 span.hide-small{
     display: inline-block;
@@ -841,7 +963,7 @@ span.hide-small{
       color: var(--bodyF);
     }
 }
-@keyframes rotate {
+@keyframes spin {
     to {
         transform: rotate(360deg);
     }
